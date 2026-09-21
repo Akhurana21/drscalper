@@ -30,8 +30,28 @@ function toggleTheme() {
 document.getElementById('thbtn').addEventListener('click', toggleTheme);
 
 /*  NAVBAR  */
-window.addEventListener('scroll', () => document.getElementById('nbar').classList.toggle('scr', scrollY > 40));
+window.addEventListener('scroll', () => {
+    document.getElementById('nbar').classList.toggle('scr', scrollY > 40);
+    
+    // Scroll to top button visibility
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    if (scrollTopBtn) {
+        if (scrollY > 300) {
+            scrollTopBtn.classList.add('visible');
+        } else {
+            scrollTopBtn.classList.remove('visible');
+        }
+    }
+});
 let mbOpen = false;
+
+/*  SCROLL TO TOP  */
+document.getElementById('scrollTopBtn').addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
 document.getElementById('mbtog').addEventListener('click', () => {
     mbOpen = !mbOpen;
     document.getElementById('mbmenu').classList.toggle('open', mbOpen);
@@ -218,8 +238,8 @@ function doLogout() {
     // reset chat UI
     document.getElementById('chatBody').innerHTML = `
     <div class="d-flex flex-column gap-1">
-      <div class="msg msg-ai">ðŸ‘‹ Hi! I'm your NexusAI assistant. I can help you with support analytics, agent configuration, automation workflows, and business insights. What would you like to know?</div>
-      <div class="msg-time" style="align-self:flex-start;padding-left:4px">NexusAI Â· Just now</div>
+      <div class="msg msg-ai">👋 Hi! I'm your Dr. Scalper assistant. I can help you with trading analytics, EA configuration, basket management, recovery strategies, and performance insights. What would you like to know?</div>
+      <div class="msg-time" style="align-self:flex-start;padding-left:4px">Dr. Scalper · Just now</div>
     </div>`;
 }
 
@@ -270,8 +290,8 @@ function initOverviewChart() {
     }
     const c = ctx.getContext('2d');
     const g = c.createLinearGradient(0, 0, 0, 280);
-    g.addColorStop(0, 'rgba(139,92,246,0.35)');
-    g.addColorStop(1, 'rgba(59,130,246,0.02)');
+    g.addColorStop(0, 'rgba(232,186,89,0.35)');
+    g.addColorStop(1, 'rgba(0,0,0,0.02)');
     const labels = Array.from({
         length: 30
     }, (_, i) => `${i+1}`);
@@ -289,7 +309,7 @@ function initOverviewChart() {
                 data,
                 fill: true,
                 backgroundColor: g,
-                borderColor: '#8b5cf6',
+                borderColor: '#E8BA59',
                 borderWidth: 2.5,
                 pointRadius: 0,
                 pointHoverRadius: 5,
@@ -304,9 +324,9 @@ function initOverviewChart() {
                 },
                 tooltip: {
                     backgroundColor: 'rgba(22,22,42,.95)',
-                    titleColor: '#a78bfa',
+                    titleColor: '#E8BA59',
                     bodyColor: '#a8a8c8',
-                    borderColor: 'rgba(139,92,246,.3)',
+                    borderColor: 'rgba(232,186,89,.3)',
                     borderWidth: 1,
                     padding: 10,
                     callbacks: {
@@ -355,8 +375,8 @@ function initAnalyticsChart() {
     }
     const c = ctx.getContext('2d');
     const g1 = c.createLinearGradient(0, 0, 0, 250);
-    g1.addColorStop(0, 'rgba(139,92,246,0.3)');
-    g1.addColorStop(1, 'rgba(139,92,246,0.01)');
+    g1.addColorStop(0, 'rgba(232,186,89,0.3)');
+    g1.addColorStop(1, 'rgba(232,186,89,0.01)');
     const g2 = c.createLinearGradient(0, 0, 0, 250);
     g2.addColorStop(0, 'rgba(52,211,153,0.2)');
     g2.addColorStop(1, 'rgba(52,211,153,0.01)');
@@ -374,10 +394,10 @@ function initAnalyticsChart() {
                     data: [8200, 9100, 10400, 9800, 11200, 12800, 14100, 15600, 17200, 19000, 21400, 24800],
                     fill: true,
                     backgroundColor: g1,
-                    borderColor: '#8b5cf6',
+                    borderColor: '#E8BA59',
                     borderWidth: 2.5,
                     pointRadius: 3,
-                    pointBackgroundColor: '#8b5cf6',
+                    pointBackgroundColor: '#E8BA59',
                     tension: .4
                 },
                 {
@@ -410,9 +430,9 @@ function initAnalyticsChart() {
                 },
                 tooltip: {
                     backgroundColor: 'rgba(22,22,42,.95)',
-                    titleColor: '#a78bfa',
+                    titleColor: '#E8BA59',
                     bodyColor: '#a8a8c8',
-                    borderColor: 'rgba(139,92,246,.3)',
+                    borderColor: 'rgba(232,186,89,.3)',
                     borderWidth: 1,
                     padding: 10
                 }
@@ -487,7 +507,7 @@ async function sendChat() {
             body: JSON.stringify({
                 model: 'claude-sonnet-4-20250514',
                 max_tokens: 1000,
-                system: `You are NexusAI, an intelligent AI assistant built into the NexusAI business automation platform. The user is ${currentUser?.name || 'a user'} on the ${currentUser?.plan || 'Pro'} plan. You help with: AI agent performance, support ticket analytics, workflow automation suggestions, business metrics insights, and platform usage. Current platform stats: 24.8K conversations today, 98.2% resolution rate, 1.4s avg response, $18.2K monthly savings, 4 active agents. Be concise, professional, and data-driven. Use emojis sparingly.`,
+                system: `You are Dr. Scalper, an intelligent AI assistant built into the Dr. Scalper gold trading automation platform. The user is ${currentUser?.name || 'a trader'} on the ${currentUser?.plan || 'Pro'} plan. You help with: EA performance, trading analytics, basket management, position management, recovery strategies, and platform usage. Current platform stats: $12,450 today's profit, 89.4% win rate, 47 total trades, 3.2 active baskets, $48.2K weekly profit. Be concise, professional, and data-driven. Use emojis sparingly.`,
                 messages: chatHistory
             })
         });
@@ -520,7 +540,7 @@ function appendMsg(text, role) {
     wrap.className = 'd-flex flex-column gap-1';
     wrap.innerHTML = `
     <div class="msg msg-${role}" style="animation:fadeIn .3s ease">${escapeHtml(text).replace(/\n/g,'<br>')}</div>
-    <div class="msg-time" style="align-self:${role==='ai'?'flex-start':'flex-end'};padding:0 4px">${role==='ai'?'NexusAI':'You'} Â· ${time}</div>`;
+    <div class="msg-time" style="align-self:${role==='ai'?'flex-start':'flex-end'};padding:0 4px">${role==='ai'?'Dr. Scalper':'You'} · ${time}</div>`;
     body.appendChild(wrap);
     body.scrollTop = body.scrollHeight;
 }

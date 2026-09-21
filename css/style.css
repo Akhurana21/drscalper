@@ -157,7 +157,6 @@ a {
 .sp {
   padding: 90px 0;
 }
-/* NAVBAR */
 #nbar {
   position: fixed;
   top: 0;
@@ -171,6 +170,10 @@ a {
   display: flex;
   align-items: center;
   transition: background 0.3s, box-shadow 0.3s;
+}
+
+#nbar .container {
+  position: relative;
 }
 .lm #nbar {
   background: rgba(250, 250, 254, 0.88);
@@ -193,6 +196,37 @@ a {
   color: #fff;
   font-size: 0.95rem;
   flex-shrink: 0;
+}
+
+/* Logo image styling */
+img[alt="Dr. Scalper Logo"] {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Main navigation logo - adjusted size for navigation bar */
+#nbar img[alt="Dr. Scalper Logo"] {
+  height: 50px;
+  width: auto;
+}
+
+/* Adjust logo size in footer */
+footer img[alt="Dr. Scalper Logo"] {
+  height: 80px;
+  width: auto;
+}
+
+/* Adjust logo size in offcanvas */
+.offcanvas-header img[alt="Dr. Scalper Logo"] {
+  height: 60px;
+  width: auto;
+}
+
+/* Adjust logo size in dashboard sidebar */
+.db-logo img[alt="Dr. Scalper Logo"] {
+  height: 50px;
+  width: auto;
 }
 .nav-link {
   color: var(--tx2) !important;
@@ -878,6 +912,43 @@ a {
   border-top: 1px solid var(--bd);
   padding: 60px 0 28px;
 }
+
+/* Scroll to Top Button */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--grad);
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(232, 186, 89, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-top-btn.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-top-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(232, 186, 89, 0.6);
+}
+
+.scroll-top-btn:active {
+  transform: translateY(-1px);
+}
 .fcol h5 {
   font-size: 0.77rem;
   font-weight: 700;
@@ -1060,7 +1131,7 @@ a {
   top: 0;
   left: var(--dsb);
   right: 0;
-  height: var(--nav);
+  height: 68px;
   background: rgba(8, 8, 15, 0.85);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--bd);
@@ -1225,7 +1296,7 @@ a {
 /* DB MAIN */
 .db-main {
   margin-left: var(--dsb);
-  padding-top: var(--nav);
+  padding-top: 68px;
   min-height: 100vh;
 }
 .db-content {
