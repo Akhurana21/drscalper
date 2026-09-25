@@ -1,23 +1,53 @@
 <?php
 
-$host = 'us3.smtp.mailhostbox.com';
-$port = 587;
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
-echo "Testing connection to $host:$port<br>";
+require 'PHPMailer/src/Exception.php';
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
 
-$connection = @fsockopen(
-    $host,
-    $port,
-    $errno,
-    $errstr,
-    10
-);
+$mail = new PHPMailer(true);
 
-if ($connection) {
-    echo "SUCCESS: Port $port is reachable.<br>";
-    fclose($connection);
-} else {
-    echo "FAILED<br>";
-    echo "Error number: " . $errno . "<br>";
-    echo "Error message: " . htmlspecialchars($errstr) . "<br>";
+try {
+
+    // SMTP configuration
+    $mail->isSMTP();
+
+    $mail->Host       = 'smtpout.secureserver.net';
+    $mail->SMTPAuth   = true;
+    $mail->Username   = 'support@drscalper.com';
+    $mail->Password   = 'Danny@12123';
+
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+    $mail->Port       = 465;
+
+    // Sender
+    $mail->setFrom(
+        'support@drscalper.com',
+        'Dr. Scalper Website'
+    );
+
+    // Recipient
+    $mail->addAddress(
+        'support@drscalper.com'
+    );
+
+    // Email
+    $mail->Subject = 'Dr. Scalper SMTP Test';
+
+    $mail->Body =
+        'This is a test email sent using GoDaddy SMTP from the Dr. Scalper website.';
+
+    $mail->send();
+
+    echo 'SMTP EMAIL SENT SUCCESSFULLY';
+
+} catch (Exception $e) {
+
+    echo 'SMTP ERROR:<br><br>';
+    echo htmlspecialchars($mail->ErrorInfo);
+
 }
+
+?>

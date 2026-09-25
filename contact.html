@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us | MODULYST</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+            color: #222;
+        }
+
+        .contact-container {
+            max-width: 700px;
+            margin: 60px auto;
+            padding: 20px;
+        }
+
+        .contact-card {
+            background: #fff;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        h1 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: 600;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+            font-family: inherit;
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #333;
+        }
+
+        textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 6px;
+            background: #222;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #444;
+        }
+
+        .message {
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+            display: none;
+        }
+
+        .success {
+            background: #e8f7ed;
+            color: #187a3d;
+        }
+
+        .error {
+            background: #fdeaea;
+            color: #b42318;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="contact-container">
+
+    <div class="contact-card">
+
+        <h1>Contact Us</h1>
+
+        <p class="subtitle">
+            Have a question or enquiry? Send us a message and we'll get back to you.
+        </p>
+
+        <!-- Success / Error message -->
+        <div id="successMessage" class="message success">
+            Thank you! Your enquiry has been submitted successfully.
+        </div>
+
+        <div id="errorMessage" class="message error">
+            Something went wrong. Please try again.
+        </div>
+
+        <!-- Contact Form -->
+        <form action="send-form.php" method="POST">
+
+            <div class="form-group">
+                <label for="name">Name *</label>
+
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your name"
+                    required
+                >
+            </div>
+
+
+            <div class="form-group">
+                <label for="email">Email *</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                >
+            </div>
+
+
+            <div class="form-group">
+                <label for="phone">Phone</label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="Enter your phone number"
+                >
+            </div>
+
+
+            <div class="form-group">
+                <label for="message">Message *</label>
+
+                <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Enter your message"
+                    required
+                ></textarea>
+            </div>
+
+
+            <button type="submit">
+                Send Enquiry
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<script>
+
+    // Show success/error message based on URL parameter
+
+    const params = new URLSearchParams(window.location.search);
+
+    if (params.get("success") === "1") {
+
+        document.getElementById("successMessage").style.display = "block";
+
+    }
+
+    if (params.get("error") === "1") {
+
+        document.getElementById("errorMessage").style.display = "block";
+
+    }
+
+</script>
+
+</body>
+</html>

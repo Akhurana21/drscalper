@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" id="htmlRoot">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Registration Failed | Dr. Scalper EA</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="css/all.min.css">
+      <link rel="stylesheet" href="css/style.css">
+      <style>
+         .result-icon {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: rgba(239, 68, 68, 0.15);
+            border: 2px solid #ef4444;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 48px;
+            color: #ef4444;
+         }
+         .result-content {
+            text-align: center;
+            max-width: 500px;
+            margin: 0 auto;
+         }
+         .result-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+         }
+         .result-message {
+            color: var(--tx2);
+            margin-bottom: 32px;
+            line-height: 1.6;
+         }
+         .result-actions {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+         }
+      </style>
+   </head>
+   <body class="free-access-page">
+      <nav class="free-access-nav">
+         <div class="container d-flex align-items-center justify-content-between">
+            <a href="index.html" class="free-access-logo">
+               <img src="img/logo.png" alt="Dr. Scalper Logo">
+            </a>
+            <div class="d-flex align-items-center gap-2">
+               <button class="boc free-theme-toggle" id="freeThemeToggle" type="button" aria-label="Toggle theme">
+                  <i class="fa-solid fa-moon" id="freeMoonIcon"></i>
+                  <i class="fa-solid fa-sun" id="freeSunIcon" style="display:none"></i>
+               </button>
+               <a href="index.html#pricing" class="boc btn free-back-link">Back to pricing</a>
+            </div>
+         </div>
+      </nav>
+
+      <main>
+         <section class="free-access-content">
+            <div class="container">
+               <div class="result-content">
+                  <div class="result-icon">
+                     <i class="fa-solid fa-xmark"></i>
+                  </div>
+                  <h1 class="result-title">Registration Failed</h1>
+                  <p class="result-message">
+                     There was an error submitting your registration. Please check your details and try again, or contact our support team for assistance.
+                  </p>
+                  <div class="result-actions">
+                     <a href="free-access.html" class="bgrd btn">Try Again <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                     <a href="https://t.me/your_telegram_username" target="_blank" rel="noopener" class="boc btn"><i class="fa-brands fa-telegram me-2"></i>Contact Support</a>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+
+      <button id="freeScrollTopBtn" class="scroll-top-btn free-page-scroll-top" type="button" aria-label="Scroll to top">
+         <i class="fa-solid fa-arrow-up"></i>
+      </button>
+
+      <footer class="free-access-footer">
+         <div class="container d-flex align-items-center justify-content-between flex-wrap gap-3">
+            <span>© 2026 Dr. Scalper EA. All rights reserved.</span>
+            <a href="index.html">Back to Dr. Scalper</a>
+         </div>
+      </footer>
+
+      <script>
+         const root = document.getElementById('htmlRoot');
+         const themeToggle = document.getElementById('freeThemeToggle');
+         const moonIcon = document.getElementById('freeMoonIcon');
+         const sunIcon = document.getElementById('freeSunIcon');
+
+         themeToggle.addEventListener('click', () => {
+            const lightMode = root.classList.toggle('lm');
+            moonIcon.style.display = lightMode ? 'none' : 'inline';
+            sunIcon.style.display = lightMode ? 'inline' : 'none';
+         });
+
+         document.getElementById('freeScrollTopBtn').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+         });
+      </script>
+   </body>
+</html>

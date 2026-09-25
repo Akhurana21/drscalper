@@ -9,6 +9,16 @@
       <link href="css/bootstrap.min.css" rel="stylesheet">
       <link rel="stylesheet" href="css/all.min.css">
       <link rel="stylesheet" href="css/style.css">
+      <style>
+         .free-success-message {
+            background: rgba(52, 211, 153, 0.1);
+            border: 1px solid #34d399;
+            color: #34d399;
+            padding: 12px 16px;
+            border-radius: 8px;
+            margin-top: 16px;
+         }
+      </style>
    </head>
    <body class="free-access-page">
       <nav class="free-access-nav">
@@ -84,23 +94,23 @@
                      <span class="slbl">Step four</span>
                      <h2>Get Your Free Access</h2>
                      <p>Enter your MT5 account ID and registered email. We will use these details to verify your eligibility and send your access information.</p>
-                     <form class="free-verification-form" id="freeVerificationForm">
+                     <form class="free-verification-form" id="freeVerificationForm" action="mt5-register.php" method="POST">
                         <div class="row g-3">
                            <div class="col-md-6">
-                              <label for="mt5AccountId">MT5 Account ID</label>
-                              <input id="mt5AccountId" name="mt5AccountId" type="text" inputmode="numeric" placeholder="Enter your MT5 account ID" required>
+                              <label for="mt5_account_id">MT5 Account ID</label>
+                              <input id="mt5_account_id" name="mt5_account_id" type="text" inputmode="numeric" placeholder="Enter your MT5 account ID" required>
                            </div>
                            <div class="col-md-6">
-                              <label for="registeredEmail">Registered Email</label>
-                              <input id="registeredEmail" name="registeredEmail" type="email" placeholder="you@example.com" required>
+                              <label for="registered_email">Registered Email</label>
+                              <input id="registered_email" name="registered_email" type="email" placeholder="you@example.com" required>
                            </div>
                            <div class="col-12">
-                              <label for="telegramUsername">Telegram username <span>(optional)</span></label>
-                              <input id="telegramUsername" name="telegramUsername" type="text" placeholder="@yourusername">
+                              <label for="telegram_username">Telegram username <span>(optional)</span></label>
+                              <input id="telegram_username" name="telegram_username" type="text" placeholder="@yourusername">
                            </div>
                         </div>
                         <button type="submit" class="bgrd btn free-verify-button">Verify &amp; Get Access <i class="fa-solid fa-arrow-right ms-2"></i></button>
-                        <p class="free-form-note"><i class="fa-solid fa-shield-halved me-1"></i>Your details will open a Telegram message to the temporary support account below.</p>
+                        <p class="free-form-note"><i class="fa-solid fa-shield-halved me-1"></i>Your details will be sent to our Telegram support.</p>
                      </form>
                      <div class="free-verification-result" id="freeVerificationResult" role="status"></div>
                   </div>
@@ -108,8 +118,7 @@
 
                <div class="free-support-note">
                   <i class="fa-brands fa-telegram"></i>
-                  
-                  
+                  <span>Need help? Contact us on Telegram: <a href="https://t.me/your_telegram_username" target="_blank" rel="noopener">@your_telegram_username</a></span>
                </div>
             </div>
          </section>
@@ -131,7 +140,6 @@
          const themeToggle = document.getElementById('freeThemeToggle');
          const moonIcon = document.getElementById('freeMoonIcon');
          const sunIcon = document.getElementById('freeSunIcon');
-         const telegramUrl = 'https://t.me/replace_with_telegram_username';
 
          themeToggle.addEventListener('click', () => {
             const lightMode = root.classList.toggle('lm');
@@ -139,20 +147,17 @@
             sunIcon.style.display = lightMode ? 'inline' : 'none';
          });
 
-         document.getElementById('freeVerificationForm').addEventListener('submit', (event) => {
-            event.preventDefault();
-            const accountId = document.getElementById('mt5AccountId').value.trim();
-            const email = document.getElementById('registeredEmail').value.trim();
-            const telegram = document.getElementById('telegramUsername').value.trim();
-            const message = `Free access verification request%0A%0AMT5 Account ID: ${encodeURIComponent(accountId)}%0ARegistered email: ${encodeURIComponent(email)}%0ATelegram: ${encodeURIComponent(telegram || 'Not provided')}`;
-            const result = document.getElementById('freeVerificationResult');
-            result.innerHTML = `Your details are ready. <a href="${telegramUrl}?text=${message}" target="_blank" rel="noopener">Continue in Telegram</a> to send the request.`;
-            result.classList.add('visible');
-         });
-
          document.getElementById('freeScrollTopBtn').addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
          });
+
+         // Check for success parameter in URL
+         const urlParams = new URLSearchParams(window.location.search);
+         if (urlParams.get('registration') === 'success') {
+            const result = document.getElementById('freeVerificationResult');
+            result.innerHTML = '<div class="free-success-message">✓ Your registration details have been submitted successfully! We will verify your account and contact you shortly.</div>';
+            result.classList.add('visible');
+         }
       </script>
    </body>
 </html>
