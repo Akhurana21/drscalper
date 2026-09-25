@@ -31,7 +31,6 @@
                   </a>
                   <div class="d-none d-lg-flex align-items-center gap-1 mx-auto">
                      <a href="#how" class="nav-link">How it works</a>
-                     <a href="#features" class="nav-link">Features</a>
                      <a href="#downloads" class="nav-link">Download</a>
                      <a href="#pricing" class="nav-link">Pricing</a>
                      <a href="#faq" class="nav-link">FAQ</a>
@@ -53,7 +52,6 @@
          </nav>
          <div id="mbmenu">
             <a href="#how" class="nav-link d-block py-3 border-bottom" style="border-color:var(--bd)!important">How it works</a>
-            <a href="#features" class="nav-link d-block py-3 border-bottom" style="border-color:var(--bd)!important">Features</a>
             <a href="#downloads" class="nav-link d-block py-3 border-bottom" style="border-color:var(--bd)!important">Downloads</a>
             <a href="#pricing" class="nav-link d-block py-3 border-bottom" style="border-color:var(--bd)!important">Pricing</a>
             <a href="#faq" class="nav-link d-block py-3">FAQ</a>
@@ -213,7 +211,22 @@
                </div>
             </div>
          </section>
-
+         <!-- LIVE RESULTS -->
+         <section id="live-results" class="live-results-section">
+            <div class="container">
+               <div class="live-results-content rv">
+                  <div>
+                     <span class="live-results-eyebrow">Live Results</span>
+                     <h2>Real Results. Real Users.</h2>
+                     <p>See live account updates, user feedback, and trading results shared by the GoldTrap community.</p>
+                  </div>
+                  <a href="https://t.me/drscalperea" target="_blank" rel="noopener" class="live-results-button">
+                     <i class="fa-brands fa-telegram" aria-hidden="true"></i>
+                     <span>View Live Results</span>
+                  </a>
+               </div>
+            </div>
+         </section>
          <!-- PRICING -->
          <section id="pricing" class="sp position-relative" style="background:var(--bg2)">
             <div class="aur aur-a" style="top:50%;left:50%;transform:translate(-50%,-50%)"></div>
@@ -242,14 +255,14 @@
                   <div class="col-md-4">
                      <div class="pcard h-100">
                         <div style="font-size:.82rem;font-weight:600;color:var(--tx3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px">1 Accounts</div>
-                        <div class="pamt mb-1">$99 <span style="font-size:1rem;font-weight:400">USD</span> <span style="background:rgba(232,186,89,.2);color:#E8BA59;font-size:.7rem;font-weight:600;padding:2px 8px;border-radius:100px;margin-left:8px">Most Popular</span></div>
+                        <div class="pamt mb-1">$99 <span style="font-size:1rem;font-weight:400">USD</span> <span style="color:#E8BA59;font-size:.7rem;font-weight:600;padding:2px 8px;border-radius:100px;margin-left:8px"></span></div>
                         <div style="font-size:.82rem;color:var(--tx3)" class="pper">For individual traders</div>
                         <p style="font-size:.875rem;color:var(--tx2);margin:14px 0 20px;padding-bottom:20px;border-bottom:1px solid var(--bd)">For traders managing multiple accounts. Unlimited MT5 accounts with any broker.</p>
                         <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Lifetime license</div>
                         <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Use with any broker</div>
                         <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Free upgrades to all future versions</div>
                         <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Priority reply message</div>
-                        <button class="boc btn w-100 py-2 mt-4">Purchase License</button>
+                        <button class="boc btn w-100 py-2 mt-4" data-plan="1 Account" data-amount="$99" onclick="openPaymentModal(this)">Purchase License</button>
                      </div>
                   </div>
                    <div class="col-md-4">
@@ -263,7 +276,7 @@
                         <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Use with any broker</div>
                         <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Free future upgrades</div>
                         <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Priority reply message</div>
-                        <button class="bgrd btn w-100 py-2 mt-4">Purchase License <i class="fa-solid fa-arrow-right ms-1 fa-sm"></i></button>
+                        <button class="bgrd btn w-100 py-2 mt-4" data-plan="5 Accounts" data-amount="$329" onclick="openPaymentModal(this)">Purchase License <i class="fa-solid fa-arrow-right ms-1 fa-sm"></i></button>
                      </div>
                   </div>
                </div>
@@ -302,7 +315,6 @@
                      <div class="gc p-4 h-100 text-center">
                         <div style="width:64px;height:64px;border-radius:16px;background:rgba(232,186,89,.15);display:flex;align-items:center;justify-content:center;margin:0 auto 18px"><i class="fa-solid fa-download fa-2x" style="color:#E8BA59"></i></div>
                         <h3 class="fs-5 fw-semibold mb-2">MetaTrader 5</h3>
-                        <p style="font-size:.875rem;color:var(--tx2);margin-bottom:16px">GoldTrap_v4_2_3.ex5</p>
                         <div style="font-size:.78rem;color:var(--tx3);margin-bottom:18px">License key required at runtime</div>
                         <a href="#" class="bgrd btn px-4 py-2">Download MT5 Version</a>
                      </div>
@@ -334,40 +346,120 @@
                   <div class="col-lg-8">
                      <div class="accordion acco" id="faqAcc">
                         <div class="accordion-item">
-                           <h2 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#f1">How do I get the free version?</button></h2>
+                           <h2 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#f1">What is Dr. Scalper EA?</button></h2>
                            <div id="f1" class="accordion-collapse collapse show" data-bs-parent="#faqAcc">
-                              <div class="accordion-body">Register using our referral link with VT Markets, complete full verification (KYC), open an MT5 trading account, and submit your MT5 ID + email for instant access. Limited to 1 MT5 account.</div>
+                              <div class="accordion-body">Dr. Scalper EA is an Expert Advisor exclusively designed for MetaTrader 5 (MT5) and XAUUSD (Gold) trading. It combines a straddle-entry strategy, grid-based recovery, basket take-profit management, license protection, and configurable risk controls to automate trade execution and position management according to your selected settings.</div>
                            </div>
                         </div>
                         <div class="accordion-item">
-                           <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f2">What platforms does Dr. Scalper EA support?</button></h2>
+                           <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f2">Who is Dr. Scalper EA for?</button></h2>
                            <div id="f2" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
-                              <div class="accordion-body">Dr. Scalper EA is fully compatible with both MetaTrader 4 (MT4) and MetaTrader 5 (MT5) platforms. It works with cent and standard accounts from most major brokers.</div>
+                              <div class="accordion-body">Dr. Scalper EA is designed for traders who understand the risks involved in automated trading and are prepared to follow an appropriate setup, including broker selection, account type, leverage, lot size, VPS configuration, and risk management settings. It is intended for users who understand that trading involves floating losses and drawdowns and that results can vary with market conditions, broker execution, and account settings.</div>
                            </div>
                         </div>
                         <div class="accordion-item">
-                           <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f3">Is VPS required?</button></h2>
+                           <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f3">Can I run Dr. Scalper EA on a mobile phone?</button></h2>
                            <div id="f3" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
-                              <div class="accordion-body">VPS is not required but highly recommended for 24/7 operation. The EA is VPS-friendly and optimized to run continuously without requiring your PC to be constantly on.</div>
+                              <div class="accordion-body">No. A phone is only required for monitoring trade activity through the MetaTrader 5 mobile app. Dr. Scalper EA must run on a Windows PC/laptop or a Windows VPS with the MetaTrader 5 desktop terminal installed and running.</div>
                            </div>
                         </div>
                         <div class="accordion-item">
-                           <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f4">What is the difference between license tiers?</button></h2>
+                           <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f4">Which pair does Dr. Scalper EA trade?</button></h2>
                            <div id="f4" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
-                              <div class="accordion-body">The free version includes 1 MT5 account via VT Markets registration. The 5-account license ($329 USDT) supports up to 5 MT5 accounts with any broker. The unlimited license ($689 USDT) supports unlimited MT5 accounts. All paid licenses include free upgrades and priority support.</div>
+                              <div class="accordion-body">Dr. Scalper EA is specifically designed and optimized for the XAUUSD (Gold) market, with its core trading logic focused on Gold price movements.</div>
                            </div>
                         </div>
                         <div class="accordion-item">
-                           <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f5">How do I install and set up the EA?</button></h2>
+                           <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f5">What strategy does Dr. Scalper EA use?</button></h2>
                            <div id="f5" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
-                              <div class="accordion-body">Download the appropriate file (.ex5 for MT5, .ex4 for MT4), install into your platform's Experts folder, and activate with your license key. You'll need to add https://a689.link to your MetaTrader whitelist for license verification.</div>
+                              <div class="accordion-body">Dr. Scalper EA places Buy Stop and Sell Stop pending orders around the current market price. Once one side is triggered, the EA manages the resulting basket using predefined grid levels, configurable lot scaling, and basket-level take-profit rules, with the objective of closing the overall basket according to the configured parameters.</div>
                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center mt-4" id="faqViewAllWrap">
+                           <button type="button" class="boc btn px-4 py-2" id="faqViewAll" onclick="setFaqExpanded(true)">View all <i class="fa-solid fa-chevron-down ms-2" aria-hidden="true"></i></button>
+                     </div>
+                        <div class="accordion-item faq-extra">
+                           <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f6">Which brokers can I use?</button></h2>
+                           <div id="f6" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+                              <div class="accordion-body">Dr. Scalper EA can operate with any MT5 brokers that provide a suitable symbol, competitive trading conditions, adequate leverage, reliable execution, and a compatible account type. For the Free Access Program, the trading account must first be registered through our supported IB (Introducing Broker) network and successfully verified.</div>
+                           </div>
+                        </div>
+                        <div class="accordion-item faq-extra">
+                           <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f7">What is the difference between Direct License and Free Access?</button></h2>
+                           <div id="f7" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+                              <div class="accordion-body">
+                                 <p><strong>Direct License</strong> - The Direct License gives users the flexibility to use Dr. Scalper EA with a broker of their choice, without any trading-volume requirements or IB restrictions.</p>
+                                 <p class="mb-0"><strong>Free Access</strong> - The Free Access Program has no license fee. However, license activation is subject to successful verification of the trading account through our supported IB (Introducing Broker) network.</p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="accordion-item faq-extra">
+                           <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f8">How much capital do you recommend?</button></h2>
+                           <div id="f8" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+                              <div class="accordion-body">
+                                 <p>Dr. Scalper EA can technically operate on a Cent Account starting from 20,000 USC, depending on the broker, leverage, account conditions, and configured risk settings.</p>
+                                 <p>For a more comfortable margin buffer and greater flexibility in managing market fluctuations, we recommend considering 50,000 USC as a more balanced account size.</p>
+                                 <p>For traders looking for a larger capital buffer, 100,000 USC may provide greater margin flexibility and additional capacity for changing market conditions.</p>
+                                 <ul>
+                                    <li>20,000 USC - Minimum Suggested Starting Capital</li>
+                                    <li>50,000 USC - Recommended Capital Level</li>
+                                    <li>100,000 USC - Preferred Capital Level for Greater Margin Flexibility</li>
+                                 </ul>
+                                 <p class="mb-0">These figures are guidelines, not guarantees of performance or protection from loss. Actual results and drawdown can vary depending on market conditions, broker execution, leverage, lot size, grid settings, and risk parameters. Always choose a capital size that matches your financial situation and risk tolerance.</p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="accordion-item faq-extra">
+                           <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f9">Does Dr. Scalper EA guarantee profit?</button></h2>
+                           <div id="f9" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+                              <div class="accordion-body">No. No trading system or Expert Advisor can guarantee fixed profits or provide a risk-free investment.<br><br>Dr. Scalper EA remains exposed to floating losses, drawdown, margin calls, stop-outs, and the potential loss of trading capital, particularly during sharp one-directional market movements or periods of high volatility when sufficient price retracement does not occur.</div>
+                           </div>
+                        </div>
+                        <div class="accordion-item faq-extra">
+                           <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f10">Can I Withdraw Funds While Dr. Scalper EA Is Running?</button></h2>
+                           <div id="f10" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+                              <div class="accordion-body"><p>Yes. Withdrawals are processed entirely through your broker's system and are not controlled by Dr. Scalper EA. However, always ensure that sufficient free margin remains available after any withdrawal. Avoid making large withdrawals while the EA has active floating baskets, as reducing available margin can increase the risk of a margin call or stop-out, particularly during adverse market movements.</p><p class="mb-0">Before withdrawing funds, consider your current open positions, floating drawdown, margin level, and configured risk settings.</p></div>
+                           </div>
+                        </div>
+                        <div class="accordion-item faq-extra">
+                           <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f11">Do I need a VPS?</button></h2>
+                           <div id="f11" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+                              <div class="accordion-body"><p>A Virtual Private Server (VPS) is strongly recommended for live trading with Dr. Scalper EA. The MetaTrader 5 terminal needs to remain online and connected 24/5 so the EA can execute, manage, and close trades according to its configured settings. If your PC or laptop is turned off, in sleep mode, restarting, disconnected from the internet, or otherwise offline, the EA cannot execute new trades or manage existing positions during that period.</p><p class="mb-0">For more consistent operation, we recommend running MetaTrader 5 on a reliable Windows VPS with a stable internet connection.</p></div>
+                           </div>
+                        </div>
+                        <div class="accordion-item faq-extra">
+                           <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f12">Why isn't the EA opening trades?</button></h2>
+                           <div id="f12" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+                              <div class="accordion-body">
+                                 <ul>
+                                    <li><strong>License:</strong> The license may be invalid, expired, or not activated.</li>
+                                    <li><strong>WebRequest Settings:</strong> The required WebRequest URL/domain may not be added to the allowed list in MetaTrader 5 settings.</li>
+                                    <li><strong>Algo Trading:</strong> The Algo Trading button may be disabled in the MT5 terminal.</li>
+                                    <li><strong>Market Session:</strong> The market may currently be closed or outside the EA's configured trading hours.</li>
+                                    <li><strong>Spread:</strong> The current spread may be higher than the maximum spread configured in the EA.</li>
+                                    <li><strong>Symbol:</strong> Your broker may use a different XAUUSD symbol suffix, for example XAUUSD.a or XAUUSDm.</li>
+                                    <li><strong>Trading Window:</strong> The EA's configured trading session may not have started yet.</li>
+                                    <li><strong>Free Margin:</strong> Available free margin may be insufficient to open or manage the required positions.</li>
+                                 </ul>
+                                 <p class="mb-0">If all settings appear correct and the EA still does not trade, check the Experts and Journal tabs in MetaTrader 5 for error messages and contact support with the relevant details.</p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="accordion-item faq-extra">
+                           <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f13">If I register to get the EA, is an installation service provided?</button></h2>
+                           <div id="f13" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+                              <div class="accordion-body"><p>Installation service is not provided by default. Users are required to install and configure Dr. Scalper EA themselves using the installation guide we provide.</p><p>If you experience technical issues, our Support Team can help verify basic settings and review relevant error messages or logs from the Experts and Journal tabs in MetaTrader 5.</p><p class="mb-0"><strong>Security Notice:</strong> Never share your trading account password (master password) with anyone, including our Support Team. We will never require your master password to provide technical assistance.</p></div>
+                           </div>
+                        </div>
+                        <div class="justify-content-center mt-4 faq-show-less" id="faqShowLessWrap">
+                           <button type="button" class="boc btn px-4 py-2" onclick="setFaqExpanded(false)">Show less <i class="fa-solid fa-chevron-up ms-2" aria-hidden="true"></i></button>
                         </div>
                      </div>
                   </div>
                </div>
             </div>
          </section>
+         
          <!-- FINAL CTA -->
          <section id="cta">
             <div class="aur aur-a" style="top:50%;left:50%;transform:translate(-50%,-50%)"></div>
@@ -387,35 +479,50 @@
          <!-- FOOTER -->
          <footer id="foot">
             <div class="container">
-               <div class="row g-5 mb-5">
-                  <div class="col-lg-4">
-                     <a class="d-flex align-items-center gap-2 mb-3" href="#" style="font-size:1.15rem;font-weight:700;color:var(--tx)">
-                        <img src="img/logo.png" alt="Dr. Scalper Logo">
+               <div class="row g-5 mb-5 justify-content-center">
+                  <div class="col-lg-6 footer-brand text-center">
+                     <a class="d-flex align-items-center justify-content-center gap-2 mb-3" href="#" style="font-size:1.15rem;font-weight:700;color:var(--tx)">
+
                      </a>
-                     <p style="font-size:.875rem;color:var(--tx3);line-height:1.65;max-width:280px">Precision gold trading automation with advanced basket management for MT5.</p>
+                     <a href="https://t.me/drscalperofficial" target="_blank" rel="noopener" class="footer-telegram-button" aria-label="Contact us on Telegram">
+                        <span class="footer-telegram-icon"><i class="fa-brands fa-telegram" aria-hidden="true"></i></span>
+                        <span>Contact</span>
+                     </a>
+                     <p class="footer-disclaimer">Trading XAUUSD involves substantial risk. Past performance does not guarantee future results. The EA, like any automated system, can lose money. Use only capital you can afford to lose.</p>
                   </div>
-                  <div class="col-6 col-md-2 fcol">
-                     <h5>Product</h5>
-                     <a href="#features">How It Works</a><a href="#how">Features</a><a href="#pricing">Pricing</a><a href="#faq">Downloads</a><a href="#downloads">FAQ</a>
+               
                   </div>
-                  <div class="col-6 col-md-2 fcol">
-                     <h5>Legal</h5>
-                     <a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Risk Disclaimer</a><a href="#">Refund Policy</a>
-                  </div>
-                  <div class="col-6 col-md-4 fcol">
-                     <h5>Contact</h5>
-                     <div class="footer-contact-list">
-                        <a href="tel:+10000000000"><i class="fa-solid fa-phone"></i><span>+1 (000) 000-0000</span></a>
-                        <a href="mailto:contact@example.com"><i class="fa-regular fa-envelope"></i><span>contact@example.com</span></a>
-                        <span><i class="fa-solid fa-location-dot"></i><span>123 Market Street, Dubai</span></span>
-                     </div>
-                  </div>
-               </div>
                <div class="footer-copyright d-flex align-items-center justify-content-center flex-wrap gap-3 pt-4" style="border-top:1px solid var(--bd)">
                   <p style="font-size:.8rem;color:var(--tx3);margin:0"><i class="fa-regular fa-copyright me-1"></i>2026 Dr. Scalper. All rights reserved. Powered by <a href="https://www.feb87.com/" target="_blank" rel="noopener" style="color:var(--pur);text-decoration:underline">feb87</a></p>
+                  </div>
+                     </div>
+         </footer>
+         <div class="payment-modal" id="paymentModal" aria-hidden="true">
+            <div class="payment-modal-backdrop" onclick="closePaymentModal()"></div>
+            <div class="payment-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="paymentModalTitle">
+               <div class="payment-modal-header">
+                  <div>
+                     <h2 id="paymentModalTitle">Purchase GOLDTRAP EA v4.2.3</h2>
+                     <p>Send USDT and confirm on Telegram.</p>
+                  </div>
+                  <button type="button" class="payment-modal-close" aria-label="Close payment window" onclick="closePaymentModal()"><i class="fa-solid fa-xmark"></i></button>
+               </div>
+               <div class="payment-modal-body">
+                  <div class="payment-detail"><span>Plan</span><strong id="paymentPlan">5 Accounts</strong></div>
+                  <div class="payment-detail"><span>Amount</span><strong><b id="paymentAmount">$329</b> <small>USDT</small></strong></div>
+                  <div class="payment-detail"><span>Network</span><strong>TRC20 (Tron)</strong></div>
+                  <div class="payment-wallet">
+                     <span>Wallet Address</span>
+                     <div class="payment-wallet-row">
+                        <code id="paymentWallet">TCbTBQPCpYYLbu2Mxx8BtEbguyKgG85vSz</code>
+                        <button type="button" aria-label="Copy wallet address" onclick="copyWalletAddress(event)"><i class="fa-regular fa-copy"></i></button>
                </div>
             </div>
-         </footer>
+                  <p class="payment-note">After payment, send the transaction screenshot to Dr. Scalper on Telegram for license activation.</p>
+                  <a class="payment-confirm-button" href="https://t.me/drscalperofficial" target="_blank" rel="noopener"><i class="fa-brands fa-telegram" aria-hidden="true"></i>Confirm Payment on Telegram</a>
+               </div>
+            </div>
+         </div>
       </div>
       <!-- /landing -->
       

@@ -1,5 +1,12 @@
 <?php
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'PHPMailer/src/Exception.php';
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
+
 // ===============================
 // CONFIGURATION
 // ===============================
@@ -64,10 +71,56 @@ curl_close($ch);
 
 
 // ===============================
+// EMAIL
+// ===============================
+
+$mail = new PHPMailer(true);
+
+$emailSent = false;
+
+try {
+    // SMTP configuration
+    $mail->isSMTP();
+    $mail->Host       = 'smtpout.secureserver.net';
+    $mail->SMTPAuth   = true;
+    $mail->Username   = 'support@drscalper.com';
+    $mail->Password   = 'Danny@12123';
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+    $mail->Port       = 465;
+
+    // Sender
+    $mail->setFrom(
+        'support@drscalper.com',
+        'Dr. Scalper Website'
+    );
+
+    // Recipient
+    $mail->addAddress('support@drscalper.com');
+
+    // Email
+    $mail->Subject = 'New MT5 Account Registration';
+
+    $emailBody =
+        "New MT5 account registration received\n\n" .
+        "MT5 Account ID: " . $mt5AccountId . "\n" .
+        "Registered Email: " . $registeredEmail . "\n" .
+        "Telegram Username: " . $telegramUsername;
+
+    $mail->Body = $emailBody;
+
+    $mail->send();
+    $emailSent = true;
+
+} catch (Exception $e) {
+    $emailSent = false;
+}
+
+
+// ===============================
 // RESULT
 // ===============================
 
-if ($telegramResponse) {
+if ($telegramResponse && $emailSent) {
     header("Location: registration-success.html");
     exit;
 }

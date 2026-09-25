@@ -86,6 +86,42 @@ const rvObs = new IntersectionObserver(
 );
 document.querySelectorAll('.rv').forEach(el => rvObs.observe(el));
 
+function setFaqExpanded(expanded) {
+    document.querySelectorAll('.faq-extra').forEach(item => item.classList.toggle('is-visible', expanded));
+    document.getElementById('faqViewAllWrap').classList.toggle('d-none', expanded);
+    document.getElementById('faqShowLessWrap').classList.toggle('is-visible', expanded);
+}
+
+function openPaymentModal(button) {
+    const modal = document.getElementById('paymentModal');
+    document.getElementById('paymentPlan').textContent = button.dataset.plan;
+    document.getElementById('paymentAmount').textContent = button.dataset.amount;
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    modal.querySelector('.payment-modal-close').focus();
+}
+
+function closePaymentModal() {
+    const modal = document.getElementById('paymentModal');
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+}
+
+function copyWalletAddress(event) {
+    event.stopPropagation();
+    const wallet = document.getElementById('paymentWallet').textContent;
+    navigator.clipboard?.writeText(wallet);
+    event.currentTarget.title = 'Copied';
+}
+
+document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && document.getElementById('paymentModal')?.classList.contains('is-open')) {
+        closePaymentModal();
+    }
+});
+
 /*  VIDEO POPUP  */
 $('.vidpop').magnificPopup({
     type: 'iframe',
