@@ -4,6 +4,7 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>DR.Scalper - Gold Trading. Built for MT5</title>
+      <link rel="icon" type="image/png" href="img/favicon.png">
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
       <!-- Bootstrap 5.3 -->
@@ -248,7 +249,7 @@
                         <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Complete full verification (KYC)</div>
                         <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Open MT5 trading account</div>
                         <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Submit MT5 ID + email for instant access</div>
-                        <button class="bgrd btn w-100 py-2 mt-4">Get Free Access<i class="fa-solid fa-arrow-right ms-1 fa-sm"></i></button>
+                        <button class="bgrd btn w-100 py-2 mt-4"><a href="free-access.html">Get Free Access</a><i class="fa-solid fa-arrow-right ms-1 fa-sm"></i></button>
                      </div>
                   </div>
                  
@@ -327,8 +328,8 @@
                      <div class="setup-note-title">Setup note — required once per terminal</div>
                      <p>The EA verifies your license online. Add this URL to your MetaTrader whitelist:</p>
                      <div class="setup-note-url">
-                        <code>https://script.google.com/macros/s/AKfycbwdL74RPE8ZqbtLBifJYOHzWMqB-m5ifSvdpNbjJK2TH3DybUeQpafg0plQo2Uy-vHz/exec</code>
-                        <button type="button" class="setup-copy" onclick="navigator.clipboard.writeText('https://a689.link')"><i class="fa-regular fa-copy me-1"></i>Copy</button>
+                        <code id="licenseUrl">https://script.google.com/macros/s/AKfycbwdL74RPE8ZqbtLBifJYOHzWMqB-m5ifSvdpNbjJK2TH3DybUeQpafg0plQo2Uy-vHz/exec</code>
+                        <button type="button" class="setup-copy" onclick="copyToClipboard('licenseUrl')"><i class="fa-regular fa-copy me-1"></i>Copy</button>
                      </div>
                      <p class="setup-note-instructions">MT5/MT4 → Tools → Options → Expert Advisors → tick "Allow WebRequest for listed URL" → add the domain → OK.</p>
                   </div>
@@ -1316,5 +1317,29 @@
       <script src="js/jquery.magnific-popup.min.js"></script>
       <!-- Main js -->
       <script src="js/main.js"></script>
+      <script>
+      function copyToClipboard(elementId) {
+         const text = document.getElementById(elementId).textContent;
+         const button = event.target.closest('button');
+         const originalContent = button.innerHTML;
+
+         navigator.clipboard.writeText(text).then(function() {
+            button.innerHTML = '<i class="fa-solid fa-check me-1"></i>Copied';
+            button.style.color = '#34d399';
+            setTimeout(function() {
+               button.innerHTML = originalContent;
+               button.style.color = '';
+            }, 2000);
+         }, function(err) {
+            console.error('Failed to copy: ', err);
+            button.innerHTML = '<i class="fa-solid fa-xmark me-1"></i>Failed';
+            button.style.color = '#ef4444';
+            setTimeout(function() {
+               button.innerHTML = originalContent;
+               button.style.color = '';
+            }, 2000);
+         });
+      }
+      </script>
    </body>
 </html>

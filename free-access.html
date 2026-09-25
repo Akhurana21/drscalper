@@ -4,6 +4,7 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Free Access | Dr. Scalper EA</title>
+      <link rel="icon" type="image/png" href="img/favicon.png">
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
       <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -17,6 +18,28 @@
             padding: 12px 16px;
             border-radius: 8px;
             margin-top: 16px;
+         }
+         .setup-copy {
+            background: var(--bg3);
+            border: 1px solid var(--bd);
+            border-radius: 6px;
+            padding: 4px 10px;
+            margin-left: 8px;
+            cursor: pointer;
+            font-size: 0.75rem;
+            color: var(--tx2);
+            transition: all 0.2s;
+         }
+         .setup-copy:hover {
+            background: var(--bg4);
+            border-color: var(--tx3);
+         }
+         .free-referral-note {
+            display: flex;
+            align-items: center;
+            margin-top: 12px;
+            font-size: 0.85rem;
+            color: var(--tx2);
          }
       </style>
    </head>
@@ -65,7 +88,11 @@
                      <h2>Register via My Link</h2>
                      <p>Register a new trading account through our referral link. Your account must be registered under our link to qualify for free access.</p>
                      <a href="https://vtm.pro/la5-com/global/Sk3UytRC" class="bgrd btn" target="_blank" rel="noopener">Register New Account <i class="fa-solid fa-arrow-up-right-from-square ms-2"></i></a>
-                     <div class="free-referral-note"><strong>Referral code:  </strong>Sk3UytRC</div>
+                     <div class="free-referral-note">
+                        <strong>Referral code:  </strong>
+                        <span id="referralCode">Sk3UytRC</span>
+                        <button type="button" class="setup-copy" onclick="copyToClipboard('referralCode')"><i class="fa-regular fa-copy me-1"></i>Copy</button>
+                     </div>
                   </div>
                </div>
 
@@ -126,11 +153,25 @@
          <i class="fa-solid fa-arrow-up"></i>
       </button>
 
-      <footer class="free-access-footer">
-         <div class="container d-flex align-items-center justify-content-between flex-wrap gap-3">
-            <span>© 2026 Dr. Scalper EA. All rights reserved.</span>
-            <a href="index.html">Back to Dr. Scalper</a>
-         </div>
+      <footer id="foot">
+         <div class="container">
+            <div class="row g-5 mb-5 justify-content-center">
+               <div class="col-lg-6 footer-brand text-center">
+                  <a class="d-flex align-items-center justify-content-center gap-2 mb-3" href="#" style="font-size:1.15rem;font-weight:700;color:var(--tx)">
+
+                  </a>
+                  <a href="https://t.me/drscalperofficial" target="_blank" rel="noopener" class="footer-telegram-button" aria-label="Contact us on Telegram">
+                     <span class="footer-telegram-icon"><i class="fa-brands fa-telegram" aria-hidden="true"></i></span>
+                     <span>Contact</span>
+                  </a>
+                  <p class="footer-disclaimer">Trading XAUUSD involves substantial risk. Past performance does not guarantee future results. The EA, like any automated system, can lose money. Use only capital you can afford to lose.</p>
+               </div>
+
+               </div>
+            <div class="footer-copyright d-flex align-items-center justify-content-center flex-wrap gap-3 pt-4" style="border-top:1px solid var(--bd)">
+               <p style="font-size:.8rem;color:var(--tx3);margin:0"><i class="fa-regular fa-copyright me-1"></i>2026 Dr. Scalper. All rights reserved. Powered by <a href="https://www.feb87.com/" target="_blank" rel="noopener" style="color:var(--pur);text-decoration:underline">feb87</a></p>
+               </div>
+                  </div>
       </footer>
 
       <script>
@@ -155,6 +196,29 @@
             const result = document.getElementById('freeVerificationResult');
             result.innerHTML = '<div class="free-success-message">✓ Your registration details have been submitted successfully! We will verify your account and contact you shortly.</div>';
             result.classList.add('visible');
+         }
+
+         function copyToClipboard(elementId) {
+            const text = document.getElementById(elementId).textContent;
+            const button = event.target.closest('button');
+            const originalContent = button.innerHTML;
+
+            navigator.clipboard.writeText(text).then(function() {
+               button.innerHTML = '<i class="fa-solid fa-check me-1"></i>Copied';
+               button.style.color = '#34d399';
+               setTimeout(function() {
+                  button.innerHTML = originalContent;
+                  button.style.color = '';
+               }, 2000);
+            }, function(err) {
+               console.error('Failed to copy: ', err);
+               button.innerHTML = '<i class="fa-solid fa-xmark me-1"></i>Failed';
+               button.style.color = '#ef4444';
+               setTimeout(function() {
+                  button.innerHTML = originalContent;
+                  button.style.color = '';
+               }, 2000);
+            });
          }
       </script>
    </body>
