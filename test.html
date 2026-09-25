@@ -126,6 +126,7 @@
 
             <div
                 class="tradingview-widget-container__widget"
+                id="tradingview_widget"
             ></div>
 
 
@@ -160,8 +161,10 @@
                 type="text/javascript"
                 src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js"
                 async
-            >
-            {
+            ></script>
+
+            <script type="text/javascript">
+            new TradingView.widget({
                 "autosize": true,
                 "symbol": "OANDA:XAUUSD",
                 "interval": "15",
@@ -175,8 +178,9 @@
                 "hide_legend": false,
                 "save_image": false,
                 "calendar": false,
-                "support_host": "https://www.tradingview.com"
-            }
+                "support_host": "https://www.tradingview.com",
+                "container_id": "tradingview_widget"
+            });
             </script>
 
         </div>

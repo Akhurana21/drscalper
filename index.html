@@ -79,79 +79,12 @@
                </div>
                <div class="row justify-content-center mt-5">
                   <div class="col-lg-11 adi">
-                     <div class="dwrap">
-                        <div class="dtbar"><span class="dd" style="background:#ff5f57"></span><span class="dd" style="background:#ffbd2e"></span><span class="dd" style="background:#28c840"></span><span class="ms-auto me-auto" style="font-size:.76rem;color:var(--tx3)">Dr. Scalper Dashboard � drscalper.com/dashboard</span></div>
-                        <div class="dgrid">
-                           <div class="dside">
-                              <div style="font-size:.64rem;text-transform:uppercase;letter-spacing:.1em;color:var(--tx3);padding:0 10px 10px;font-weight:700">Overview</div>
-                              <button class="dsi on"><i class="fa-solid fa-gauge-high"></i> Dashboard</button>
-                              <button class="dsi"><i class="fa-solid fa-chart-line"></i> Trading</button>
-                              <button class="dsi"><i class="fa-solid fa-robot"></i> EA Settings</button>
-                              <button class="dsi"><i class="fa-solid fa-coins"></i> Positions</button>
-                              <button class="dsi"><i class="fa-solid fa-history"></i> History</button>
-                           </div>
-                           <div class="p-3">
-                              <div class="row g-2 mb-3">
-                                 <div class="col-6 col-sm-3">
-                                    <div class="stpill">
-                                       <div style="font-size:1.4rem;font-weight:700" class="gt">$12,450</div>
-                                       <div style="font-size:.67rem;color:var(--tx3)">Today's Profit</div>
-                                       <div style="font-size:.67rem;color:#34d399;font-weight:600"><i class="fa-solid fa-caret-up me-1"></i>+8.4%</div>
-                                    </div>
-                                 </div>
-                                 <div class="col-6 col-sm-3">
-                                    <div class="stpill">
-                                       <div style="font-size:1.4rem;font-weight:700">47</div>
-                                       <div style="font-size:.67rem;color:var(--tx3)">Total Trades</div>
-                                       <div style="font-size:.67rem;color:#34d399;font-weight:600"><i class="fa-solid fa-caret-up me-1"></i>89.4% Win</div>
-                                    </div>
-                                 </div>
-                                 <div class="col-6 col-sm-3">
-                                    <div class="stpill">
-                                       <div style="font-size:1.4rem;font-weight:700">3.2</div>
-                                       <div style="font-size:.67rem;color:var(--tx3)">Active Baskets</div>
-                                       <div style="font-size:.67rem;color:#60a5fa;font-weight:600"><i class="fa-solid fa-caret-down me-1"></i>-1</div>
-                                    </div>
-                                 </div>
-                                 <div class="col-6 col-sm-3">
-                                    <div class="stpill">
-                                       <div style="font-size:1.4rem;font-weight:700">$48.2K</div>
-                                       <div style="font-size:.67rem;color:var(--tx3)">Weekly Profit</div>
-                                       <div style="font-size:.67rem;color:#34d399;font-weight:600"><i class="fa-solid fa-caret-up me-1"></i>+15.2%</div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="row g-2">
-                                 <div class="col-sm-7">
-                                    <div style="background:var(--bg3);border:1px solid var(--bd);border-radius:12px;padding:14px">
-                                       <div style="font-size:.73rem;color:var(--tx3);margin-bottom:10px;font-weight:600"><i class="fa-solid fa-chart-bar me-1"></i>Trading Performance � Last 7 days</div>
-                                       <div style="display:flex;align-items:flex-end;gap:5px;height:76px">
-                                          <div class="bbar" style="height:45%"></div>
-                                          <div class="bbar" style="height:72%"></div>
-                                          <div class="bbar" style="height:55%"></div>
-                                          <div class="bbar" style="height:88%"></div>
-                                          <div class="bbar" style="height:63%"></div>
-                                          <div class="bbar" style="height:95%"></div>
-                                          <div class="bbar" style="height:78%"></div>
-                                       </div>
-                                       <div class="d-flex justify-content-between mt-2" style="font-size:.62rem;color:var(--tx3)"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div>
-                                    </div>
-                                 </div>
-                                 <div class="col-sm-5">
-                                    <div style="background:var(--bg3);border:1px solid var(--bd);border-radius:12px;padding:12px;height:100%;display:flex;flex-direction:column;gap:8px">
-                                       <div style="font-size:.71rem;color:var(--tx3);font-weight:600"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--pur);box-shadow:0 0 6px var(--pur);margin-right:6px;animation:bpls 2s infinite"></span>Live Trading</div>
-                                       <div class="cbbl cbus">Gold (XAUUSD) basket active</div>
-                                       <div class="cbbl cbai"><strong>7 positions.</strong> Total: 0.15 lots. Net: +$245.</div>
-                                       <div style="display:flex;gap:4px;padding:8px 12px">
-                                          <div class="tdot"></div>
-                                          <div class="tdot" style="animation-delay:.15s"></div>
-                                          <div class="tdot" style="animation-delay:.3s"></div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
+                     <div style="height: 550px; background: var(--bg3); border: 1px solid var(--bd); border-radius: 12px; overflow: hidden;">
+                        <iframe
+                           src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_76d87&symbol=OANDA%3AXAUUSD&interval=15&hidesidetoolbar=0&symboledit=1&saveimage=0&toolbarbg=f1f3f6&studies=%5B%5D&theme=dark&style=1&timezone=Asia%2FKolkata"
+                           style="width: 100%; height: 100%; border: none;"
+                           title="TradingView Widget"
+                        ></iframe>
                      </div>
                   </div>
                </div>
