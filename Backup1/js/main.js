@@ -52,14 +52,6 @@ document.getElementById('scrollTopBtn').addEventListener('click', () => {
         behavior: 'smooth'
     });
 });
-document.querySelectorAll('#nbar .nav-link, #mbmenu .nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-        const target = link.getAttribute('href');
-        document.querySelectorAll('#nbar .nav-link, #mbmenu .nav-link').forEach(item => {
-            item.classList.toggle('active', item.getAttribute('href') === target);
-        });
-    });
-});
 document.getElementById('mbtog').addEventListener('click', () => {
     mbOpen = !mbOpen;
     document.getElementById('mbmenu').classList.toggle('open', mbOpen);

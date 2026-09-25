@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" id="htmlRoot">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Free Access | Dr. Scalper EA</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="css/all.min.css">
+      <link rel="stylesheet" href="css/style.css">
+   </head>
+   <body class="free-access-page">
+      <nav class="free-access-nav">
+         <div class="container d-flex align-items-center justify-content-between">
+            <a href="index.html" class="free-access-logo">
+               <img src="img/logo.png" alt="Dr. Scalper Logo">
+            </a>
+            <div class="d-flex align-items-center gap-2">
+               <button class="boc free-theme-toggle" id="freeThemeToggle" type="button" aria-label="Toggle theme">
+                  <i class="fa-solid fa-moon" id="freeMoonIcon"></i>
+                  <i class="fa-solid fa-sun" id="freeSunIcon" style="display:none"></i>
+               </button>
+               <a href="index.html#pricing" class="boc btn free-back-link">Back to pricing</a>
+            </div>
+         </div>
+      </nav>
+
+      <main>
+         <section class="free-access-hero">
+            <div class="aur aur-a" style="top:-220px;left:-180px"></div>
+            <div class="aur aur-b" style="top:180px;right:-220px"></div>
+            <div class="container position-relative">
+               <div class="text-center">
+                  <span class="free-access-eyebrow">Free Access</span>
+                  <h1>How to Get <span class="gt">Free Access</span></h1>
+                  <p>Follow these simple steps to get Dr. Scalper EA for free.</p>
+               </div>
+
+               <div class="free-access-progress">
+                  <a href="#step-1" class="free-progress-item active"><span>01</span><strong>Register via My Link</strong></a>
+                  <a href="#step-2" class="free-progress-item"><span>02</span><strong>Complete Verification (KYC)</strong></a>
+                  <a href="#step-3" class="free-progress-item"><span>03</span><strong>Open MT5 Trading Account</strong></a>
+                  <a href="#verification" class="free-progress-item"><span>04</span><strong>Get Your Free Access</strong></a>
+               </div>
+            </div>
+         </section>
+
+         <section class="free-access-content">
+            <div class="container">
+               <div class="free-access-detail" id="step-1">
+                  <div class="free-detail-number">01</div>
+                  <div>
+                     <span class="slbl">Step one</span>
+                     <h2>Register via My Link</h2>
+                     <p>Register a new trading account through our referral link. Your account must be registered under our link to qualify for free access.</p>
+                     <a href="https://example.com/replace-with-referral-link" class="bgrd btn" target="_blank" rel="noopener">Register New Account <i class="fa-solid fa-arrow-up-right-from-square ms-2"></i></a>
+                     <div class="free-referral-note"><strong>Referral code:</strong> REPLACE_ME</div>
+                  </div>
+               </div>
+
+               <div class="free-access-detail" id="step-2">
+                  <div class="free-detail-number">02</div>
+                  <div>
+                     <span class="slbl">Step two</span>
+                     <h2>Complete Verification (KYC)</h2>
+                     <p>Fully verify your identity inside the broker platform. Verification is required before you can open and trade from your MT5 account.</p>
+                  </div>
+               </div>
+
+               <div class="free-access-detail" id="step-3">
+                  <div class="free-detail-number">03</div>
+                  <div>
+                     <span class="slbl">Step three</span>
+                     <h2>Open MT5 Trading Account</h2>
+                     <p>Create a new MT5 trading account inside the broker platform, then keep your MT5 account ID ready for the final verification step.</p>
+                     <div class="free-account-tip"><i class="fa-solid fa-circle-info"></i><span><strong>Recommended setup:</strong> Use a cent account while you test the EA and follow your broker's account requirements.</span></div>
+                  </div>
+               </div>
+
+               <div class="free-access-detail free-verification-detail" id="verification">
+                  <div class="free-detail-number">04</div>
+                  <div class="w-100">
+                     <span class="slbl">Step four</span>
+                     <h2>Get Your Free Access</h2>
+                     <p>Enter your MT5 account ID and registered email. We will use these details to verify your eligibility and send your access information.</p>
+                     <form class="free-verification-form" id="freeVerificationForm">
+                        <div class="row g-3">
+                           <div class="col-md-6">
+                              <label for="mt5AccountId">MT5 Account ID</label>
+                              <input id="mt5AccountId" name="mt5AccountId" type="text" inputmode="numeric" placeholder="Enter your MT5 account ID" required>
+                           </div>
+                           <div class="col-md-6">
+                              <label for="registeredEmail">Registered Email</label>
+                              <input id="registeredEmail" name="registeredEmail" type="email" placeholder="you@example.com" required>
+                           </div>
+                           <div class="col-12">
+                              <label for="telegramUsername">Telegram username <span>(optional)</span></label>
+                              <input id="telegramUsername" name="telegramUsername" type="text" placeholder="@yourusername">
+                           </div>
+                        </div>
+                        <button type="submit" class="bgrd btn free-verify-button">Verify &amp; Get Access <i class="fa-solid fa-arrow-right ms-2"></i></button>
+                        <p class="free-form-note"><i class="fa-solid fa-shield-halved me-1"></i>Your details will open a Telegram message to the temporary support account below.</p>
+                     </form>
+                     <div class="free-verification-result" id="freeVerificationResult" role="status"></div>
+                  </div>
+               </div>
+
+               <div class="free-support-note">
+                  <i class="fa-brands fa-telegram"></i>
+                  
+                  
+               </div>
+            </div>
+         </section>
+      </main>
+
+      <button id="freeScrollTopBtn" class="scroll-top-btn free-page-scroll-top" type="button" aria-label="Scroll to top">
+         <i class="fa-solid fa-arrow-up"></i>
+      </button>
+
+      <footer class="free-access-footer">
+         <div class="container d-flex align-items-center justify-content-between flex-wrap gap-3">
+            <span>© 2026 Dr. Scalper EA. All rights reserved.</span>
+            <a href="index.html">Back to Dr. Scalper</a>
+         </div>
+      </footer>
+
+      <script>
+         const root = document.getElementById('htmlRoot');
+         const themeToggle = document.getElementById('freeThemeToggle');
+         const moonIcon = document.getElementById('freeMoonIcon');
+         const sunIcon = document.getElementById('freeSunIcon');
+         const telegramUrl = 'https://t.me/replace_with_telegram_username';
+
+         themeToggle.addEventListener('click', () => {
+            const lightMode = root.classList.toggle('lm');
+            moonIcon.style.display = lightMode ? 'none' : 'inline';
+            sunIcon.style.display = lightMode ? 'inline' : 'none';
+         });
+
+         document.getElementById('freeVerificationForm').addEventListener('submit', (event) => {
+            event.preventDefault();
+            const accountId = document.getElementById('mt5AccountId').value.trim();
+            const email = document.getElementById('registeredEmail').value.trim();
+            const telegram = document.getElementById('telegramUsername').value.trim();
+            const message = `Free access verification request%0A%0AMT5 Account ID: ${encodeURIComponent(accountId)}%0ARegistered email: ${encodeURIComponent(email)}%0ATelegram: ${encodeURIComponent(telegram || 'Not provided')}`;
+            const result = document.getElementById('freeVerificationResult');
+            result.innerHTML = `Your details are ready. <a href="${telegramUrl}?text=${message}" target="_blank" rel="noopener">Continue in Telegram</a> to send the request.`;
+            result.classList.add('visible');
+         });
+
+         document.getElementById('freeScrollTopBtn').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+         });
+      </script>
+   </body>
+</html>

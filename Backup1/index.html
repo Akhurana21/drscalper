@@ -3,7 +3,7 @@
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>DR.Scalper - Gold Trading. Built for MT5</title>
+      <title>DR.Scalper - Gold Trading. Built for MT4 & MT5</title>
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
       <!-- Bootstrap 5.3 -->
@@ -32,7 +32,7 @@
                   <div class="d-none d-lg-flex align-items-center gap-1 mx-auto">
                      <a href="#how" class="nav-link">How it works</a>
                      <a href="#features" class="nav-link">Features</a>
-                     <a href="#downloads" class="nav-link">Download</a>
+                     <a href="#integrations" class="nav-link">Integrations</a>
                      <a href="#pricing" class="nav-link">Pricing</a>
                      <a href="#faq" class="nav-link">FAQ</a>
                   </div>
@@ -41,8 +41,12 @@
                      <i class="fa-solid fa-sun" id="suni" style="display:none"></i>
                      <i class="fa-solid fa-moon" id="mooni"></i>
                      </button>
-                     
-                     
+                     <button class="boc px-3 py-2 d-none d-sm-flex align-items-center gap-1" data-bs-toggle="offcanvas" data-bs-target="#lofc" onclick="swTab('login')">
+                     <i class="fa-regular fa-user fa-sm"></i> Log in
+                     </button>
+                     <button class="bgrd btn px-3 py-2 d-none d-sm-flex align-items-center gap-1" data-bs-toggle="offcanvas" data-bs-target="#lofc" onclick="swTab('signup')">
+                     Get Started <i class="fa-solid fa-arrow-right fa-sm"></i>
+                     </button>
                      <button class="boc d-lg-none px-2 py-2" id="mbtog" style="border-radius:10px">
                      <i class="fa-solid fa-bars" id="barIcon"></i>
                      <i class="fa-solid fa-xmark" id="xIcon" style="display:none"></i>
@@ -54,7 +58,7 @@
          <div id="mbmenu">
             <a href="#how" class="nav-link d-block py-3 border-bottom" style="border-color:var(--bd)!important">How it works</a>
             <a href="#features" class="nav-link d-block py-3 border-bottom" style="border-color:var(--bd)!important">Features</a>
-            <a href="#downloads" class="nav-link d-block py-3 border-bottom" style="border-color:var(--bd)!important">Downloads</a>
+            <a href="#integrations" class="nav-link d-block py-3 border-bottom" style="border-color:var(--bd)!important">Integrations</a>
             <a href="#pricing" class="nav-link d-block py-3 border-bottom" style="border-color:var(--bd)!important">Pricing</a>
             <a href="#faq" class="nav-link d-block py-3">FAQ</a>
             <div class="d-flex gap-2 mt-3">
@@ -69,13 +73,18 @@
             <div class="aur aur-a" style="bottom:-80px;left:45%;transform:translateX(-50%);opacity:.4"></div>
             <div class="container position-relative" style="z-index:2">
                <div class="text-center">
-                  <h1 class="h1 afu" style="animation-delay:.12s">Precision Trading for Gold.<br>Built for <span class="gt">MT5</span></h1>
+                  <h1 class="h1 afu" style="animation-delay:.12s">Precision Trading for Gold.<br>Built for <span class="gt">MT4 & MT5</span></h1>
                   <p class="mx-auto afu" style="max-width:580px;font-size:clamp(.95rem,1.8vw,1.2rem);color:var(--tx2);margin-bottom:36px;animation-delay:.2s">Dr. Scalper EA is designed to automate trade execution and basket management while following a structured trading methodology, reducing the need for manual intervention.</p>
                   <div class="d-flex align-items-center justify-content-center gap-3 flex-wrap afu" style="animation-delay:.28s">
                      <a href="#pricing" class="bgrd btn px-4 py-3 fs-6">Get Started <i class="fa-solid fa-arrow-right ms-1"></i></a>
                      <a href="#how" class="boc btn px-4 py-3 fs-6"><i class="fa-solid fa-circle-play me-2" style="color:var(--pur)"></i>How It Works</a>
                   </div>
-                  
+                  <div class="mt-5 afu" style="animation-delay:.4s">
+                     <p style="font-size:.71rem;color:var(--tx3);text-transform:uppercase;letter-spacing:.12em;margin-bottom:14px">Why Traders Choose Dr. Scalper EA</p>
+                     <div class="d-flex align-items-center justify-content-center gap-4 flex-wrap" style="font-size:.85rem;color:var(--tx2)">
+                        <span class="tlog">Automated Trade Execution</span><span class="tlog">Optimized for Gold Trading</span><span class="tlog">MT5 Compatible</span><span class="tlog">Advanced Position Management</span>
+                     </div>
+                  </div>
                </div>
                <div class="row justify-content-center mt-5">
                   <div class="col-lg-11 adi">
@@ -157,7 +166,32 @@
                </div>
             </div>
          </section>
-         
+         <!-- SOCIAL PROOF -->
+         <section id="proof">
+            <div class="container">
+               <div class="row g-3 align-items-center text-center">
+                  <div class="col-6 col-sm-3">
+                     <div class="pnum">89.4%</div>
+                     <div class="plbl"><i class="fa-solid fa-star text-warning me-1"></i>Win Rate</div>
+                  </div>
+                  <div class="col-6 col-sm-3">
+                     <div class="pnum">5K+</div>
+                     <div class="plbl">Active Traders</div>
+                  </div>
+                  <div class="col-6 col-sm-3">
+                     <div class="pnum">$2M+</div>
+                     <div class="plbl">Monthly Volume</div>
+                  </div>
+                  <div class="col-6 col-sm-3">
+                     <div class="pnum">24/7</div>
+                     <div class="plbl">Automated Trading</div>
+                  </div>
+               </div>
+               <div class="lscroll">
+                  <div class="ltrack"><span class="lbr">VT Markets</span><span class="lbr">IC Markets</span><span class="lbr">Pepperstone</span><span class="lbr">FxPro</span><span class="lbr">XM</span><span class="lbr">OANDA</span><span class="lbr">Tickmill</span><span class="lbr">FXTM</span><span class="lbr">VT Markets</span><span class="lbr">IC Markets</span><span class="lbr">Pepperstone</span><span class="lbr">FxPro</span><span class="lbr">XM</span><span class="lbr">OANDA</span><span class="lbr">Tickmill</span><span class="lbr">FXTM</span></div>
+               </div>
+            </div>
+         </section>
          <!-- PROBLEM -->
          <section class="sp position-relative">
             <div class="aur aur-b" style="top:50%;right:-200px;transform:translateY(-50%)"></div>
@@ -167,61 +201,91 @@
                   <h2 class="stitle">Advanced Features for <span class="gt">Serious Traders</span></h2>
                   <p class="ssub mx-auto">Built for gold trading with precision execution and intelligent basket management.</p>
                </div>
-               <div class="row g-4" style="row-gap:40px">
-                  <div class="col-md-3 rv">
+               <div class="row g-4">
+                  <div class="col-md-4 rv">
                      <div class="gc p-4 h-100">
                         <div style="width:52px;height:52px;border-radius:14px;background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.2);display:flex;align-items:center;justify-content:center;margin-bottom:18px"><i class="fa-solid fa-robot fa-lg" style="color:#f87171"></i></div>
                         <h3 class="fw-semibold fs-5 mb-2">Automated Trade Execution</h3>
+                        <p style="font-size:.875rem;color:var(--tx2)">Eliminate emotional trading decisions. Dr. Scalper EA executes trades automatically based on predefined strategy parameters.</p>
                      </div>
                   </div>
-                  <div class="col-md-3 rv" style="transition-delay:.1s">
+                  <div class="col-md-4 rv" style="transition-delay:.1s">
                      <div class="gc p-4 h-100">
                         <div style="width:52px;height:52px;border-radius:14px;background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.2);display:flex;align-items:center;justify-content:center;margin-bottom:18px"><i class="fa-solid fa-coins fa-lg" style="color:#fbbf24"></i></div>
                         <h3 class="fw-semibold fs-5 mb-2">Optimized for Gold Trading</h3>
+                        <p style="font-size:.875rem;color:var(--tx2)">Specifically tuned for XAUUSD trading with optimized entry points, basket management, and recovery strategies.</p>
                      </div>
                   </div>
-                  <div class="col-md-3 rv" style="transition-delay:.2s">
+                  <div class="col-md-4 rv" style="transition-delay:.2s">
                      <div class="gc p-4 h-100">
                         <div style="width:52px;height:52px;border-radius:14px;background:rgba(99,102,241,.12);border:1px solid rgba(99,102,241,.2);display:flex;align-items:center;justify-content:center;margin-bottom:18px"><i class="fa-solid fa-layer-group fa-lg" style="color:#a78bfa"></i></div>
                         <h3 class="fw-semibold fs-5 mb-2">Advanced Position Management</h3>
-                     </div>
-                  </div>
-               
-                  <div class="col-md-3 rv">
-                     <div class="gc p-4 h-100">
-                        <div style="width:52px;height:52px;border-radius:14px;background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.2);display:flex;align-items:center;justify-content:center;margin-bottom:18px"><i class="fa-solid fa-robot fa-lg" style="color:#f87171"></i></div>
-                        <h3 class="fw-semibold fs-5 mb-2">MT5 Compatible</h3>
-                     </div>
-                  </div>
-                  <div class="col-md-3 rv" style="transition-delay:.1s">
-                     <div class="gc p-4 h-100">
-                        <div style="width:52px;height:52px;border-radius:14px;background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.2);display:flex;align-items:center;justify-content:center;margin-bottom:18px"><i class="fa-solid fa-coins fa-lg" style="color:#fbbf24"></i></div>
-                        <h3 class="fw-semibold fs-5 mb-2">Compatible with cent & standard accounts</h3>
-                     </div>
-                  </div>
-                  <div class="col-md-3 rv" style="transition-delay:.2s">
-                     <div class="gc p-4 h-100">
-                        <div style="width:52px;height:52px;border-radius:14px;background:rgba(99,102,241,.12);border:1px solid rgba(99,102,241,.2);display:flex;align-items:center;justify-content:center;margin-bottom:18px"><i class="fa-solid fa-layer-group fa-lg" style="color:#a78bfa"></i></div>
-                        <h3 class="fw-semibold fs-5 mb-2">VPS-Friendly Operation</h3>
-                     </div>
-                  </div>
-                  <div class="col-md-3 rv" style="transition-delay:.2s">
-                     <div class="gc p-4 h-100">
-                        <div style="width:52px;height:52px;border-radius:14px;background:rgba(99,102,241,.12);border:1px solid rgba(99,102,241,.2);display:flex;align-items:center;justify-content:center;margin-bottom:18px"><i class="fa-solid fa-layer-group fa-lg" style="color:#a78bfa"></i></div>
-                        <h3 class="fw-semibold fs-5 mb-2">Optional daily profit target</h3>
-                     </div>
-                  </div>
-                  <div class="col-md-3 rv" style="transition-delay:.2s">
-                     <div class="gc p-4 h-100">
-                        <div style="width:52px;height:52px;border-radius:14px;background:rgba(99,102,241,.12);border:1px solid rgba(99,102,241,.2);display:flex;align-items:center;justify-content:center;margin-bottom:18px"><i class="fa-solid fa-layer-group fa-lg" style="color:#a78bfa"></i></div>
-                        <h3 class="fw-semibold fs-5 mb-2">Customizable daily loss</h3>
+                        <p style="font-size:.875rem;color:var(--tx2)">Intelligent basket management handles multiple positions collectively with structured recovery and exit rules.</p>
                      </div>
                   </div>
                </div>
-               
             </div>
          </section>
-      
+         <!-- FEATURES -->
+         <section id="features" class="sp" style="background:var(--bg2)">
+            <div class="container">
+               <div class="text-center mb-5 rv">
+                  <span class="slbl">Key Features</span>
+                  <h2 class="stitle">Why Traders Choose <span class="gt">Dr. Scalper EA</span></h2>
+                  <p class="ssub mx-auto">Comprehensive features designed for professional gold trading automation.</p>
+               </div>
+               <div class="row g-3">
+                  <div class="col-md-4 rv">
+                     <div class="gc p-4 h-100">
+                        <div class="ftico"><i class="fa-solid fa-check-circle"></i></div>
+                        <h3 class="fs-5 fw-semibold mb-2">MT5 Compatible</h3>
+                        <p style="font-size:.875rem;color:var(--tx2)">Fully compatible with MetaTrader 5 platform for seamless integration with your existing trading setup.</p>
+                        <span class="ftag">MT4 & MT5</span>
+                     </div>
+                  </div>
+                  <div class="col-md-4 rv" style="transition-delay:.05s">
+                     <div class="gc p-4 h-100">
+                        <div class="ftico"><i class="fa-solid fa-server"></i></div>
+                        <h3 class="fs-5 fw-semibold mb-2">VPS-Friendly Operation</h3>
+                        <p style="font-size:.875rem;color:var(--tx2)">Optimized for VPS environments ensuring 24/7 operation without requiring your PC to be constantly on.</p>
+                        <span class="ftag">24/7 Trading</span>
+                     </div>
+                  </div>
+                  <div class="col-md-4 rv" style="transition-delay:.1s">
+                     <div class="gc p-4 h-100">
+                        <div class="ftico"><i class="fa-solid fa-sliders"></i></div>
+                        <h3 class="fs-5 fw-semibold mb-2">Customizable Controls</h3>
+                        <p style="font-size:.875rem;color:var(--tx2)">Optional daily profit target and customizable daily loss control to manage your risk effectively.</p>
+                        <span class="ftag">Risk Management</span>
+                     </div>
+                  </div>
+                  <div class="col-md-4 rv" style="transition-delay:.15s">
+                     <div class="gc p-4 h-100">
+                        <div class="ftico"><i class="fa-solid fa-wallet"></i></div>
+                        <h3 class="fs-5 fw-semibold mb-2">Cent & Standard Accounts</h3>
+                        <p style="font-size:.875rem;color:var(--tx2)">Compatible with both cent and standard accounts, giving you flexibility in account types and trading styles.</p>
+                        <span class="ftag">Flexible</span>
+                     </div>
+                  </div>
+                  <div class="col-md-4 rv" style="transition-delay:.2s">
+                     <div class="gc p-4 h-100">
+                        <div class="ftico"><i class="fa-solid fa-layer-group"></i></div>
+                        <h3 class="fs-5 fw-semibold mb-2">Basket Management</h3>
+                        <p style="font-size:.875rem;color:var(--tx2)">Advanced position management that handles multiple positions collectively as a unified basket.</p>
+                        <span class="ftag">Smart Management</span>
+                     </div>
+                  </div>
+                  <div class="col-md-4 rv" style="transition-delay:.25s">
+                     <div class="gc p-4 h-100">
+                        <div class="ftico"><i class="fa-solid fa-sync"></i></div>
+                        <h3 class="fs-5 fw-semibold mb-2">Dynamic Recovery</h3>
+                        <p style="font-size:.875rem;color:var(--tx2)">Intelligent recovery management system that adapts to changing market conditions systematically.</p>
+                        <span class="ftag">Adaptive</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
          <!-- HOW IT WORKS -->
          <section id="how" class="sp" style="background:var(--bg3)">
             <div class="container">
@@ -263,7 +327,7 @@
                      <div class="gc p-4 h-100 text-center">
                         <div class="hnum">05</div>
                         <h3 class="fs-5 fw-semibold mb-2">Automated Cycle Management</h3>
-                        <p style="font-size:.875rem;color:var(--tx2)"> After completing a trading cycle, the EA automatically prepares for the next opportunity according to its predefined rules.</p>
+                        <p style="font-size:.875rem;color:var(--tx2)">After completing a trading cycle, the EA automatically prepares for the next opportunity according to its predefined rules.</p>
                      </div>
                   </div>
                   <div class="col-md-4 rv" style="transition-delay:.5s">
@@ -273,11 +337,70 @@
                         <p style="font-size:.875rem;color:var(--tx2)">Dr. Scalper EA can temporarily pause new entries during predefined periods while continuing to manage existing positions.</p>
                      </div>
                   </div>
+               </div>
+            </div>
+         </section>
+         <!-- INTEGRATIONS -->
+         <section id="integrations" class="sp position-relative">
+            <div class="aur aur-b" style="top:50%;right:-200px;transform:translateY(-50%)"></div>
+            <div class="container position-relative" style="z-index:1">
+               <div class="text-center mb-5 rv">
+                  <span class="slbl">Supported Platforms</span>
+                  <h2 class="stitle">Works with <span class="gt">MT4 & MT5</span></h2>
+                  <p class="ssub mx-auto">Compatible with major brokers and trading platforms for seamless integration.</p>
+               </div>
+               <div class="row g-3 justify-content-center rv">
+                  <div class="col-6 col-md-4">
+                     <div class="gc p-4 text-center h-100">
+                        <div style="width:52px;height:52px;border-radius:14px;background:rgba(232,186,89,.15);display:flex;align-items:center;justify-content:center;margin:0 auto 14px"><i class="fa-solid fa-chart-line fa-xl" style="color:#E8BA59"></i></div>
+                        <div class="fw-semibold mb-1">MetaTrader 4</div>
+                        <div style="font-size:.78rem;color:var(--tx3);margin-bottom:8px">Full MT4 compatibility</div>
+                        <span class="ftag"><i class="fa-solid fa-check me-1"></i>Supported</span>
+                     </div>
+                  </div>
+                  <div class="col-6 col-md-4">
+                     <div class="gc p-4 text-center h-100">
+                        <div style="width:52px;height:52px;border-radius:14px;background:rgba(232,186,89,.15);display:flex;align-items:center;justify-content:center;margin:0 auto 14px"><i class="fa-solid fa-chart-area fa-xl" style="color:#E8BA59"></i></div>
+                        <div class="fw-semibold mb-1">MetaTrader 5</div>
+                        <div style="font-size:.78rem;color:var(--tx3);margin-bottom:8px">Full MT5 compatibility</div>
+                        <span class="ftag"><i class="fa-solid fa-check me-1"></i>Supported</span>
+                     </div>
+                  </div>
+                  <div class="col-6 col-md-4">
+                     <div class="gc p-4 text-center h-100">
+                        <div style="width:52px;height:52px;border-radius:14px;background:rgba(52,211,153,.15);display:flex;align-items:center;justify-content:center;margin:0 auto 14px"><i class="fa-solid fa-server fa-xl" style="color:#34d399"></i></div>
+                        <div class="fw-semibold mb-1">VPS Hosting</div>
+                        <div style="font-size:.78rem;color:var(--tx3);margin-bottom:8px">24/7 automated trading</div>
+                        <span class="ftag"><i class="fa-solid fa-check me-1"></i>Optimized</span>
+                     </div>
+                  </div>
+                  <div class="col-6 col-md-4">
+                     <div class="gc p-4 text-center h-100">
+                        <div style="width:52px;height:52px;border-radius:14px;background:rgba(59,130,246,.15);display:flex;align-items:center;justify-content:center;margin:0 auto 14px"><i class="fa-solid fa-building fa-xl" style="color:#60a5fa"></i></div>
+                        <div class="fw-semibold mb-1">VT Markets</div>
+                        <div style="font-size:.78rem;color:var(--tx3);margin-bottom:8px">Preferred broker partner</div>
+                        <span class="ftag"><i class="fa-solid fa-check me-1"></i>Partner</span>
+                     </div>
+                  </div>
+                  <div class="col-6 col-md-4">
+                     <div class="gc p-4 text-center h-100">
+                        <div style="width:52px;height:52px;border-radius:14px;background:rgba(59,130,246,.15);display:flex;align-items:center;justify-content:center;margin:0 auto 14px"><i class="fa-solid fa-globe fa-xl" style="color:#60a5fa"></i></div>
+                        <div class="fw-semibold mb-1">IC Markets</div>
+                        <div style="font-size:.78rem;color:var(--tx3);margin-bottom:8px">Verified compatibility</div>
+                        <span class="ftag"><i class="fa-solid fa-check me-1"></i>Supported</span>
+                     </div>
+                  </div>
+                  <div class="col-6 col-md-4">
+                     <div class="gc p-4 text-center h-100">
+                        <div style="width:52px;height:52px;border-radius:14px;background:rgba(59,130,246,.15);display:flex;align-items:center;justify-content:center;margin:0 auto 14px"><i class="fa-solid fa-exchange-alt fa-xl" style="color:#60a5fa"></i></div>
+                        <div class="fw-semibold mb-1">Pepperstone</div>
+                        <div style="font-size:.78rem;color:var(--tx3);margin-bottom:8px">Verified compatibility</div>
+                        <span class="ftag"><i class="fa-solid fa-check me-1"></i>Supported</span>
+                     </div>
                   </div>
                </div>
             </div>
          </section>
-
          <!-- PRICING -->
          <section id="pricing" class="sp position-relative" style="background:var(--bg2)">
             <div class="aur aur-a" style="top:50%;left:50%;transform:translate(-50%,-50%)"></div>
@@ -289,38 +412,23 @@
                </div>
                <div class="row g-4 align-items-start rv">
                   <div class="col-md-4">
-                     <div class="pcard pop h-100">
-                        <span class="pbadge"><i class="fa-solid fa-star me-1"></i>Most Popular</span>
+                     <div class="pcard h-100">
                         <div style="font-size:.82rem;font-weight:600;color:var(--tx3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px">Free Option</div>
                         <div class="pamt mb-1">FREE</div>
-                        <div style="font-size:.82rem;color:var(--tx3)" class="pper">Via VT Markets IB registration · 1 account only</div>
+                        <div style="font-size:.82rem;color:var(--tx3)" class="pper">Via VT Markets IB registration</div>
                         <p style="font-size:.875rem;color:var(--tx2);margin:14px 0 20px;padding-bottom:20px;border-bottom:1px solid var(--bd)">1 account only. Register using my referral link, complete verification, and get instant access.</p>
-                        <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Register using my referral link</div>
-                        <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Complete full verification (KYC)</div>
-                        <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Open MT5 trading account</div>
-                        <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Submit MT5 ID + email for instant access</div>
-                        <button class="bgrd btn w-100 py-2 mt-4">Get Free Access<i class="fa-solid fa-arrow-right ms-1 fa-sm"></i></button>
+                        <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>1 MT5 account</div>
+                        <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Full features</div>
+                        <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>VT Markets required</div>
+                        <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>KYC verification needed</div>
+                        <button class="boc btn w-100 py-2 mt-4">Get Free Access</button>
                      </div>
                   </div>
-                 
                   <div class="col-md-4">
-                     <div class="pcard h-100">
-                        <div style="font-size:.82rem;font-weight:600;color:var(--tx3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px">1 Accounts</div>
-                        <div class="pamt mb-1">$99 <span style="font-size:1rem;font-weight:400">USD</span> <span style="background:rgba(232,186,89,.2);color:#E8BA59;font-size:.7rem;font-weight:600;padding:2px 8px;border-radius:100px;margin-left:8px">Most Popular</span></div>
-                        <div style="font-size:.82rem;color:var(--tx3)" class="pper">For individual traders</div>
-                        <p style="font-size:.875rem;color:var(--tx2);margin:14px 0 20px;padding-bottom:20px;border-bottom:1px solid var(--bd)">For traders managing multiple accounts. Unlimited MT5 accounts with any broker.</p>
-                        <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Lifetime license</div>
-                        <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Use with any broker</div>
-                        <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Free upgrades to all future versions</div>
-                        <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Priority reply message</div>
-                        <button class="boc btn w-100 py-2 mt-4">Purchase License</button>
-                     </div>
-                  </div>
-                   <div class="col-md-4">
                      <div class="pcard pop h-100">
                         <span class="pbadge"><i class="fa-solid fa-star me-1"></i>Most Popular</span>
                         <div style="font-size:.82rem;font-weight:600;color:var(--tx3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px">5 Accounts</div>
-                        <div class="pamt mb-1">$329 <span style="font-size:1rem;font-weight:400">USD</span></div>
+                        <div class="pamt mb-1">$329 <span style="font-size:1rem;font-weight:400">USDT</span></div>
                         <div style="font-size:.82rem;color:var(--tx3)" class="pper">Lifetime license</div>
                         <p style="font-size:.875rem;color:var(--tx2);margin:14px 0 20px;padding-bottom:20px;border-bottom:1px solid var(--bd)">Perfect for most traders. Use with any broker, free upgrades to all future versions.</p>
                         <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Up to 5 MT5 accounts</div>
@@ -330,36 +438,101 @@
                         <button class="bgrd btn w-100 py-2 mt-4">Purchase License <i class="fa-solid fa-arrow-right ms-1 fa-sm"></i></button>
                      </div>
                   </div>
+                  <div class="col-md-4">
+                     <div class="pcard h-100">
+                        <div style="font-size:.82rem;font-weight:600;color:var(--tx3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px">Unlimited Access</div>
+                        <div class="pamt mb-1">$689 <span style="font-size:1rem;font-weight:400">USDT</span> <span style="background:rgba(232,186,89,.2);color:#E8BA59;font-size:.7rem;font-weight:600;padding:2px 8px;border-radius:100px;margin-left:8px">HOT</span></div>
+                        <div style="font-size:.82rem;color:var(--tx3)" class="pper">Lifetime license</div>
+                        <p style="font-size:.875rem;color:var(--tx2);margin:14px 0 20px;padding-bottom:20px;border-bottom:1px solid var(--bd)">For traders managing multiple accounts. Unlimited MT5 accounts with any broker.</p>
+                        <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Unlimited MT5 accounts</div>
+                        <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Use with any broker</div>
+                        <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Free future upgrades</div>
+                        <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Priority reply message</div>
+                        <button class="boc btn w-100 py-2 mt-4">Purchase License</button>
+                     </div>
+                  </div>
                </div>
-               <div class="free-access-wrap rv">
-                  <div class="free-access-panel">
-                     <div class="free-access-heading text-center">
-                        <span class="free-access-eyebrow">Free Access</span>
-                        <h3>How to Get <span class="gt">Free Access</span></h3>
-                        <p>Follow these simple steps to get Dr. Scalper EA for free.</p>
+               <div class="text-center mt-5 rv">
+                  <div class="gc p-4 d-inline-block text-start" style="max-width:600px">
+                     <div class="d-flex align-items-center gap-3 mb-3">
+                        <div style="width:52px;height:52px;border-radius:14px;background:rgba(232,186,89,.15);display:flex;align-items:center;justify-content:center"><i class="fa-solid fa-code fa-xl" style="color:#E8BA59"></i></div>
+                        <div>
+                           <div style="font-weight:700;font-size:1.1rem">Get the Source Code</div>
+                           <div style="font-size:.78rem;color:var(--tx3)">Full MQL5 source code for Dr. Scalper EA v4.2.3</div>
+                        </div>
                      </div>
-                     <div class="free-access-steps">
-                        <div class="free-access-step"><span>01</span><strong>Register via My Link</strong></div>
-                        <div class="free-access-step"><span>02</span><strong>Complete Verification (KYC)</strong></div>
-                        <div class="free-access-step"><span>03</span><strong>Open MT5 Trading Account</strong></div>
-                        <div class="free-access-step"><span>04</span><strong>Submit Your Details</strong></div>
+                     <p style="font-size:.875rem;color:var(--tx2);margin-bottom:12px">Read every line, modify logic, integrate with your own tooling, or build on top of it. No license server lock-in.</p>
+                     <div class="d-flex align-items-center gap-2 mb-3">
+                        <span style="font-size:.78rem;color:var(--tx3)">Full MQL5 (.mq5) source</span>
+                        <span style="font-size:.78rem;color:var(--tx3)">•</span>
+                        <span style="font-size:.78rem;color:var(--tx3)">Modify, customize, rebrand</span>
+                        <span style="font-size:.78rem;color:var(--tx3)">•</span>
+                        <span style="font-size:.78rem;color:var(--tx3)">Direct support from Dr. Scalper Team</span>
                      </div>
-                     <div class="free-access-actions">
-                        <a href="free-access.html" class="bgrd btn free-access-primary">Free Access <i class="fa-solid fa-arrow-right ms-2"></i></a>
-                        <button type="button" class="boc btn free-access-secondary"><i class="fa-regular fa-user me-2"></i>Already Registered? Not Under Our Link</button>
+                     <div style="font-size:1.4rem;font-weight:700;color:#E8BA59;margin-bottom:8px">$9,999 USD</div>
+                     <div style="font-size:.78rem;color:var(--tx3);margin-bottom:12px">One-time payment · Lifetime ownership of the source · No refund</div>
+                     <button class="bgrd btn px-4 py-2">Purchase Source Code</button>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- TESTIMONIALS -->
+         <section id="testimonials" class="sp">
+            <div class="container">
+               <div class="text-center mb-5 rv">
+                  <span class="slbl">See Dr. Scalper EA in Action</span>
+                  <h2 class="stitle">Real Results from <span class="gt">Our Traders</span></h2>
+               </div>
+               <div class="row g-3">
+                  <div class="col-md-4 rv">
+                     <div class="gc p-4 h-100">
+                        <div class="d-flex gap-1 mb-3"><i class="fa-solid fa-star text-warning"></i><i class="fa-solid fa-star text-warning"></i><i class="fa-solid fa-star text-warning"></i><i class="fa-solid fa-star text-warning"></i><i class="fa-solid fa-star text-warning"></i></div>
+                        <p style="font-size:.875rem;color:var(--tx2);line-height:1.65;font-style:italic;margin-bottom:18px">"Dr. Scalper EA has completely transformed my gold trading. The basket management system is brilliant - I went from manual stress to automated profits."</p>
+                        <div class="d-flex align-items-center gap-2">
+                           <div class="tav" style="background:var(--grad);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700">JM</div>
+                           <div>
+                              <div style="font-size:.88rem;font-weight:600">James M.</div>
+                              <div style="font-size:.76rem;color:var(--tx3)">Gold Trader, 2 years</div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-4 rv" style="transition-delay:.1s">
+                     <div class="gc p-4 h-100">
+                        <div class="d-flex gap-1 mb-3"><i class="fa-solid fa-star text-warning"></i><i class="fa-solid fa-star text-warning"></i><i class="fa-solid fa-star text-warning"></i><i class="fa-solid fa-star text-warning"></i><i class="fa-solid fa-star text-warning"></i></div>
+                        <p style="font-size:.875rem;color:var(--tx2);line-height:1.65;font-style:italic;margin-bottom:18px">"The recovery management system is incredible. When the market turns against me, the EA systematically manages positions without emotion. Best investment I've made."</p>
+                        <div class="d-flex align-items-center gap-2">
+                           <div class="tav" style="background:var(--grad);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700">SK</div>
+                           <div>
+                              <div style="font-size:.88rem;font-weight:600">Sarah K.</div>
+                              <div style="font-size:.76rem;color:var(--tx3)">Forex Trader, 5 years</div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-4 rv" style="transition-delay:.2s">
+                     <div class="gc p-4 h-100">
+                        <div class="d-flex gap-1 mb-3"><i class="fa-solid fa-star text-warning"></i><i class="fa-solid fa-star text-warning"></i><i class="fa-solid fa-star text-warning"></i><i class="fa-solid fa-star text-warning"></i><i class="fa-solid fa-star text-warning"></i></div>
+                        <p style="font-size:.875rem;color:var(--tx2);line-height:1.65;font-style:italic;margin-bottom:18px">"89% win rate consistently. The precision entry system finds opportunities I would miss. Running on VPS 24/7 with zero issues. Highly recommend for serious gold traders."</p>
+                        <div class="d-flex align-items-center gap-2">
+                           <div class="tav" style="background:var(--grad);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700">RP</div>
+                           <div>
+                              <div style="font-size:.88rem;font-weight:600">Robert P.</div>
+                              <div style="font-size:.76rem;color:var(--tx3)">Professional Trader, 8 years</div>
+                           </div>
+                        </div>
                      </div>
                   </div>
                </div>
             </div>
          </section>
-        
          <!-- DOWNLOADS -->
          <section id="downloads" class="sp">
             <div class="container">
                <div class="text-center mb-5 rv">
                   <span class="slbl">Downloads</span>
                   <h2 class="stitle">Download <span class="gt">Dr. Scalper EA</span></h2>
-                  <p class="ssub mx-auto">Compiled for MetaTrader 5. Install into your platform's Experts folder and activate with your license key.</p>
+                  <p class="ssub mx-auto">Compiled for MetaTrader 5 and MetaTrader 4. Install into your platform's Experts folder and activate with your license key.</p>
                </div>
                <div class="row g-4 justify-content-center rv">
                   <div class="col-md-5">
@@ -371,20 +544,24 @@
                         <a href="https://eagoldtrap.com/downloads/GoldTrap_v4_2_3-20260513.ex5" class="bgrd btn px-4 py-2">Download MT5 Version</a>
                      </div>
                   </div>
-                  
+                  <div class="col-md-5">
+                     <div class="gc p-4 h-100 text-center">
+                        <div style="width:64px;height:64px;border-radius:16px;background:rgba(232,186,89,.15);display:flex;align-items:center;justify-content:center;margin:0 auto 18px"><i class="fa-solid fa-download fa-2x" style="color:#E8BA59"></i></div>
+                        <h3 class="fs-5 fw-semibold mb-2">MetaTrader 4</h3>
+                        <p style="font-size:.875rem;color:var(--tx2);margin-bottom:16px">GoldTrap_v4_2_3.ex4</p>
+                        <div style="font-size:.78rem;color:var(--tx3);margin-bottom:18px">License key required at runtime</div>
+                        <a href="https://eagoldtrap.com/downloads/GoldTrap_v4_2_3-20260513.ex4" class="bgrd btn px-4 py-2">Download MT4 Version</a>
+                     </div>
+                  </div>
                </div>
                <div class="text-center mt-4 rv">
                   <p style="font-size:.875rem;color:var(--tx2);margin-bottom:12px">Need preset .set files?</p>
                   <a href="https://eagoldtrap.com/download-set-files" style="color:var(--pur);text-decoration:underline">Browse preset files</a>
-                  <p style="font-size:.78rem;color:var(--tx3);margin-top:8px">Ready-made 50K capital presets for every pair, tuned for MT5 at 1:500 and 1:2000 leverage.</p>
-                  <div class="setup-note mt-4">
-                     <div class="setup-note-title">Setup note — required once per terminal</div>
-                     <p>The EA verifies your license online. Add this URL to your MetaTrader whitelist:</p>
-                     <div class="setup-note-url">
-                        <code>https://a689.link</code>
-                        <button type="button" class="setup-copy" onclick="navigator.clipboard.writeText('https://a689.link')"><i class="fa-regular fa-copy me-1"></i>Copy</button>
-                     </div>
-                     <p class="setup-note-instructions">MT5/MT4 → Tools → Options → Expert Advisors → tick "Allow WebRequest for listed URL" → add the domain → OK.</p>
+                  <p style="font-size:.78rem;color:var(--tx3);margin-top:8px">Ready-made 50K capital presets for every pair, tuned for MT4 & MT5 at 1:500 and 1:2000 leverage.</p>
+                  <div class="mt-4 p-3" style="background:rgba(232,186,89,.1);border:1px solid rgba(232,186,89,.2);border-radius:12px;max-width:600px;margin:0 auto">
+                     <div style="font-size:.85rem;font-weight:600;margin-bottom:8px"><i class="fa-solid fa-info-circle me-2" style="color:#E8BA59"></i>Setup note — required once per terminal</div>
+                     <p style="font-size:.8rem;color:var(--tx2);margin:0">The EA verifies your license online. Add this URL to your MetaTrader whitelist: <code style="background:var(--bg3);padding:2px 6px;border-radius:4px">https://a689.link</code></p>
+                     <p style="font-size:.78rem;color:var(--tx3);margin-top:8px">MT5/MT4 → Tools → Options → Expert Advisors → tick "Allow WebRequest for listed URL" → add the domain → OK.</p>
                   </div>
                </div>
             </div>
@@ -394,7 +571,7 @@
             <div class="container">
                <div class="text-center mb-5 rv">
                   <span class="slbl">FAQ</span>
-                  <h2 class="stitle">Frequently Asked Questions</h2>
+                  <h2 class="stitle">Common <span class="gt">questions</span></h2>
                </div>
                <div class="row justify-content-center rv">
                   <div class="col-lg-8">
@@ -458,27 +635,25 @@
                      <a class="d-flex align-items-center gap-2 mb-3" href="#" style="font-size:1.15rem;font-weight:700;color:var(--tx)">
                         <img src="img/logo.png" alt="Dr. Scalper Logo">
                      </a>
-                     <p style="font-size:.875rem;color:var(--tx3);line-height:1.65;max-width:280px">Precision gold trading automation with advanced basket management for MT5.</p>
+                     <p style="font-size:.875rem;color:var(--tx3);line-height:1.65;max-width:280px">Precision gold trading automation with advanced basket management for MT4 & MT5.</p>
+                     <div class="d-flex gap-2 mt-3"><input class="nli" type="email" placeholder="your@email.com" style="max-width:200px"><button class="bgrd btn px-3 py-2" style="font-size:.85rem;white-space:nowrap">Subscribe</button></div>
                   </div>
                   <div class="col-6 col-md-2 fcol">
                      <h5>Product</h5>
-                     <a href="#features">How It Works</a><a href="#how">Features</a><a href="#pricing">Pricing</a><a href="#faq">Downloads</a><a href="#downloads">FAQ</a>
+                     <a href="#features">Features</a><a href="#how">How It Works</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="#downloads">Downloads</a>
+                  </div>
+                  <div class="col-6 col-md-2 fcol">
+                     <h5>Resources</h5>
+                     <a href="#">Documentation</a><a href="#">Setup Guide</a><a href="#">Presets</a><a href="#">Video Tutorials</a><a href="#">Support</a>
                   </div>
                   <div class="col-6 col-md-2 fcol">
                      <h5>Legal</h5>
-                     <a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Risk Disclaimer</a><a href="#">Refund Policy</a>
-                  </div>
-                  <div class="col-6 col-md-4 fcol">
-                     <h5>Contact</h5>
-                     <div class="footer-contact-list">
-                        <a href="tel:+10000000000"><i class="fa-solid fa-phone"></i><span>+1 (000) 000-0000</span></a>
-                        <a href="mailto:contact@example.com"><i class="fa-regular fa-envelope"></i><span>contact@example.com</span></a>
-                        <span><i class="fa-solid fa-location-dot"></i><span>123 Market Street, Dubai</span></span>
-                     </div>
+                     <a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Risk Disclaimer</a><a href="#">Refund Policy</a><a href="#">Contact</a>
                   </div>
                </div>
-               <div class="footer-copyright d-flex align-items-center justify-content-center flex-wrap gap-3 pt-4" style="border-top:1px solid var(--bd)">
-                  <p style="font-size:.8rem;color:var(--tx3);margin:0"><i class="fa-regular fa-copyright me-1"></i>2026 Dr. Scalper. All rights reserved. Powered by <a href="https://www.feb87.com/" target="_blank" rel="noopener" style="color:var(--pur);text-decoration:underline">feb87</a></p>
+               <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 pt-4" style="border-top:1px solid var(--bd)">
+                  <p style="font-size:.8rem;color:var(--tx3);margin:0">� 2025 Dr. Scalper. All rights reserved. <br> Trading involves substantial risk of loss.</p>
+                  <div class="d-flex gap-2"><a href="#" class="sico"><i class="fa-brands fa-x-twitter"></i></a><a href="#" class="sico"><i class="fa-brands fa-github"></i></a><a href="#" class="sico"><i class="fa-brands fa-linkedin-in"></i></a><a href="#" class="sico"><i class="fa-brands fa-discord"></i></a></div>
                </div>
             </div>
          </footer>
@@ -486,7 +661,7 @@
       <!-- /landing -->
       
       <!-- Scroll to Top Button -->
-      <button id="scrollTopBtn" class="scroll-top-btn" type="button" aria-label="Scroll to top">
+      <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top">
          <i class="fa-solid fa-arrow-up"></i>
       </button>
       <!-- ======================== LOGIN OFFCANVAS ======================== -->
@@ -664,7 +839,7 @@
                      <div style="padding:8px 0">
                         <button class="profile-menu-item" onclick="dbNav('settings',document.querySelector('[onclick*=settings]'));toggleProfile()"><i class="fa-regular fa-user" style="color:var(--pur)"></i>My Profile</button>
                         <button class="profile-menu-item" onclick="dbNav('settings',document.querySelector('[onclick*=settings]'));toggleProfile()"><i class="fa-solid fa-gear" style="color:var(--tx3)"></i>Account Settings</button>
-                        <button class="profile-menu-item" onclick="dbNav('downloads,document.querySelector('[onclick*=]'));toggleProfile()"><i class="fa-solid fa-plug" style="color:#60a5fa"></i>Integrations</button>
+                        <button class="profile-menu-item" onclick="dbNav('integrations',document.querySelector('[onclick*=integrations]'));toggleProfile()"><i class="fa-solid fa-plug" style="color:#60a5fa"></i>Integrations</button>
                         <button class="profile-menu-item" onclick="dbNav('chat',document.querySelector('[onclick*=chat]'));toggleProfile()"><i class="fa-solid fa-robot" style="color:#34d399"></i>AI Chat Console</button>
                         <div style="height:1px;background:var(--bd);margin:8px 16px"></div>
                         <div style="padding:8px 16px 4px">
