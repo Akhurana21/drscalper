@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" id="htmlRoot">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Message Sent | Dr. Scalper EA</title>
+      <link rel="icon" type="image/png" href="img/favicon.png">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="css/all.min.css">
+      <link rel="stylesheet" href="css/style.css">
+      <style>
+         .result-icon {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: rgba(52, 211, 153, 0.15);
+            border: 2px solid #34d399;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 48px;
+            color: #34d399;
+         }
+         .result-content {
+            text-align: center;
+            max-width: 500px;
+            margin: 0 auto;
+         }
+         .result-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+         }
+         .result-message {
+            color: var(--tx2);
+            margin-bottom: 32px;
+            line-height: 1.6;
+         }
+         .result-actions {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+         }
+      </style>
+   </head>
+   <body class="free-access-page">
+      <nav class="free-access-nav">
+         <div class="container d-flex align-items-center justify-content-between">
+            <a href="index.html" class="free-access-logo">
+               <img src="img/logo.png" alt="Dr. Scalper Logo">
+            </a>
+            <div class="d-flex align-items-center gap-2">
+               <button class="boc free-theme-toggle" id="freeThemeToggle" type="button" aria-label="Toggle theme">
+                  <i class="fa-solid fa-moon" id="freeMoonIcon"></i>
+                  <i class="fa-solid fa-sun" id="freeSunIcon" style="display:none"></i>
+               </button>
+               <a href="index.html" class="boc btn free-back-link">Back to Home</a>
+            </div>
+         </div>
+      </nav>
+
+      <main>
+         <section class="free-access-content">
+            <div class="container">
+               <div class="result-content">
+                  <div class="result-icon">
+                     <i class="fa-solid fa-check"></i>
+                  </div>
+                  <h1 class="result-title">Message Sent Successfully!</h1>
+                  <p class="result-message">
+                     Thank you for contacting us. Your message has been sent and we will get back to you as soon as possible.
+                  </p>
+                  <div class="result-actions">
+                     <a href="index.html" class="bgrd btn">Back to Home <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                     <a href="contact.html" class="boc btn">Send Another Message</a>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+
+      <button id="freeScrollTopBtn" class="scroll-top-btn free-page-scroll-top" type="button" aria-label="Scroll to top">
+         <i class="fa-solid fa-arrow-up"></i>
+      </button>
+
+      <footer id="foot">
+         <div class="container">
+            <div class="row g-5 mb-5 justify-content-center">
+               <div class="col-lg-6 footer-brand text-center">
+                  <a class="d-flex align-items-center justify-content-center gap-2 mb-3" href="#" style="font-size:1.15rem;font-weight:700;color:var(--tx)">
+
+                  </a>
+                  <a href="https://t.me/drscalperofficial" target="_blank" rel="noopener" class="footer-telegram-button" aria-label="Contact us on Telegram">
+                     <span class="footer-telegram-icon"><i class="fa-brands fa-telegram" aria-hidden="true"></i></span>
+                     <span>Contact</span>
+                  </a>
+                  <p class="footer-disclaimer">Trading XAUUSD involves substantial risk. Past performance does not guarantee future results. The EA, like any automated system, can lose money. Use only capital you can afford to lose.</p>
+               </div>
+
+               </div>
+            <div class="footer-copyright d-flex align-items-center justify-content-center flex-wrap gap-3 pt-4" style="border-top:1px solid var(--bd)">
+               <p style="font-size:.8rem;color:var(--tx3);margin:0"><i class="fa-regular fa-copyright me-1"></i>2026 Dr. Scalper. All rights reserved. Powered by <a href="https://www.feb87.com/" target="_blank" rel="noopener" style="color:var(--pur);text-decoration:underline">feb87</a></p>
+               </div>
+                  </div>
+      </footer>
+
+      <script>
+         const root = document.getElementById('htmlRoot');
+         const themeToggle = document.getElementById('freeThemeToggle');
+         const moonIcon = document.getElementById('freeMoonIcon');
+         const sunIcon = document.getElementById('freeSunIcon');
+
+         themeToggle.addEventListener('click', () => {
+            const lightMode = root.classList.toggle('lm');
+            moonIcon.style.display = lightMode ? 'none' : 'inline';
+            sunIcon.style.display = lightMode ? 'inline' : 'none';
+         });
+
+         document.getElementById('freeScrollTopBtn').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+         });
+      </script>
+   </body>
+</html>

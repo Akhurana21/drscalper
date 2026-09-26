@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html lang="en" id="htmlRoot">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>DR.Scalper - Gold Trading. Built for MT5</title>
+      <link rel="icon" type="image/png" href="img/favicon.png">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+      <!-- Bootstrap 5.3 -->
+      <link href="css/bootstrap.min.css" rel="stylesheet"/>
+      <!-- AOS Animate on Scroll -->
+      <link href="css/aos.css" rel="stylesheet"/>
+      <!-- Swiper -->
+      <link href="css/swiper-bundle.min.css" rel="stylesheet"/>
+      <!-- all min css -->
+      <link rel="stylesheet" href="css/all.min.css"/>
+      <!-- magnific CSS -->
+      <link rel="stylesheet" href="css/magnific-popup.css"/>
+      <!-- Style CSS -->
+      <link rel="stylesheet" href="css/style.css" />
+   </head>
+   <body>
+      <!-- ======================== LANDING PAGE ======================== -->
+      <div id="landing">
+         <!-- NAVBAR -->
+         <nav id="nbar">
+            <div class="container">
+               <div class="d-flex align-items-center justify-content-between w-100">
+                  <a href="#" class="d-flex align-items-center gap-2" style="font-size:1.2rem;font-weight:700;color:var(--tx)">
+                     <img src="img/logo.png" alt="Dr. Scalper Logo">
+                  </a>
+                  <div class="d-none d-lg-flex align-items-center gap-1 mx-auto">
+                     <a href="#how" class="nav-link">How it works</a>
+                     <a href="#downloads" class="nav-link">Download</a>
+                     <a href="#pricing" class="nav-link">Pricing</a>
+                     <a href="#faq" class="nav-link">FAQ</a>
+                  </div>
+                  <div class="d-flex align-items-center gap-2">
+                     <button class="boc d-flex align-items-center justify-content-center" id="thbtn" style="width:38px;height:38px;padding:0;border-radius:12px" aria-label="Toggle theme">
+                     <i class="fa-solid fa-sun" id="suni" style="display:none"></i>
+                     <i class="fa-solid fa-moon" id="mooni"></i>
+                     </button>
+                     
+                     
+                     <button class="boc d-lg-none px-2 py-2" id="mbtog" style="border-radius:10px">
+                     <i class="fa-solid fa-bars" id="barIcon"></i>
+                     <i class="fa-solid fa-xmark" id="xIcon" style="display:none"></i>
+                     </button>
+                  </div>
+               </div>
+            </div>
+         </nav>
+         <div id="mbmenu">
+            <a href="#how" class="nav-link d-block py-3 border-bottom" style="border-color:var(--bd)!important">How it works</a>
+            <a href="#downloads" class="nav-link d-block py-3 border-bottom" style="border-color:var(--bd)!important">Downloads</a>
+            <a href="#pricing" class="nav-link d-block py-3 border-bottom" style="border-color:var(--bd)!important">Pricing</a>
+            <a href="#faq" class="nav-link d-block py-3">FAQ</a>
+            <div class="d-flex gap-2 mt-3">
+               <button class="boc flex-fill py-2 btn" data-bs-toggle="offcanvas" data-bs-target="#lofc" onclick="swTab('login')">Log in</button>
+               <button class="bgrd flex-fill py-2 btn" data-bs-toggle="offcanvas" data-bs-target="#lofc" onclick="swTab('signup')">Get Started</button>
+            </div>
+         </div>
+         <!-- HERO -->
+         <section id="hero">
+            <div class="aur aur-a" style="top:-80px;left:-120px"></div>
+            <div class="aur aur-b" style="top:180px;right:-180px"></div>
+            <div class="aur aur-a" style="bottom:-80px;left:45%;transform:translateX(-50%);opacity:.4"></div>
+            <div class="container position-relative" style="z-index:2">
+               <div class="text-center">
+                  <h1 class="h1 afu" style="animation-delay:.12s">Precision Trading for Gold.<br>Built for <span class="gt">MT5</span></h1>
+                  <p class="mx-auto afu" style="max-width:580px;font-size:clamp(.95rem,1.8vw,1.2rem);color:var(--tx2);margin-bottom:36px;animation-delay:.2s">Dr. Scalper EA is designed to automate trade execution and basket management while following a structured trading methodology, reducing the need for manual intervention.</p>
+                  <div class="d-flex align-items-center justify-content-center gap-3 flex-wrap afu" style="animation-delay:.28s">
+                     <a href="#pricing" class="bgrd btn px-4 py-3 fs-6">Get Started <i class="fa-solid fa-arrow-right ms-1"></i></a>
+                     <a href="#how" class="boc btn px-4 py-3 fs-6"><i class="fa-solid fa-circle-play me-2" style="color:var(--pur)"></i>How It Works</a>
+                  </div>
+                  
+               </div>
+               <div class="row justify-content-center mt-5">
+                  <div class="col-lg-11 adi">
+                     <div style="height: 550px; background: var(--bg3); border: 1px solid var(--bd); border-radius: 12px; overflow: hidden;">
+                        <iframe
+                           src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_76d87&symbol=OANDA%3AXAUUSD&interval=15&hidesidetoolbar=0&symboledit=1&saveimage=0&toolbarbg=f1f3f6&studies=%5B%5D&theme=dark&style=1&timezone=Asia%2FKolkata"
+                           style="width: 100%; height: 100%; border: none;"
+                           title="TradingView Widget"
+                        ></iframe>
+                     </div>
+                     <div style="text-align: center; margin-top: 12px; font-size: 0.8rem; color: var(--tx3);">
+                        Live chart is for reference. Dr. Scalper EA still runs inside your own MetaTrader terminal.
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         
+         <!-- PROBLEM -->
+         <section class="sp position-relative">
+            <div class="aur aur-b" style="top:50%;right:-200px;transform:translateY(-50%)"></div>
+            <div class="container position-relative" style="z-index:1">
+               <div class="text-center mb-5 rv">
+                  <span class="slbl">Why Traders Choose Dr. Scalper EA</span>
+                  <h2 class="stitle">Advanced Features for <span class="gt">Serious Traders</span></h2>
+                  <p class="ssub mx-auto">Built for gold trading with precision execution and intelligent basket management.</p>
+               </div>
+               <div class="row g-4" style="row-gap:40px">
+                  <div class="col-md-3 rv">
+                     <div class="gc p-4 h-100">
+                        <div style="width:52px;height:52px;border-radius:14px;background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.2);display:flex;align-items:center;justify-content:center;margin-bottom:18px"><i class="fa-solid fa-robot fa-lg" style="color:#f87171"></i></div>
+                        <h3 class="fw-semibold fs-5 mb-2">Automated Trade Execution</h3>
+                     </div>
+                  </div>
+                  <div class="col-md-3 rv" style="transition-delay:.1s">
+                     <div class="gc p-4 h-100">
+                        <div style="width:52px;height:52px;border-radius:14px;background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.2);display:flex;align-items:center;justify-content:center;margin-bottom:18px"><i class="fa-solid fa-coins fa-lg" style="color:#fbbf24"></i></div>
+                        <h3 class="fw-semibold fs-5 mb-2">Optimized for Gold Trading</h3>
+                     </div>
+                  </div>
+                  <div class="col-md-3 rv" style="transition-delay:.2s">
+                     <div class="gc p-4 h-100">
+                        <div style="width:52px;height:52px;border-radius:14px;background:rgba(99,102,241,.12);border:1px solid rgba(99,102,241,.2);display:flex;align-items:center;justify-content:center;margin-bottom:18px"><i class="fa-solid fa-layer-group fa-lg" style="color:#a78bfa"></i></div>
+                        <h3 class="fw-semibold fs-5 mb-2">Advanced Position Management</h3>
+                     </div>
+                  </div>
+               
+                  <div class="col-md-3 rv">
+                     <div class="gc p-4 h-100">
+                        <div style="width:52px;height:52px;border-radius:14px;background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.2);display:flex;align-items:center;justify-content:center;margin-bottom:18px"><i class="fa-solid fa-robot fa-lg" style="color:#f87171"></i></div>
+                        <h3 class="fw-semibold fs-5 mb-2">MT5 Compatible</h3>
+                     </div>
+                  </div>
+                  <div class="col-md-3 rv" style="transition-delay:.1s">
+                     <div class="gc p-4 h-100">
+                        <div style="width:52px;height:52px;border-radius:14px;background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.2);display:flex;align-items:center;justify-content:center;margin-bottom:18px"><i class="fa-solid fa-coins fa-lg" style="color:#fbbf24"></i></div>
+                        <h3 class="fw-semibold fs-5 mb-2">Compatible with cent & standard accounts</h3>
+                     </div>
+                  </div>
+                  <div class="col-md-3 rv" style="transition-delay:.2s">
+                     <div class="gc p-4 h-100">
+                        <div style="width:52px;height:52px;border-radius:14px;background:rgba(99,102,241,.12);border:1px solid rgba(99,102,241,.2);display:flex;align-items:center;justify-content:center;margin-bottom:18px"><i class="fa-solid fa-layer-group fa-lg" style="color:#a78bfa"></i></div>
+                        <h3 class="fw-semibold fs-5 mb-2">VPS-Friendly Operation</h3>
+                     </div>
+                  </div>
+                  <div class="col-md-3 rv" style="transition-delay:.2s">
+                     <div class="gc p-4 h-100">
+                        <div style="width:52px;height:52px;border-radius:14px;background:rgba(99,102,241,.12);border:1px solid rgba(99,102,241,.2);display:flex;align-items:center;justify-content:center;margin-bottom:18px"><i class="fa-solid fa-layer-group fa-lg" style="color:#a78bfa"></i></div>
+                        <h3 class="fw-semibold fs-5 mb-2">Optional daily profit target</h3>
+                     </div>
+                  </div>
+                  <div class="col-md-3 rv" style="transition-delay:.2s">
+                     <div class="gc p-4 h-100">
+                        <div style="width:52px;height:52px;border-radius:14px;background:rgba(99,102,241,.12);border:1px solid rgba(99,102,241,.2);display:flex;align-items:center;justify-content:center;margin-bottom:18px"><i class="fa-solid fa-layer-group fa-lg" style="color:#a78bfa"></i></div>
+                        <h3 class="fw-semibold fs-5 mb-2">Customizable daily loss</h3>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </section>
+      
+         <!-- HOW IT WORKS -->
+         <section id="how" class="sp" style="background:var(--bg3)">
+            <div class="container">
+               <div class="text-center mb-5 rv">
+                  <span class="slbl">How Dr. Scalper EA Works</span>
+                  <h2 class="stitle">One structured cycle. <span class="gt">Automated execution.</span></h2>
+                  <p class="ssub mx-auto">Disciplined trade management for consistent results.</p>
+               </div>
+               <div class="row g-4">
+                  <div class="col-md-4 rv">
+                     <div class="gc p-4 h-100 text-center">
+                        <div class="hnum">01</div>
+                        <h3 class="fs-5 fw-semibold mb-2">Precision Entry System</h3>
+                        <p style="font-size:.875rem;color:var(--tx2)">Dr. Scalper EA automatically identifies trading opportunities and executes trades according to its predefined strategy.</p>
+                     </div>
+                  </div>
+                  <div class="col-md-4 rv" style="transition-delay:.1s">
+                     <div class="gc p-4 h-100 text-center">
+                        <div class="hnum">02</div>
+                        <h3 class="fs-5 fw-semibold mb-2">Unified Position Management</h3>
+                        <p style="font-size:.875rem;color:var(--tx2)">Dr. Scalper EA manages multiple positions collectively as a basket, applying structured trade management across the overall position.</p>
+                     </div>
+                  </div>
+                  <div class="col-md-4 rv" style="transition-delay:.2s">
+                     <div class="gc p-4 h-100 text-center">
+                        <div class="hnum">03</div>
+                        <h3 class="fs-5 fw-semibold mb-2">Dynamic Recovery Management</h3>
+                        <p style="font-size:.875rem;color:var(--tx2)">The EA uses predefined recovery and position management rules to systematically manage trades during changing market conditions.</p>
+                     </div>
+                  </div>
+                  <div class="col-md-4 rv" style="transition-delay:.3s">
+                     <div class="gc p-4 h-100 text-center">
+                        <div class="hnum">04</div>
+                        <h3 class="fs-5 fw-semibold mb-2">Intelligent Exit System</h3>
+                        <p style="font-size:.875rem;color:var(--tx2)">Predefined exit rules automatically manage take-profit levels and trade closures, maintaining a systematic approach to position management.</p>
+                     </div>
+                  </div>
+                  <div class="col-md-4 rv" style="transition-delay:.4s">
+                     <div class="gc p-4 h-100 text-center">
+                        <div class="hnum">05</div>
+                        <h3 class="fs-5 fw-semibold mb-2">Automated Cycle Management</h3>
+                        <p style="font-size:.875rem;color:var(--tx2)"> After completing a trading cycle, the EA automatically prepares for the next opportunity according to its predefined rules.</p>
+                     </div>
+                  </div>
+                  <div class="col-md-4 rv" style="transition-delay:.5s">
+                     <div class="gc p-4 h-100 text-center">
+                        <div class="hnum">06</div>
+                        <h3 class="fs-5 fw-semibold mb-2">Predefined Trading Pause</h3>
+                        <p style="font-size:.875rem;color:var(--tx2)">Dr. Scalper EA can temporarily pause new entries during predefined periods while continuing to manage existing positions.</p>
+                     </div>
+                  </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- LIVE RESULTS -->
+         <section id="live-results" class="live-results-section">
+            <div class="container">
+               <div class="live-results-content rv">
+                  <div>
+                     <span class="live-results-eyebrow">Live Results</span>
+                     <h2>Real Results. Real Users.</h2>
+                     <p>See live account updates, user feedback, and trading results shared by the GoldTrap community.</p>
+                  </div>
+                  <a href="https://t.me/drscalperea" target="_blank" rel="noopener" class="live-results-button">
+                     <i class="fa-brands fa-telegram" aria-hidden="true"></i>
+                     <span>View Live Results</span>
+                  </a>
+               </div>
+            </div>
+         </section>
+         <!-- PRICING -->
+         <section id="pricing" class="sp position-relative" style="background:var(--bg2)">
+            <div class="aur aur-a" style="top:50%;left:50%;transform:translate(-50%,-50%)"></div>
+            <div class="container position-relative" style="z-index:1">
+               <div class="text-center mb-5 rv">
+                  <span class="slbl">Pricing</span>
+                  <h2 class="stitle">Choose Your <span class="gt">Trading License</span></h2>
+                  <p class="ssub mx-auto">Lifetime licenses with free upgrades. No monthly fees.</p>
+               </div>
+               <div class="row g-4 align-items-start rv">
+                  <div class="col-md-4">
+                     <div class="pcard pop h-100">
+                        <span class="pbadge"><i class="fa-solid fa-star me-1"></i>Most Popular</span>
+                        <div style="font-size:.82rem;font-weight:600;color:var(--tx3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px">Free Option</div>
+                        <div class="pamt mb-1">FREE</div>
+                        <div style="font-size:.82rem;color:var(--tx3)" class="pper">Via VT Markets IB registration · 1 account only</div>
+                        <p style="font-size:.875rem;color:var(--tx2);margin:14px 0 20px;padding-bottom:20px;border-bottom:1px solid var(--bd)">1 account only. Register using my referral link, complete verification, and get instant access.</p>
+                        <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Register using my referral link</div>
+                        <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Complete full verification (KYC)</div>
+                        <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Open MT5 trading account</div>
+                        <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Submit MT5 ID + email for instant access</div>
+                        <button class="bgrd btn w-100 py-2 mt-4"><a href="free-access.html">Get Free Access</a><i class="fa-solid fa-arrow-right ms-1 fa-sm"></i></button>
+                     </div>
+                  </div>
+                 
+                  <div class="col-md-4">
+                     <div class="pcard h-100">
+                        <div style="font-size:.82rem;font-weight:600;color:var(--tx3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px">1 Accounts</div>
+                        <div class="pamt mb-1">$99 <span style="font-size:1rem;font-weight:400">USD</span> <span style="color:#E8BA59;font-size:.7rem;font-weight:600;padding:2px 8px;border-radius:100px;margin-left:8px"></span></div>
+                        <div style="font-size:.82rem;color:var(--tx3)" class="pper">For individual traders</div>
+                        <p style="font-size:.875rem;color:var(--tx2);margin:14px 0 20px;padding-bottom:20px;border-bottom:1px solid var(--bd)">For traders managing multiple accounts. Unlimited MT5 accounts with any broker.</p>
+                        <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Lifetime license</div>
+                        <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Use with any broker</div>
+                        <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Free upgrades to all future versions</div>
+                        <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Priority reply message</div>
+                        <button class="boc btn w-100 py-2 mt-4" data-plan="1 Account" data-amount="$99" onclick="openPaymentModal(this)">Purchase License</button>
+                     </div>
+                  </div>
+                   <div class="col-md-4">
+                     <div class="pcard pop h-100">
+                        <span class="pbadge"><i class="fa-solid fa-star me-1"></i>Most Popular</span>
+                        <div style="font-size:.82rem;font-weight:600;color:var(--tx3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px">5 Accounts</div>
+                        <div class="pamt mb-1">$329 <span style="font-size:1rem;font-weight:400">USD</span></div>
+                        <div style="font-size:.82rem;color:var(--tx3)" class="pper">Lifetime license</div>
+                        <p style="font-size:.875rem;color:var(--tx2);margin:14px 0 20px;padding-bottom:20px;border-bottom:1px solid var(--bd)">Perfect for most traders. Use with any broker, free upgrades to all future versions.</p>
+                        <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Up to 5 MT5 accounts</div>
+                        <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Use with any broker</div>
+                        <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Free future upgrades</div>
+                        <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Priority reply message</div>
+                        <button class="bgrd btn w-100 py-2 mt-4" data-plan="5 Accounts" data-amount="$329" onclick="openPaymentModal(this)">Purchase License <i class="fa-solid fa-arrow-right ms-1 fa-sm"></i></button>
+                     </div>
+                  </div>
+               </div>
+               <div class="free-access-wrap rv">
+                  <div class="free-access-panel">
+                     <div class="free-access-heading text-center">
+                        <span class="free-access-eyebrow">Free Access</span>
+                        <h3>How to Get <span class="gt">Free Access</span></h3>
+                        <p>Follow these simple steps to get Dr. Scalper EA for free.</p>
+                     </div>
+                     <div class="free-access-steps">
+                        <div class="free-access-step"><span>01</span><strong>Register via My Link</strong></div>
+                        <div class="free-access-step"><span>02</span><strong>Complete Verification (KYC)</strong></div>
+                        <div class="free-access-step"><span>03</span><strong>Open MT5 Trading Account</strong></div>
+                        <div class="free-access-step"><span>04</span><strong>Submit Your Details</strong></div>
+                     </div>
+                     <div class="free-access-actions">
+                        <a href="free-access.html" class="bgrd btn free-access-primary">Free Access <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                        <button type="button" class="boc btn free-access-secondary"><i class="fa-regular fa-user me-2"></i>Already Registered? Not Under Our Link</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+        
+         <!-- DOWNLOADS -->
+         <section id="downloads" class="sp">
+            <div class="container">
+               <div class="text-center mb-5 rv">
+                  <span class="slbl">Downloads</span>
+                  <h2 class="stitle">Download <span class="gt">Dr. Scalper EA</span></h2>
+                  <p class="ssub mx-auto">Compiled for MetaTrader 5. Install into your platform's Experts folder and activate with your license key.</p>
+               </div>
+               <div class="row g-4 justify-content-center rv">
+                  <div class="col-md-5">
+                     <div class="gc p-4 h-100 text-center">
+                        <div style="width:64px;height:64px;border-radius:16px;background:rgba(232,186,89,.15);display:flex;align-items:center;justify-content:center;margin:0 auto 18px"><i class="fa-solid fa-download fa-2x" style="color:#E8BA59"></i></div>
+                        <h3 class="fs-5 fw-semibold mb-2">MetaTrader 5</h3>
+                        <div style="font-size:.78rem;color:var(--tx3);margin-bottom:18px">License key required at runtime</div>
+                        <a href="#" class="bgrd btn px-4 py-2">Download MT5 Version</a>
+                     </div>
+                  </div>
+                  
+               </div>
+               <div class="text-center mt-4 rv">
+                  
+                  <div class="setup-note mt-4">
+                     <div class="setup-note-title">Setup note — required once per terminal</div>
+                     <p>The EA verifies your license online. Add this URL to your MetaTrader whitelist:</p>
+                     <div class="setup-note-url">
+                        <code id="licenseUrl">https://script.google.com/macros/s/AKfycbwdL74RPE8ZqbtLBifJYOHzWMqB-m5ifSvdpNbjJK2TH3DybUeQpafg0plQo2Uy-vHz/exec</code>
+                        <button type="button" class="setup-copy" onclick="copyToClipboard('licenseUrl')"><i class="fa-regular fa-copy me-1"></i>Copy</button>
+                     </div>
+                     <p class="setup-note-instructions">MT5/MT4 → Tools → Options → Expert Advisors → tick "Allow WebRequest for listed URL" → add the domain → OK.</p>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- FAQ -->
+         <section id="faq" class="sp" style="background:var(--bg2)">
+            <div class="container">
+               <div class="text-center mb-5 rv">
+                  <span class="slbl">FAQ</span>
+                  <h2 class="stitle">Frequently Asked Questions</h2>
+               </div>
+               <div class="row justify-content-center rv">
+                  <div class="col-lg-8">
+                     <div class="accordion acco" id="faqAcc">
+                        <div class="accordion-item">
+                           <h2 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#f1">What is Dr. Scalper EA?</button></h2>
+                           <div id="f1" class="accordion-collapse collapse show" data-bs-parent="#faqAcc">
+                              <div class="accordion-body">Dr. Scalper EA is an Expert Advisor exclusively designed for MetaTrader 5 (MT5) and XAUUSD (Gold) trading. It combines a straddle-entry strategy, grid-based recovery, basket take-profit management, license protection, and configurable risk controls to automate trade execution and position management according to your selected settings.</div>
+                           </div>
+                        </div>
+                        <div class="accordion-item">
+                           <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f2">Who is Dr. Scalper EA for?</button></h2>
+                           <div id="f2" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+                              <div class="accordion-body">Dr. Scalper EA is designed for traders who understand the risks involved in automated trading and are prepared to follow an appropriate setup, including broker selection, account type, leverage, lot size, VPS configuration, and risk management settings. It is intended for users who understand that trading involves floating losses and drawdowns and that results can vary with market conditions, broker execution, and account settings.</div>
+                           </div>
+                        </div>
+                        <div class="accordion-item">
+                           <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f3">Can I run Dr. Scalper EA on a mobile phone?</button></h2>
+                           <div id="f3" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+                              <div class="accordion-body">No. A phone is only required for monitoring trade activity through the MetaTrader 5 mobile app. Dr. Scalper EA must run on a Windows PC/laptop or a Windows VPS with the MetaTrader 5 desktop terminal installed and running.</div>
+                           </div>
+                        </div>
+                        <div class="accordion-item">
+                           <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f4">Which pair does Dr. Scalper EA trade?</button></h2>
+                           <div id="f4" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+                              <div class="accordion-body">Dr. Scalper EA is specifically designed and optimized for the XAUUSD (Gold) market, with its core trading logic focused on Gold price movements.</div>
+                           </div>
+                        </div>
+                        <div class="accordion-item">
+                           <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f5">What strategy does Dr. Scalper EA use?</button></h2>
+                           <div id="f5" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+                              <div class="accordion-body">Dr. Scalper EA places Buy Stop and Sell Stop pending orders around the current market price. Once one side is triggered, the EA manages the resulting basket using predefined grid levels, configurable lot scaling, and basket-level take-profit rules, with the objective of closing the overall basket according to the configured parameters.</div>
+                           </div>
+                        </div>
+                        <div class="d-flex justify-content-center mt-4" id="faqViewAllWrap">
+                           <button type="button" class="boc btn px-4 py-2" id="faqViewAll" onclick="setFaqExpanded(true)">View all <i class="fa-solid fa-chevron-down ms-2" aria-hidden="true"></i></button>
+                     </div>
+                        <div class="accordion-item faq-extra">
+                           <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f6">Which brokers can I use?</button></h2>
+                           <div id="f6" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+                              <div class="accordion-body">Dr. Scalper EA can operate with any MT5 brokers that provide a suitable symbol, competitive trading conditions, adequate leverage, reliable execution, and a compatible account type. For the Free Access Program, the trading account must first be registered through our supported IB (Introducing Broker) network and successfully verified.</div>
+                           </div>
+                        </div>
+                        <div class="accordion-item faq-extra">
+                           <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f7">What is the difference between Direct License and Free Access?</button></h2>
+                           <div id="f7" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+                              <div class="accordion-body">
+                                 <p><strong>Direct License</strong> - The Direct License gives users the flexibility to use Dr. Scalper EA with a broker of their choice, without any trading-volume requirements or IB restrictions.</p>
+                                 <p class="mb-0"><strong>Free Access</strong> - The Free Access Program has no license fee. However, license activation is subject to successful verification of the trading account through our supported IB (Introducing Broker) network.</p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="accordion-item faq-extra">
+                           <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f8">How much capital do you recommend?</button></h2>
+                           <div id="f8" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+                              <div class="accordion-body">
+                                 <p>Dr. Scalper EA can technically operate on a Cent Account starting from 20,000 USC, depending on the broker, leverage, account conditions, and configured risk settings.</p>
+                                 <p>For a more comfortable margin buffer and greater flexibility in managing market fluctuations, we recommend considering 50,000 USC as a more balanced account size.</p>
+                                 <p>For traders looking for a larger capital buffer, 100,000 USC may provide greater margin flexibility and additional capacity for changing market conditions.</p>
+                                 <ul>
+                                    <li>20,000 USC - Minimum Suggested Starting Capital</li>
+                                    <li>50,000 USC - Recommended Capital Level</li>
+                                    <li>100,000 USC - Preferred Capital Level for Greater Margin Flexibility</li>
+                                 </ul>
+                                 <p class="mb-0">These figures are guidelines, not guarantees of performance or protection from loss. Actual results and drawdown can vary depending on market conditions, broker execution, leverage, lot size, grid settings, and risk parameters. Always choose a capital size that matches your financial situation and risk tolerance.</p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="accordion-item faq-extra">
+                           <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f9">Does Dr. Scalper EA guarantee profit?</button></h2>
+                           <div id="f9" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+                              <div class="accordion-body">No. No trading system or Expert Advisor can guarantee fixed profits or provide a risk-free investment.<br><br>Dr. Scalper EA remains exposed to floating losses, drawdown, margin calls, stop-outs, and the potential loss of trading capital, particularly during sharp one-directional market movements or periods of high volatility when sufficient price retracement does not occur.</div>
+                           </div>
+                        </div>
+                        <div class="accordion-item faq-extra">
+                           <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f10">Can I Withdraw Funds While Dr. Scalper EA Is Running?</button></h2>
+                           <div id="f10" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+                              <div class="accordion-body"><p>Yes. Withdrawals are processed entirely through your broker's system and are not controlled by Dr. Scalper EA. However, always ensure that sufficient free margin remains available after any withdrawal. Avoid making large withdrawals while the EA has active floating baskets, as reducing available margin can increase the risk of a margin call or stop-out, particularly during adverse market movements.</p><p class="mb-0">Before withdrawing funds, consider your current open positions, floating drawdown, margin level, and configured risk settings.</p></div>
+                           </div>
+                        </div>
+                        <div class="accordion-item faq-extra">
+                           <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f11">Do I need a VPS?</button></h2>
+                           <div id="f11" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+                              <div class="accordion-body"><p>A Virtual Private Server (VPS) is strongly recommended for live trading with Dr. Scalper EA. The MetaTrader 5 terminal needs to remain online and connected 24/5 so the EA can execute, manage, and close trades according to its configured settings. If your PC or laptop is turned off, in sleep mode, restarting, disconnected from the internet, or otherwise offline, the EA cannot execute new trades or manage existing positions during that period.</p><p class="mb-0">For more consistent operation, we recommend running MetaTrader 5 on a reliable Windows VPS with a stable internet connection.</p></div>
+                           </div>
+                        </div>
+                        <div class="accordion-item faq-extra">
+                           <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f12">Why isn't the EA opening trades?</button></h2>
+                           <div id="f12" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+                              <div class="accordion-body">
+                                 <ul>
+                                    <li><strong>License:</strong> The license may be invalid, expired, or not activated.</li>
+                                    <li><strong>WebRequest Settings:</strong> The required WebRequest URL/domain may not be added to the allowed list in MetaTrader 5 settings.</li>
+                                    <li><strong>Algo Trading:</strong> The Algo Trading button may be disabled in the MT5 terminal.</li>
+                                    <li><strong>Market Session:</strong> The market may currently be closed or outside the EA's configured trading hours.</li>
+                                    <li><strong>Spread:</strong> The current spread may be higher than the maximum spread configured in the EA.</li>
+                                    <li><strong>Symbol:</strong> Your broker may use a different XAUUSD symbol suffix, for example XAUUSD.a or XAUUSDm.</li>
+                                    <li><strong>Trading Window:</strong> The EA's configured trading session may not have started yet.</li>
+                                    <li><strong>Free Margin:</strong> Available free margin may be insufficient to open or manage the required positions.</li>
+                                 </ul>
+                                 <p class="mb-0">If all settings appear correct and the EA still does not trade, check the Experts and Journal tabs in MetaTrader 5 for error messages and contact support with the relevant details.</p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="accordion-item faq-extra">
+                           <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f13">If I register to get the EA, is an installation service provided?</button></h2>
+                           <div id="f13" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+                              <div class="accordion-body"><p>Installation service is not provided by default. Users are required to install and configure Dr. Scalper EA themselves using the installation guide we provide.</p><p>If you experience technical issues, our Support Team can help verify basic settings and review relevant error messages or logs from the Experts and Journal tabs in MetaTrader 5.</p><p class="mb-0"><strong>Security Notice:</strong> Never share your trading account password (master password) with anyone, including our Support Team. We will never require your master password to provide technical assistance.</p></div>
+                           </div>
+                        </div>
+                        <div class="justify-content-center mt-4 faq-show-less" id="faqShowLessWrap">
+                           <button type="button" class="boc btn px-4 py-2" onclick="setFaqExpanded(false)">Show less <i class="fa-solid fa-chevron-up ms-2" aria-hidden="true"></i></button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         
+         <!-- FINAL CTA -->
+         <section id="cta">
+            <div class="aur aur-a" style="top:50%;left:50%;transform:translate(-50%,-50%)"></div>
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:400px;background:radial-gradient(ellipse,rgba(232,186,89,.2),transparent 70%);pointer-events:none"></div>
+            <div class="container position-relative" style="z-index:2">
+               <div class="rv">
+                  <span class="hbadge mb-4 d-inline-flex"><span class="bdot"></span>Lifetime License · Free Upgrades</span>
+                  <h2 style="font-size:clamp(2rem,5vw,3.8rem);font-weight:700;letter-spacing:-.025em;line-height:1.1;margin-bottom:18px">Ready to Automate Your<br><span class="gt">Gold Trading?</span></h2>
+                  <p style="font-size:1.05rem;color:var(--tx2);max-width:500px;margin:0 auto 36px">Join 5,000+ traders using Dr. Scalper EA for precision gold trading with automated basket management.</p>
+                  <div class="d-flex align-items-center justify-content-center gap-3 flex-wrap">
+                     <a href="#pricing" class="bgrd btn px-4 py-3 fs-6">Get Started <i class="fa-solid fa-arrow-right ms-1"></i></a>
+                     <a href="#how" class="boc btn px-4 py-3 fs-6"><i class="fa-solid fa-circle-play me-2"></i>How It Works</a>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- FOOTER -->
+         <footer id="foot">
+            <div class="container">
+               <div class="row g-5 mb-5 justify-content-center">
+                  <div class="col-lg-6 footer-brand text-center">
+                     <a class="d-flex align-items-center justify-content-center gap-2 mb-3" href="#" style="font-size:1.15rem;font-weight:700;color:var(--tx)">
+
+                     </a>
+                     <a href="https://t.me/drscalperofficial" target="_blank" rel="noopener" class="footer-telegram-button" aria-label="Contact us on Telegram">
+                        <span class="footer-telegram-icon"><i class="fa-brands fa-telegram" aria-hidden="true"></i></span>
+                        <span>Contact</span>
+                     </a>
+                     <p class="footer-disclaimer">Trading XAUUSD involves substantial risk. Past performance does not guarantee future results. The EA, like any automated system, can lose money. Use only capital you can afford to lose.</p>
+                  </div>
+               
+                  </div>
+               <div class="footer-copyright d-flex align-items-center justify-content-center flex-wrap gap-3 pt-4" style="border-top:1px solid var(--bd)">
+                  <p style="font-size:.8rem;color:var(--tx3);margin:0"><i class="fa-regular fa-copyright me-1"></i>2026 Dr. Scalper. All rights reserved. Powered by <a href="https://www.feb87.com/" target="_blank" rel="noopener" style="color:var(--pur);text-decoration:underline">feb87</a></p>
+                  </div>
+                     </div>
+         </footer>
+         <div class="payment-modal" id="paymentModal" aria-hidden="true">
+            <div class="payment-modal-backdrop" onclick="closePaymentModal()"></div>
+            <div class="payment-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="paymentModalTitle">
+               <div class="payment-modal-header">
+                  <div>
+                     <h2 id="paymentModalTitle">Purchase GOLDTRAP EA v4.2.3</h2>
+                     <p>Send USDT and confirm on Telegram.</p>
+                  </div>
+                  <button type="button" class="payment-modal-close" aria-label="Close payment window" onclick="closePaymentModal()"><i class="fa-solid fa-xmark"></i></button>
+               </div>
+               <div class="payment-modal-body">
+                  <div class="payment-detail"><span>Plan</span><strong id="paymentPlan">5 Accounts</strong></div>
+                  <div class="payment-detail"><span>Amount</span><strong><b id="paymentAmount">$329</b> <small>USDT</small></strong></div>
+                  <div class="payment-detail"><span>Network</span><strong>TRC20 (Tron)</strong></div>
+                  <div class="payment-wallet">
+                     <span>Wallet Address</span>
+                     <div class="payment-wallet-row">
+                        <code id="paymentWallet">TCbTBQPCpYYLbu2Mxx8BtEbguyKgG85vSz</code>
+                        <button type="button" aria-label="Copy wallet address" onclick="copyWalletAddress(event)"><i class="fa-regular fa-copy"></i></button>
+               </div>
+            </div>
+                  <p class="payment-note">After payment, send the transaction screenshot to Dr. Scalper on Telegram for license activation.</p>
+                  <a class="payment-confirm-button" href="https://t.me/drscalperofficial" target="_blank" rel="noopener"><i class="fa-brands fa-telegram" aria-hidden="true"></i>Confirm Payment on Telegram</a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- /landing -->
+      
+      <!-- Scroll to Top Button -->
+      <button id="scrollTopBtn" class="scroll-top-btn" type="button" aria-label="Scroll to top">
+         <i class="fa-solid fa-arrow-up"></i>
+      </button>
+      <!-- ======================== LOGIN OFFCANVAS ======================== -->
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="lofc">
+         <div class="offcanvas-header">
+            <div class="d-flex align-items-center gap-2">
+               <img src="img/logo.png" alt="Dr. Scalper Logo">
+               <h5 class="offcanvas-title mb-0">Dr. Scalper</h5>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" style="filter:invert(1)"></button>
+         </div>
+         <div class="offcanvas-body p-4">
+            <div class="tab-switch"><button class="tab-sw-btn on" id="tabLogin" onclick="swTab('login')">Log In</button><button class="tab-sw-btn" id="tabSignup" onclick="swTab('signup')">Sign Up</button></div>
+            <!-- Login -->
+            <div id="fLogin">
+               <div id="loginErr" class="err-msg"><i class="fa-solid fa-circle-exclamation me-1"></i><span id="loginErrMsg">Invalid email or password.</span></div>
+               <label class="olbl"><i class="fa-regular fa-envelope me-1"></i>Email address</label>
+               <input class="oinp" type="email" id="loginEmail" placeholder="you@company.com">
+               <label class="olbl"><i class="fa-solid fa-lock me-1"></i>Password</label>
+               <input class="oinp" type="password" id="loginPass" placeholder="********">
+               <div class="text-end mb-3" style="margin-top:-8px"><a href="#" style="font-size:.8rem;color:var(--pur)">Forgot password?</a></div>
+               <button class="bgrd btn w-100 py-3 fw-semibold fs-6" id="loginBtn" onclick="doLogin()">Log In <i class="fa-solid fa-arrow-right ms-1 fa-sm"></i></button>
+               <div class="odiv">or continue with</div>
+               <button class="oauth" onclick="quickLogin('google')"><i class="fa-brands fa-google me-2"></i>Continue with Google</button>
+               <button class="oauth" onclick="quickLogin('github')"><i class="fa-brands fa-github me-2"></i>Continue with GitHub</button>
+               <p class="text-center mt-4" style="font-size:.82rem;color:var(--tx3)">Don't have an account? <a href="#" style="color:var(--pur)" onclick="swTab('signup');return false">Sign up free</a></p>
+            </div>
+            <!-- Sign Up -->
+            <div id="fSignup" style="display:none">
+               <div id="signupErr" class="err-msg"><i class="fa-solid fa-circle-exclamation me-1"></i><span id="signupErrMsg">Please fill all fields.</span></div>
+               <label class="olbl"><i class="fa-regular fa-user me-1"></i>Full name</label>
+               <input class="oinp" type="text" id="signupName" placeholder="Jane Smith">
+               <label class="olbl"><i class="fa-regular fa-envelope me-1"></i>Work email</label>
+               <input class="oinp" type="email" id="signupEmail" placeholder="you@company.com">
+               <label class="olbl"><i class="fa-solid fa-lock me-1"></i>Password</label>
+               <input class="oinp" type="password" id="signupPass" placeholder="Min. 8 characters">
+               <button class="bgrd btn w-100 py-3 fw-semibold fs-6" id="signupBtn" onclick="doSignup()">Create Free Account <i class="fa-solid fa-arrow-right ms-1 fa-sm"></i></button>
+               <div class="odiv">or sign up with</div>
+               <button class="oauth" onclick="quickLogin('google')"><i class="fa-brands fa-google me-2"></i>Continue with Google</button>
+               <button class="oauth" onclick="quickLogin('github')"><i class="fa-brands fa-github me-2"></i>Continue with GitHub</button>
+               <p class="text-center mt-3" style="font-size:.76rem;color:var(--tx3)">By signing up, you agree to our <a href="#" style="color:var(--pur)">Terms</a> &amp; <a href="#" style="color:var(--pur)">Privacy Policy</a></p>
+            </div>
+         </div>
+      </div>
+      <!-- ======================== DASHBOARD ======================== -->
+      <div id="dashboard">
+         <!-- Sidebar -->
+         <div class="db-sidebar" id="dbSidebar">
+            <div class="db-logo">
+               <img src="img/logo.png" alt="Dr. Scalper Logo">
+            </div>
+            <div class="db-nav">
+               <div class="db-nav-section">Trading</div>
+               <button class="db-nl active" onclick="dbNav('overview',this)"><i class="fa-solid fa-gauge-high"></i> Overview</button>
+               <button class="db-nl" onclick="dbNav('trading',this)"><i class="fa-solid fa-chart-line"></i> Trading <span class="db-badge">3</span></button>
+               <button class="db-nl" onclick="dbNav('positions',this)"><i class="fa-solid fa-coins"></i> Positions <span class="db-badge" style="background:#34d399">7</span></button>
+               <button class="db-nl" onclick="dbNav('history',this)"><i class="fa-solid fa-history"></i> History</button>
+               <button class="db-nl" onclick="dbNav('settings',this)"><i class="fa-solid fa-sliders"></i> EA Settings</button>
+               <div class="db-nav-section">Account</div>
+               <button class="db-nl" onclick="dbNav('license',this)"><i class="fa-solid fa-key"></i> License</button>
+               <button class="db-nl" onclick="dbNav('support',this)"><i class="fa-solid fa-headset"></i> Support</button>
+            </div>
+            <div class="db-bottom">
+               <button class="db-nl" onclick="doLogout()" style="color:#f87171"><i class="fa-solid fa-right-from-bracket"></i> Log Out</button>
+            </div>
+         </div>
+         <!-- Top bar -->
+         <div class="db-top">
+            <button class="boc d-lg-none me-2 px-2 py-2" style="border-radius:10px;width:38px;height:38px" onclick="document.getElementById('dbSidebar').classList.toggle('mob-open')">
+            <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="db-top-search">
+               <i class="fa-solid fa-magnifying-glass"></i>
+               <input type="text" placeholder="Search agents, conversations...">
+            </div>
+            <div class="ms-auto d-flex align-items-center gap-3">
+               <button class="boc d-flex align-items-center justify-content-center" id="dbThBtn" style="width:38px;height:38px;padding:0;border-radius:12px" onclick="toggleTheme()">
+               <i class="fa-solid fa-sun" id="dbSunI" style="display:none"></i>
+               <i class="fa-solid fa-moon" id="dbMoonI"></i>
+               </button>
+               <div style="position:relative" id="notifWrap">
+                  <button class="boc d-flex align-items-center justify-content-center" id="bellBtn" style="width:38px;height:38px;padding:0;border-radius:12px" onclick="toggleNotif(event)">
+                  <i class="fa-regular fa-bell"></i>
+                  </button>
+                  <span id="notifBadge" style="position:absolute;top:5px;right:5px;width:9px;height:9px;border-radius:50%;background:#f87171;border:2px solid var(--bg)"></span>
+                  <!-- Notification Dropdown -->
+                  <div class="db-dropdown" id="notifDropdown" style="right:0;min-width:360px">
+                     <div class="dd-header">
+                        <div class="dd-header-title"><i class="fa-regular fa-bell me-2" style="color:var(--pur)"></i>Notifications <span id="unreadCount" style="background:rgba(248,113,113,.15);color:#f87171;font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:100px;margin-left:6px">4 new</span></div>
+                        <div class="d-flex gap-2">
+                           <button class="dd-close" onclick="markAllRead()" title="Mark all read" style="width:auto;padding:4px 10px;font-size:.72rem;color:var(--pur);border-color:rgba(139,92,246,.3)">Mark all read</button>
+                           <button class="dd-close" onclick="toggleNotif(event)"><i class="fa-solid fa-xmark"></i></button>
+                        </div>
+                     </div>
+                     <div class="dd-body" id="notifList">
+                        <div class="notif-item notif-unread d-flex gap-3 mb-2">
+                           <div class="notif-ico" style="background:rgba(248,113,113,.12)"><i class="fa-solid fa-triangle-exclamation" style="color:#f87171;font-size:.9rem"></i></div>
+                           <div style="flex:1">
+                              <div style="font-size:.85rem;font-weight:600;margin-bottom:3px">High ticket volume alert</div>
+                              <div style="font-size:.78rem;color:var(--tx2)">Support Bot handling 23% above average. Consider scaling agents.</div>
+                              <div style="font-size:.7rem;color:var(--tx3);margin-top:5px"><i class="fa-regular fa-clock me-1"></i>2 minutes ago</div>
+                           </div>
+                           <div class="notif-dot"></div>
+                        </div>
+                        <div class="notif-item notif-unread d-flex gap-3 mb-2">
+                           <div class="notif-ico" style="background:rgba(52,211,153,.12)"><i class="fa-solid fa-chart-line" style="color:#34d399;font-size:.9rem"></i></div>
+                           <div style="flex:1">
+                              <div style="font-size:.85rem;font-weight:600;margin-bottom:3px">Daily goal reached ??</div>
+                              <div style="font-size:.78rem;color:var(--tx2)">Your AI agents resolved 1,000 conversations today � a new record!</div>
+                              <div style="font-size:.7rem;color:var(--tx3);margin-top:5px"><i class="fa-regular fa-clock me-1"></i>18 minutes ago</div>
+                           </div>
+                           <div class="notif-dot"></div>
+                        </div>
+                        <div class="notif-item notif-unread d-flex gap-3 mb-2">
+                           <div class="notif-ico" style="background:rgba(139,92,246,.12)"><i class="fa-brands fa-slack" style="color:#a78bfa;font-size:.9rem"></i></div>
+                           <div style="flex:1">
+                              <div style="font-size:.85rem;font-weight:600;margin-bottom:3px">Slack sync completed</div>
+                              <div style="font-size:.78rem;color:var(--tx2)">#support channel successfully synced. 47 new threads indexed for AI training.</div>
+                              <div style="font-size:.7rem;color:var(--tx3);margin-top:5px"><i class="fa-regular fa-clock me-1"></i>1 hour ago</div>
+                           </div>
+                           <div class="notif-dot"></div>
+                        </div>
+                        <div class="notif-item notif-unread d-flex gap-3 mb-2">
+                           <div class="notif-ico" style="background:rgba(245,158,11,.1)"><i class="fa-solid fa-robot" style="color:#fbbf24;font-size:.9rem"></i></div>
+                           <div style="flex:1">
+                              <div style="font-size:.85rem;font-weight:600;margin-bottom:3px">Agent update available</div>
+                              <div style="font-size:.78rem;color:var(--tx2)">Support Bot v2.2 is ready. Improved accuracy by 4.3% on billing queries.</div>
+                              <div style="font-size:.7rem;color:var(--tx3);margin-top:5px"><i class="fa-regular fa-clock me-1"></i>3 hours ago</div>
+                           </div>
+                           <div class="notif-dot"></div>
+                        </div>
+                        <div class="notif-item d-flex gap-3 mb-2">
+                           <div class="notif-ico" style="background:rgba(59,130,246,.1)"><i class="fa-solid fa-file-lines" style="color:#60a5fa;font-size:.9rem"></i></div>
+                           <div style="flex:1">
+                              <div style="font-size:.85rem;font-weight:600;margin-bottom:3px">Weekly report ready</div>
+                              <div style="font-size:.78rem;color:var(--tx2)">Your performance report for last week is ready to download.</div>
+                              <div style="font-size:.7rem;color:var(--tx3);margin-top:5px"><i class="fa-regular fa-clock me-1"></i>Yesterday</div>
+                           </div>
+                           <div class="notif-dot read"></div>
+                        </div>
+                        <div class="notif-item d-flex gap-3 mb-2">
+                           <div class="notif-ico" style="background:rgba(52,211,153,.1)"><i class="fa-solid fa-plug" style="color:#34d399;font-size:.9rem"></i></div>
+                           <div style="flex:1">
+                              <div style="font-size:.85rem;font-weight:600;margin-bottom:3px">GitHub integration connected</div>
+                              <div style="font-size:.78rem;color:var(--tx2)">Successfully connected 2 repositories. AI code review is now active.</div>
+                              <div style="font-size:.7rem;color:var(--tx3);margin-top:5px"><i class="fa-regular fa-clock me-1"></i>2 days ago</div>
+                           </div>
+                           <div class="notif-dot read"></div>
+                        </div>
+                     </div>
+                     <div style="padding:12px 14px;border-top:1px solid var(--bd);text-align:center">
+                        <button class="boc btn w-100 py-2" style="font-size:.82rem;border-radius:10px"><i class="fa-solid fa-list me-1"></i>View All Notifications</button>
+                     </div>
+                  </div>
+               </div>
+               <div style="position:relative" id="profileWrap">
+                  <div class="db-user-pill" id="userPill" onclick="toggleProfile(event)">
+                     <div class="db-avatar" id="userAvatar">U</div>
+                     <div class="d-none d-md-block">
+                        <div style="font-size:.85rem;font-weight:600;line-height:1.2" id="userName">User</div>
+                        <div style="font-size:.72rem;color:var(--tx3)" id="userPlan">Pro Plan</div>
+                     </div>
+                     <i class="fa-solid fa-chevron-down fa-xs" id="profileChevron" style="color:var(--tx3);margin-left:2px;transition:.3s"></i>
+                  </div>
+                  <!-- Profile Dropdown -->
+                  <div class="db-dropdown profile-dd" id="profileDropdown" style="right:0">
+                     <div class="profile-dd-top">
+                        <div class="db-avatar" id="pdAvatar" style="width:46px;height:46px;border-radius:14px;font-size:1rem;flex-shrink:0">U</div>
+                        <div>
+                           <div style="font-weight:700;font-size:.95rem" id="pdName">User</div>
+                           <div style="font-size:.78rem;color:var(--tx3)" id="pdEmail">user@email.com</div>
+                           <div style="margin-top:5px"><span class="bst son" style="font-size:.68rem" id="pdPlan">Pro Plan</span></div>
+                        </div>
+                     </div>
+                     <div style="padding:8px 0">
+                        <button class="profile-menu-item" onclick="dbNav('settings',document.querySelector('[onclick*=settings]'));toggleProfile()"><i class="fa-regular fa-user" style="color:var(--pur)"></i>My Profile</button>
+                        <button class="profile-menu-item" onclick="dbNav('settings',document.querySelector('[onclick*=settings]'));toggleProfile()"><i class="fa-solid fa-gear" style="color:var(--tx3)"></i>Account Settings</button>
+                        <button class="profile-menu-item" onclick="dbNav('license',document.querySelector('[onclick*=license]'));toggleProfile()"><i class="fa-solid fa-key" style="color:#60a5fa"></i>License</button>
+                        <button class="profile-menu-item" onclick="dbNav('support',document.querySelector('[onclick*=support]'));toggleProfile()"><i class="fa-solid fa-headset" style="color:#34d399"></i>Support</button>
+                        <div style="height:1px;background:var(--bd);margin:8px 16px"></div>
+                        <div style="padding:8px 16px 4px">
+                           <div style="font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--tx3);margin-bottom:8px">Current Plan</div>
+                           <div style="background:linear-gradient(135deg,rgba(232,186,89,.12),rgba(0,0,0,.08));border:1px solid rgba(232,186,89,.25);border-radius:12px;padding:12px">
+                              <div style="font-weight:700;font-size:.88rem;margin-bottom:3px" id="pdPlanDetail">Pro Plan</div>
+                              <div style="font-size:.76rem;color:var(--tx2);margin-bottom:8px">5 Accounts License</div>
+                              <button class="bgrd btn w-100 py-1" style="font-size:.75rem;border-radius:8px">Upgrade License</button>
+                           </div>
+                        </div>
+                        <div style="height:1px;background:var(--bd);margin:8px 16px"></div>
+                        <button class="profile-menu-item danger" onclick="doLogout();toggleProfile()"><i class="fa-solid fa-right-from-bracket" style="color:#f87171"></i>Log Out</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- Main Content -->
+         <div class="db-main">
+            <div class="db-content">
+               <!-- -- OVERVIEW -- -->
+               <div class="db-section active" id="sec-overview">
+                  <div class="d-flex align-items-center justify-content-between mb-4">
+                     <div>
+                        <h4 class="fw-700 mb-1" style="font-size:1.4rem;font-weight:700">Good morning, <span id="greetName">Trader</span> ??</h4>
+                        <p style="font-size:.875rem;color:var(--tx3);margin:0">Here's your trading performance overview.</p>
+                     </div>
+                     <button class="bgrd btn px-3 py-2" style="font-size:.85rem;white-space:nowrap" onclick="dbNav('settings',document.querySelector('[onclick*=settings]'))"><i class="fa-solid fa-sliders me-2"></i>EA Settings</button>
+                  </div>
+                  <!-- Stat cards -->
+                  <div class="row g-3 mb-4">
+                     <div class="col-6 col-xl-3">
+                        <div class="db-stat-card">
+                           <div class="d-flex justify-content-between align-items-start mb-3">
+                              <div style="width:38px;height:38px;border-radius:11px;background:rgba(232,186,89,.15);display:flex;align-items:center;justify-content:center"><i class="fa-solid fa-chart-line" style="color:#E8BA59"></i></div>
+                              <span style="font-size:.72rem;font-weight:600;padding:3px 9px;border-radius:100px;background:rgba(52,211,153,.1);color:#34d399">+ 8.4%</span>
+                           </div>
+                           <div class="db-stat-val gt">$12,450</div>
+                           <div class="db-stat-lbl">Today's Profit</div>
+                        </div>
+                     </div>
+                     <div class="col-6 col-xl-3">
+                        <div class="db-stat-card">
+                           <div class="d-flex justify-content-between align-items-start mb-3">
+                              <div style="width:38px;height:38px;border-radius:11px;background:rgba(52,211,153,.12);display:flex;align-items:center;justify-content:center"><i class="fa-solid fa-bullseye" style="color:#34d399"></i></div>
+                              <span style="font-size:.72rem;font-weight:600;padding:3px 9px;border-radius:100px;background:rgba(52,211,153,.1);color:#34d399">89.4%</span>
+                           </div>
+                           <div class="db-stat-val" style="color:#34d399">89.4%</div>
+                           <div class="db-stat-lbl">Win Rate</div>
+                        </div>
+                     </div>
+                     <div class="col-6 col-xl-3">
+                        <div class="db-stat-card">
+                           <div class="d-flex justify-content-between align-items-start mb-3">
+                              <div style="width:38px;height:38px;border-radius:11px;background:rgba(59,130,246,.12);display:flex;align-items:center;justify-content:center"><i class="fa-solid fa-coins" style="color:#60a5fa"></i></div>
+                              <span style="font-size:.72rem;font-weight:600;padding:3px 9px;border-radius:100px;background:rgba(59,130,246,.1);color:#60a5fa">7 active</span>
+                           </div>
+                           <div class="db-stat-val" style="color:#60a5fa">47</div>
+                           <div class="db-stat-lbl">Total Trades</div>
+                        </div>
+                     </div>
+                     <div class="col-6 col-xl-3">
+                        <div class="db-stat-card">
+                           <div class="d-flex justify-content-between align-items-start mb-3">
+                              <div style="width:38px;height:38px;border-radius:11px;background:rgba(245,158,11,.1);display:flex;align-items:center;justify-content:center"><i class="fa-solid fa-layer-group" style="color:#fbbf24"></i></div>
+                              <span style="font-size:.72rem;font-weight:600;padding:3px 9px;border-radius:100px;background:rgba(245,158,11,.1);color:#fbbf24">3.2</span>
+                           </div>
+                           <div class="db-stat-val" style="color:#fbbf24">3.2</div>
+                           <div class="db-stat-lbl">Active Baskets</div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Chart + Activity -->
+                  <div class="row g-3">
+                     <div class="col-lg-8">
+                        <div style="background:var(--sf);border:1px solid var(--bd);border-radius:18px;padding:24px">
+                           <div class="d-flex align-items-center justify-content-between mb-3">
+                              <div style="font-weight:600"><i class="fa-solid fa-chart-area me-2" style="color:var(--pur)"></i>Trading Performance</div>
+                              <div style="font-size:.75rem;color:var(--tx3)">Last 30 days</div>
+                           </div>
+                           <canvas id="ovChart" height="100"></canvas>
+                        </div>
+                     </div>
+                     <div class="col-lg-4">
+                        <div style="background:var(--sf);border:1px solid var(--bd);border-radius:18px;padding:20px;height:100%">
+                           <div class="d-flex align-items-center justify-content-between mb-3">
+                              <div style="font-weight:600;font-size:.9rem">Live Trading</div>
+                              <div class="d-flex align-items-center gap-2"><span style="width:7px;height:7px;border-radius:50%;background:#34d399;animation:bpls 1.5s infinite"></span><span style="font-size:.72rem;color:#34d399;font-weight:600">Live</span></div>
+                           </div>
+                           <div id="liveActivity" style="display:flex;flex-direction:column;gap:8px">
+                              <div style="display:flex;gap:10px;padding:10px;background:var(--bg3);border-radius:10px;font-size:.78rem"><span style="width:7px;height:7px;border-radius:50%;background:#34d399;margin-top:4px;flex-shrink:0"></span><span style="color:var(--tx2)">Buy XAUUSD @ 2345.20 filled</span><span style="margin-left:auto;color:var(--tx3);white-space:nowrap">2s ago</span></div>
+                              <div style="display:flex;gap:10px;padding:10px;background:var(--bg3);border-radius:10px;font-size:.78rem"><span style="width:7px;height:7px;border-radius:50%;background:#E8BA59;margin-top:4px;flex-shrink:0"></span><span style="color:var(--tx2)">Basket #3 recovery triggered</span><span style="margin-left:auto;color:var(--tx3);white-space:nowrap">18s ago</span></div>
+                              <div style="display:flex;gap:10px;padding:10px;background:var(--bg3);border-radius:10px;font-size:.78rem"><span style="width:7px;height:7px;border-radius:50%;background:#34d399;margin-top:4px;flex-shrink:0"></span><span style="color:var(--tx2)">TP hit: +$245 on basket #2</span><span style="margin-left:auto;color:var(--tx3);white-space:nowrap">45s ago</span></div>
+                              <div style="display:flex;gap:10px;padding:10px;background:var(--bg3);border-radius:10px;font-size:.78rem"><span style="width:7px;height:7px;border-radius:50%;background:#fbbf24;margin-top:4px;flex-shrink:0"></span><span style="color:var(--tx2)">Daily profit target reached</span><span style="margin-left:auto;color:var(--tx3);white-space:nowrap">1m ago</span></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- -- AI AGENTS -- -->
+               <div class="db-section" id="sec-agents">
+                  <div class="d-flex align-items-center justify-content-between mb-4">
+                     <div>
+                        <h4 style="font-size:1.4rem;font-weight:700;margin-bottom:4px">AI Agents</h4>
+                        <p style="font-size:.875rem;color:var(--tx3);margin:0">Manage and monitor your deployed AI agents.</p>
+                     </div>
+                     <button class="bgrd btn px-3 py-2" style="font-size:.85rem"><i class="fa-solid fa-plus me-2"></i>Deploy New Agent</button>
+                  </div>
+                  <div class="row g-3">
+                     <div class="col-md-6">
+                        <div class="agent-card">
+                           <div class="d-flex align-items-start gap-3 mb-3">
+                              <div style="width:46px;height:46px;border-radius:14px;background:rgba(52,211,153,.12);border:1px solid rgba(52,211,153,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0"><i class="fa-solid fa-headset" style="color:#34d399;font-size:1.1rem"></i></div>
+                              <div style="flex:1">
+                                 <div class="d-flex align-items-center gap-2 mb-1"><strong>Support Bot v2.1</strong><span style="width:9px;height:9px;border-radius:50%;background:#34d399;box-shadow:0 0 8px #34d399"></span></div>
+                                 <div style="font-size:.78rem;color:var(--tx3)">Customer Support � GPT-4o</div>
+                              </div>
+                              <span class="bst son">Online</span>
+                           </div>
+                           <div class="row g-2 mb-3">
+                              <div class="col-6">
+                                 <div style="background:var(--bg3);border-radius:10px;padding:10px">
+                                    <div style="font-size:1.1rem;font-weight:700">1,248</div>
+                                    <div style="font-size:.7rem;color:var(--tx3)">Chats today</div>
+                                 </div>
+                              </div>
+                              <div class="col-6">
+                                 <div style="background:var(--bg3);border-radius:10px;padding:10px">
+                                    <div style="font-size:1.1rem;font-weight:700;color:#34d399">96.4%</div>
+                                    <div style="font-size:.7rem;color:var(--tx3)">Success rate</div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="d-flex gap-2"><button class="boc btn flex-fill py-2" style="font-size:.82rem"><i class="fa-solid fa-eye me-1"></i>View</button><button class="bgrd btn flex-fill py-2" style="font-size:.82rem"><i class="fa-solid fa-sliders me-1"></i>Configure</button></div>
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+                        <div class="agent-card">
+                           <div class="d-flex align-items-start gap-3 mb-3">
+                              <div style="width:46px;height:46px;border-radius:14px;background:rgba(139,92,246,.12);border:1px solid rgba(139,92,246,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0"><i class="fa-solid fa-handshake" style="color:#a78bfa;font-size:1.1rem"></i></div>
+                              <div style="flex:1">
+                                 <div class="d-flex align-items-center gap-2 mb-1"><strong>Sales Qualifier</strong><span style="width:9px;height:9px;border-radius:50%;background:#8b5cf6;box-shadow:0 0 8px #8b5cf6"></span></div>
+                                 <div style="font-size:.78rem;color:var(--tx3)">Sales Automation � Claude 3.5</div>
+                              </div>
+                              <span class="bst sbz">Busy</span>
+                           </div>
+                           <div class="row g-2 mb-3">
+                              <div class="col-6">
+                                 <div style="background:var(--bg3);border-radius:10px;padding:10px">
+                                    <div style="font-size:1.1rem;font-weight:700">347</div>
+                                    <div style="font-size:.7rem;color:var(--tx3)">Leads qualified</div>
+                                 </div>
+                              </div>
+                              <div class="col-6">
+                                 <div style="background:var(--bg3);border-radius:10px;padding:10px">
+                                    <div style="font-size:1.1rem;font-weight:700;color:#a78bfa">78.2%</div>
+                                    <div style="font-size:.7rem;color:var(--tx3)">Conv. rate</div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="d-flex gap-2"><button class="boc btn flex-fill py-2" style="font-size:.82rem"><i class="fa-solid fa-eye me-1"></i>View</button><button class="bgrd btn flex-fill py-2" style="font-size:.82rem"><i class="fa-solid fa-sliders me-1"></i>Configure</button></div>
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+                        <div class="agent-card">
+                           <div class="d-flex align-items-start gap-3 mb-3">
+                              <div style="width:46px;height:46px;border-radius:14px;background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0"><i class="fa-solid fa-chart-bar" style="color:#60a5fa;font-size:1.1rem"></i></div>
+                              <div style="flex:1">
+                                 <div class="d-flex align-items-center gap-2 mb-1"><strong>Data Analyzer</strong><span style="width:9px;height:9px;border-radius:50%;background:#34d399;box-shadow:0 0 8px #34d399"></span></div>
+                                 <div style="font-size:.78rem;color:var(--tx3)">Analytics � Gemini Pro</div>
+                              </div>
+                              <span class="bst son">Online</span>
+                           </div>
+                           <div class="row g-2 mb-3">
+                              <div class="col-6">
+                                 <div style="background:var(--bg3);border-radius:10px;padding:10px">
+                                    <div style="font-size:1.1rem;font-weight:700">92</div>
+                                    <div style="font-size:.7rem;color:var(--tx3)">Reports generated</div>
+                                 </div>
+                              </div>
+                              <div class="col-6">
+                                 <div style="background:var(--bg3);border-radius:10px;padding:10px">
+                                    <div style="font-size:1.1rem;font-weight:700;color:#60a5fa">100%</div>
+                                    <div style="font-size:.7rem;color:var(--tx3)">Accuracy</div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="d-flex gap-2"><button class="boc btn flex-fill py-2" style="font-size:.82rem"><i class="fa-solid fa-eye me-1"></i>View</button><button class="bgrd btn flex-fill py-2" style="font-size:.82rem"><i class="fa-solid fa-sliders me-1"></i>Configure</button></div>
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+                        <div class="agent-card">
+                           <div class="d-flex align-items-start gap-3 mb-3">
+                              <div style="width:46px;height:46px;border-radius:14px;background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0"><i class="fa-solid fa-envelope" style="color:#fbbf24;font-size:1.1rem"></i></div>
+                              <div style="flex:1">
+                                 <div class="d-flex align-items-center gap-2 mb-1"><strong>Email Automator</strong><span style="width:9px;height:9px;border-radius:50%;background:#f59e0b"></span></div>
+                                 <div style="font-size:.78rem;color:var(--tx3)">Email Marketing � GPT-4o</div>
+                              </div>
+                              <span class="bst sid">Idle</span>
+                           </div>
+                           <div class="row g-2 mb-3">
+                              <div class="col-6">
+                                 <div style="background:var(--bg3);border-radius:10px;padding:10px">
+                                    <div style="font-size:1.1rem;font-weight:700">538</div>
+                                    <div style="font-size:.7rem;color:var(--tx3)">Emails sent</div>
+                                 </div>
+                              </div>
+                              <div class="col-6">
+                                 <div style="background:var(--bg3);border-radius:10px;padding:10px">
+                                    <div style="font-size:1.1rem;font-weight:700;color:#fbbf24">41.3%</div>
+                                    <div style="font-size:.7rem;color:var(--tx3)">Open rate</div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="d-flex gap-2"><button class="boc btn flex-fill py-2" style="font-size:.82rem"><i class="fa-solid fa-eye me-1"></i>View</button><button class="bgrd btn flex-fill py-2" style="font-size:.82rem"><i class="fa-solid fa-sliders me-1"></i>Configure</button></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- -- AI CHAT (Anthropic API powered) -- -->
+               <div class="db-section" id="sec-chat">
+                  <div class="d-flex align-items-center justify-content-between mb-4">
+                     <div>
+                        <h4 style="font-size:1.4rem;font-weight:700;margin-bottom:4px">AI Chat Console</h4>
+                        <p style="font-size:.875rem;color:var(--tx3);margin:0">Chat with your NexusAI assistant � powered by Claude.</p>
+                     </div>
+                     <button class="boc btn px-3 py-2" style="font-size:.82rem" onclick="clearChat()"><i class="fa-solid fa-rotate-right me-1"></i>New Chat</button>
+                  </div>
+                  <div class="row g-3">
+                     <div class="col-lg-8">
+                        <div class="chat-wrap">
+                           <div class="chat-header">
+                              <div class="chat-ai-avatar"><i class="fa-solid fa-robot"></i></div>
+                              <div>
+                                 <div style="font-weight:600;font-size:.9rem">NexusAI Assistant</div>
+                                 <div class="chat-status"><span style="width:7px;height:7px;border-radius:50%;background:#34d399;animation:bpls 2s infinite"></span>Online � Powered by Claude</div>
+                              </div>
+                           </div>
+                           <div class="chat-body" id="chatBody">
+                              <div class="d-flex flex-column gap-1">
+                                 <div class="msg msg-ai">?? Hi! I'm your NexusAI assistant. I can help you with support analytics, agent configuration, automation workflows, and business insights. What would you like to know?</div>
+                                 <div class="msg-time" style="align-self:flex-start;padding-left:4px">NexusAI � Just now</div>
+                              </div>
+                           </div>
+                           <div class="chat-input-wrap">
+                              <textarea class="chat-inp" id="chatInp" placeholder="Ask anything � analytics, automations, agent performance..." rows="1" onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();sendChat()}"></textarea>
+                              <button class="chat-send" id="chatSendBtn" onclick="sendChat()"><i class="fa-solid fa-paper-plane fa-sm"></i></button>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-4">
+                        <div style="background:var(--sf);border:1px solid var(--bd);border-radius:18px;padding:20px;margin-bottom:14px">
+                           <div style="font-weight:600;font-size:.85rem;margin-bottom:14px;color:var(--tx3);text-transform:uppercase;letter-spacing:.06em"><i class="fa-solid fa-bolt me-1" style="color:var(--pur)"></i>Quick Actions</div>
+                           <div style="display:flex;flex-direction:column;gap:8px">
+                              <button class="boc btn py-2 text-start px-3" style="font-size:.82rem;border-radius:10px" onclick="quickMsg('Give me a summary of today\'s support metrics')"><i class="fa-solid fa-chart-bar me-2" style="color:var(--pur)"></i>Today's metrics</button>
+                              <button class="boc btn py-2 text-start px-3" style="font-size:.82rem;border-radius:10px" onclick="quickMsg('Which AI agent is performing best this week?')"><i class="fa-solid fa-robot me-2" style="color:#34d399"></i>Best performing agent</button>
+                              <button class="boc btn py-2 text-start px-3" style="font-size:.82rem;border-radius:10px" onclick="quickMsg('What automation should I set up to save the most time?')"><i class="fa-solid fa-bolt me-2" style="color:#fbbf24"></i>Automation suggestions</button>
+                              <button class="boc btn py-2 text-start px-3" style="font-size:.82rem;border-radius:10px" onclick="quickMsg('How can I reduce my average response time?')"><i class="fa-regular fa-clock me-2" style="color:#60a5fa"></i>Improve response time</button>
+                              <button class="boc btn py-2 text-start px-3" style="font-size:.82rem;border-radius:10px" onclick="quickMsg('Generate a weekly performance report')"><i class="fa-solid fa-file-lines me-2" style="color:#a78bfa"></i>Generate report</button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- -- ANALYTICS -- -->
+               <div class="db-section" id="sec-analytics">
+                  <div class="mb-4">
+                     <h4 style="font-size:1.4rem;font-weight:700;margin-bottom:4px">Analytics</h4>
+                     <p style="font-size:.875rem;color:var(--tx3);margin:0">Deep insights into your AI performance and business impact.</p>
+                  </div>
+                  <div class="row g-3 mb-4">
+                     <div class="col-md-3">
+                        <div class="db-stat-card">
+                           <div class="d-flex justify-content-between mb-3">
+                              <div style="width:36px;height:36px;border-radius:10px;background:rgba(139,92,246,.12);display:flex;align-items:center;justify-content:center"><i class="fa-solid fa-chart-line" style="color:#a78bfa;font-size:.85rem"></i></div>
+                              <span style="font-size:.7rem;font-weight:600;padding:3px 8px;border-radius:100px;background:rgba(52,211,153,.1);color:#34d399">? 24.3%</span>
+                           </div>
+                           <div class="db-stat-val gt">$128K</div>
+                           <div class="db-stat-lbl">Revenue from AI</div>
+                        </div>
+                     </div>
+                     <div class="col-md-3">
+                        <div class="db-stat-card">
+                           <div class="d-flex justify-content-between mb-3">
+                              <div style="width:36px;height:36px;border-radius:10px;background:rgba(52,211,153,.1);display:flex;align-items:center;justify-content:center"><i class="fa-solid fa-star" style="color:#34d399;font-size:.85rem"></i></div>
+                              <span style="font-size:.7rem;font-weight:600;padding:3px 8px;border-radius:100px;background:rgba(52,211,153,.1);color:#34d399">? 0.3</span>
+                           </div>
+                           <div class="db-stat-val" style="color:#34d399">4.9?</div>
+                           <div class="db-stat-lbl">Avg CSAT Score</div>
+                        </div>
+                     </div>
+                     <div class="col-md-3">
+                        <div class="db-stat-card">
+                           <div class="d-flex justify-content-between mb-3">
+                              <div style="width:36px;height:36px;border-radius:10px;background:rgba(59,130,246,.1);display:flex;align-items:center;justify-content:center"><i class="fa-solid fa-users" style="color:#60a5fa;font-size:.85rem"></i></div>
+                              <span style="font-size:.7rem;font-weight:600;padding:3px 8px;border-radius:100px;background:rgba(52,211,153,.1);color:#34d399">? 12%</span>
+                           </div>
+                           <div class="db-stat-val" style="color:#60a5fa">8,420</div>
+                           <div class="db-stat-lbl">Unique users served</div>
+                        </div>
+                     </div>
+                     <div class="col-md-3">
+                        <div class="db-stat-card">
+                           <div class="d-flex justify-content-between mb-3">
+                              <div style="width:36px;height:36px;border-radius:10px;background:rgba(245,158,11,.1);display:flex;align-items:center;justify-content:center"><i class="fa-solid fa-percent" style="color:#fbbf24;font-size:.85rem"></i></div>
+                              <span style="font-size:.7rem;font-weight:600;padding:3px 8px;border-radius:100px;background:rgba(52,211,153,.1);color:#34d399">? 5%</span>
+                           </div>
+                           <div class="db-stat-val" style="color:#fbbf24">81%</div>
+                           <div class="db-stat-lbl">AI containment rate</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row g-3">
+                     <div class="col-lg-8">
+                        <div style="background:var(--sf);border:1px solid var(--bd);border-radius:18px;padding:24px">
+                           <div class="d-flex align-items-center justify-content-between mb-3">
+                              <div style="font-weight:600"><i class="fa-solid fa-chart-area me-2" style="color:var(--pur)"></i>Monthly Performance Trend</div>
+                              <div style="font-size:.75rem;color:var(--tx3)">Last 12 months</div>
+                           </div>
+                           <canvas id="anChart" height="100"></canvas>
+                        </div>
+                     </div>
+                     <div class="col-lg-4">
+                        <div style="background:var(--sf);border:1px solid var(--bd);border-radius:18px;padding:20px">
+                           <div style="font-weight:600;font-size:.9rem;margin-bottom:16px">Agent Performance</div>
+                           <div class="d-flex flex-column gap-3">
+                              <div>
+                                 <div class="d-flex justify-content-between mb-1" style="font-size:.82rem"><span>Support Bot</span><span style="color:#34d399;font-weight:600">96.4%</span></div>
+                                 <div class="rtbar">
+                                    <div class="rtfill" style="width:96%"></div>
+                                 </div>
+                              </div>
+                              <div>
+                                 <div class="d-flex justify-content-between mb-1" style="font-size:.82rem"><span>Sales Qualifier</span><span style="color:#a78bfa;font-weight:600">78.2%</span></div>
+                                 <div class="rtbar">
+                                    <div class="rtfill" style="width:78%"></div>
+                                 </div>
+                              </div>
+                              <div>
+                                 <div class="d-flex justify-content-between mb-1" style="font-size:.82rem"><span>Data Analyzer</span><span style="color:#60a5fa;font-weight:600">100%</span></div>
+                                 <div class="rtbar">
+                                    <div class="rtfill" style="width:100%"></div>
+                                 </div>
+                              </div>
+                              <div>
+                                 <div class="d-flex justify-content-between mb-1" style="font-size:.82rem"><span>Email Automator</span><span style="color:#fbbf24;font-weight:600">41.3%</span></div>
+                                 <div class="rtbar">
+                                    <div class="rtfill" style="width:41%"></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- -- AUTOMATIONS -- -->
+               <div class="db-section" id="sec-automations">
+                  <div class="d-flex align-items-center justify-content-between mb-4">
+                     <div>
+                        <h4 style="font-size:1.4rem;font-weight:700;margin-bottom:4px">Automations</h4>
+                        <p style="font-size:.875rem;color:var(--tx3);margin:0">Manage your active workflow automations.</p>
+                     </div>
+                     <button class="bgrd btn px-3 py-2" style="font-size:.85rem"><i class="fa-solid fa-plus me-2"></i>Create Automation</button>
+                  </div>
+                  <div style="background:var(--sf);border:1px solid var(--bd);border-radius:18px;overflow:hidden">
+                     <table class="db-table">
+                        <thead>
+                           <tr>
+                              <th>Automation</th>
+                              <th>Trigger</th>
+                              <th>Runs Today</th>
+                              <th>Status</th>
+                              <th>Actions</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>
+                                 <div style="font-weight:600">Auto-resolve billing tickets</div>
+                                 <div style="font-size:.75rem;color:var(--tx3)">Support Bot ? Billing module</div>
+                              </td>
+                              <td style="font-size:.82rem">New ticket + billing tag</td>
+                              <td style="font-weight:600;color:#34d399">248</td>
+                              <td><span class="bst son">Active</span></td>
+                              <td><button class="boc btn px-2 py-1" style="font-size:.75rem;border-radius:8px"><i class="fa-solid fa-pencil"></i></button></td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <div style="font-weight:600">Welcome email sequence</div>
+                                 <div style="font-size:.75rem;color:var(--tx3)">Email Automator ? Onboarding</div>
+                              </td>
+                              <td style="font-size:.82rem">New user signup</td>
+                              <td style="font-weight:600;color:#a78bfa">93</td>
+                              <td><span class="bst sbz">Running</span></td>
+                              <td><button class="boc btn px-2 py-1" style="font-size:.75rem;border-radius:8px"><i class="fa-solid fa-pencil"></i></button></td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <div style="font-weight:600">CRM data sync</div>
+                                 <div style="font-size:.75rem;color:var(--tx3)">Data Analyzer ? HubSpot</div>
+                              </td>
+                              <td style="font-size:.82rem">Every 30 minutes</td>
+                              <td style="font-weight:600;color:#60a5fa">48</td>
+                              <td><span class="bst son">Active</span></td>
+                              <td><button class="boc btn px-2 py-1" style="font-size:.75rem;border-radius:8px"><i class="fa-solid fa-pencil"></i></button></td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <div style="font-weight:600">Escalation alerts</div>
+                                 <div style="font-size:.75rem;color:var(--tx3)">Support Bot ? Slack #escalations</div>
+                              </td>
+                              <td style="font-size:.82rem">Low confidence score &lt; 70%</td>
+                              <td style="font-weight:600;color:#fbbf24">9</td>
+                              <td><span class="bst sid">Standby</span></td>
+                              <td><button class="boc btn px-2 py-1" style="font-size:.75rem;border-radius:8px"><i class="fa-solid fa-pencil"></i></button></td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <div style="font-weight:600">Lead scoring pipeline</div>
+                                 <div style="font-size:.75rem;color:var(--tx3)">Sales Qualifier ? Salesforce</div>
+                              </td>
+                              <td style="font-size:.82rem">New lead form submission</td>
+                              <td style="font-weight:600;color:#34d399">127</td>
+                              <td><span class="bst son">Active</span></td>
+                              <td><button class="boc btn px-2 py-1" style="font-size:.75rem;border-radius:8px"><i class="fa-solid fa-pencil"></i></button></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <!-- -- INTEGRATIONS -- -->
+               <div class="db-section" id="sec-integrations">
+                  <div class="d-flex align-items-center justify-content-between mb-4">
+                     <div>
+                        <h4 style="font-size:1.4rem;font-weight:700;margin-bottom:4px">Integrations</h4>
+                        <p style="font-size:.875rem;color:var(--tx3);margin:0">Manage your connected apps and services.</p>
+                     </div>
+                     <button class="bgrd btn px-3 py-2" style="font-size:.85rem"><i class="fa-solid fa-plus me-2"></i>Add Integration</button>
+                  </div>
+                  <div class="row g-3">
+                     <div class="col-md-4">
+                        <div class="gc p-4">
+                           <div class="d-flex align-items-center gap-3 mb-3">
+                              <div style="width:46px;height:46px;border-radius:14px;background:rgba(74,21,75,.15);display:flex;align-items:center;justify-content:center"><i class="fa-brands fa-slack fa-xl" style="color:#a78bfa"></i></div>
+                              <div>
+                                 <div class="fw-semibold">Slack</div>
+                                 <div style="font-size:.75rem;color:var(--tx3)">#support, #escalations</div>
+                              </div>
+                              <span class="bst son ms-auto">Connected</span>
+                           </div>
+                           <div style="font-size:.8rem;color:var(--tx2);margin-bottom:12px">Bi-directional sync enabled. 3 channels active.</div>
+                           <button class="boc btn w-100 py-2" style="font-size:.82rem"><i class="fa-solid fa-gear me-1"></i>Configure</button>
+                        </div>
+                     </div>
+                     <div class="col-md-4">
+                        <div class="gc p-4">
+                           <div class="d-flex align-items-center gap-3 mb-3">
+                              <div style="width:46px;height:46px;border-radius:14px;background:rgba(36,41,47,.15);display:flex;align-items:center;justify-content:center"><i class="fa-brands fa-github fa-xl" style="color:var(--tx2)"></i></div>
+                              <div>
+                                 <div class="fw-semibold">GitHub</div>
+                                 <div style="font-size:.75rem;color:var(--tx3)">nexus-ai/main</div>
+                              </div>
+                              <span class="bst son ms-auto">Connected</span>
+                           </div>
+                           <div style="font-size:.8rem;color:var(--tx2);margin-bottom:12px">AI code review active. 2 repos monitored.</div>
+                           <button class="boc btn w-100 py-2" style="font-size:.82rem"><i class="fa-solid fa-gear me-1"></i>Configure</button>
+                        </div>
+                     </div>
+                     <div class="col-md-4">
+                        <div class="gc p-4">
+                           <div class="d-flex align-items-center gap-3 mb-3">
+                              <div style="width:46px;height:46px;border-radius:14px;background:rgba(52,168,83,.1);display:flex;align-items:center;justify-content:center"><i class="fa-brands fa-google-drive fa-xl" style="color:#34d399"></i></div>
+                              <div>
+                                 <div class="fw-semibold">Google Drive</div>
+                                 <div style="font-size:.75rem;color:var(--tx3)">My Drive + Team Drive</div>
+                              </div>
+                              <span class="bst son ms-auto">Connected</span>
+                           </div>
+                           <div style="font-size:.8rem;color:var(--tx2);margin-bottom:12px">234 documents indexed for AI training.</div>
+                           <button class="boc btn w-100 py-2" style="font-size:.82rem"><i class="fa-solid fa-gear me-1"></i>Configure</button>
+                        </div>
+                     </div>
+                     <div class="col-md-4">
+                        <div class="gc p-4">
+                           <div class="d-flex align-items-center gap-3 mb-3">
+                              <div style="width:46px;height:46px;border-radius:14px;background:rgba(255,102,0,.1);display:flex;align-items:center;justify-content:center"><i class="fa-solid fa-bolt fa-xl" style="color:#ff6600"></i></div>
+                              <div>
+                                 <div class="fw-semibold">Zapier</div>
+                                 <div style="font-size:.75rem;color:var(--tx3)">12 Zaps active</div>
+                              </div>
+                              <span class="bst son ms-auto">Connected</span>
+                           </div>
+                           <div style="font-size:.8rem;color:var(--tx2);margin-bottom:12px">Connecting to HubSpot, Stripe, Mailchimp.</div>
+                           <button class="boc btn w-100 py-2" style="font-size:.82rem"><i class="fa-solid fa-gear me-1"></i>Configure</button>
+                        </div>
+                     </div>
+                     <div class="col-md-4">
+                        <div class="gc p-4">
+                           <div class="d-flex align-items-center gap-3 mb-3">
+                              <div style="width:46px;height:46px;border-radius:14px;background:rgba(88,101,242,.15);display:flex;align-items:center;justify-content:center"><i class="fa-brands fa-discord fa-xl" style="color:#7289da"></i></div>
+                              <div>
+                                 <div class="fw-semibold">Discord</div>
+                                 <div style="font-size:.75rem;color:var(--tx3)">1 server, 4 channels</div>
+                              </div>
+                              <span class="bst son ms-auto">Connected</span>
+                           </div>
+                           <div style="font-size:.8rem;color:var(--tx2);margin-bottom:12px">Community bot answering 94% of questions.</div>
+                           <button class="boc btn w-100 py-2" style="font-size:.82rem"><i class="fa-solid fa-gear me-1"></i>Configure</button>
+                        </div>
+                     </div>
+                     <div class="col-md-4">
+                        <div class="gc p-4">
+                           <div class="d-flex align-items-center gap-3 mb-3">
+                              <div style="width:46px;height:46px;border-radius:14px;background:rgba(0,0,0,.15);display:flex;align-items:center;justify-content:center"><i class="fa-solid fa-book-open fa-xl" style="color:var(--tx2)"></i></div>
+                              <div>
+                                 <div class="fw-semibold">Notion</div>
+                                 <div style="font-size:.75rem;color:var(--tx3)">Team workspace</div>
+                              </div>
+                              <span class="bst sbz ms-auto">Syncing</span>
+                           </div>
+                           <div style="font-size:.8rem;color:var(--tx2);margin-bottom:12px">178 pages indexed. Syncing in progress.</div>
+                           <button class="boc btn w-100 py-2" style="font-size:.82rem"><i class="fa-solid fa-gear me-1"></i>Configure</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- -- SETTINGS -- -->
+               <div class="db-section" id="sec-settings">
+                  <div class="mb-4">
+                     <h4 style="font-size:1.4rem;font-weight:700;margin-bottom:4px">Settings</h4>
+                     <p style="font-size:.875rem;color:var(--tx3);margin:0">Manage your account and preferences.</p>
+                  </div>
+                  <div class="row g-3">
+                     <div class="col-lg-6">
+                        <div style="background:var(--sf);border:1px solid var(--bd);border-radius:18px;padding:24px;margin-bottom:16px">
+                           <div style="font-weight:600;font-size:1rem;margin-bottom:20px"><i class="fa-regular fa-user me-2" style="color:var(--pur)"></i>Profile</div>
+                           <div class="d-flex align-items-center gap-3 mb-4">
+                              <div class="db-avatar" id="settingsAvatar" style="width:56px;height:56px;font-size:1.2rem;border-radius:16px">U</div>
+                              <div>
+                                 <div id="settingsName" style="font-weight:600;font-size:1rem">User Name</div>
+                                 <div id="settingsEmail" style="font-size:.82rem;color:var(--tx3)">user@email.com</div>
+                                 <div style="margin-top:4px"><span class="bst son" style="font-size:.68rem">Pro Plan</span></div>
+                              </div>
+                           </div>
+                           <div style="margin-bottom:12px"><label class="olbl">Display Name</label><input class="oinp" type="text" id="profileName" placeholder="Your name"></div>
+                           <div style="margin-bottom:12px"><label class="olbl">Email</label><input class="oinp" type="email" id="profileEmail" placeholder="your@email.com"></div>
+                           <button class="bgrd btn px-4 py-2" style="font-size:.875rem">Save Changes</button>
+                        </div>
+                     </div>
+                     <div class="col-lg-6">
+                        <div style="background:var(--sf);border:1px solid var(--bd);border-radius:18px;padding:24px">
+                           <div style="font-weight:600;font-size:1rem;margin-bottom:20px"><i class="fa-solid fa-toggle-on me-2" style="color:var(--pur)"></i>Preferences</div>
+                           <div class="setting-row">
+                              <div>
+                                 <div style="font-size:.875rem;font-weight:500">Dark Mode</div>
+                                 <div style="font-size:.78rem;color:var(--tx3)">Toggle interface theme</div>
+                              </div>
+                              <label class="toggle-switch"><input type="checkbox" id="darkModeToggle" checked onchange="toggleTheme()"><span class="toggle-thumb"></span></label>
+                           </div>
+                           <div class="setting-row">
+                              <div>
+                                 <div style="font-size:.875rem;font-weight:500">Email Notifications</div>
+                                 <div style="font-size:.78rem;color:var(--tx3)">Daily performance digest</div>
+                              </div>
+                              <label class="toggle-switch"><input type="checkbox" checked><span class="toggle-thumb"></span></label>
+                           </div>
+                           <div class="setting-row">
+                              <div>
+                                 <div style="font-size:.875rem;font-weight:500">AI Auto-escalation</div>
+                                 <div style="font-size:.78rem;color:var(--tx3)">Escalate when confidence &lt; 70%</div>
+                              </div>
+                              <label class="toggle-switch"><input type="checkbox" checked><span class="toggle-thumb"></span></label>
+                           </div>
+                           <div class="setting-row">
+                              <div>
+                                 <div style="font-size:.875rem;font-weight:500">Usage Analytics</div>
+                                 <div style="font-size:.78rem;color:var(--tx3)">Share anonymous usage data</div>
+                              </div>
+                              <label class="toggle-switch"><input type="checkbox"><span class="toggle-thumb"></span></label>
+                           </div>
+                           <div class="setting-row" style="border:none">
+                              <div>
+                                 <div style="font-size:.875rem;font-weight:500">Slack Alerts</div>
+                                 <div style="font-size:.78rem;color:var(--tx3)">Real-time critical notifications</div>
+                              </div>
+                              <label class="toggle-switch"><input type="checkbox" checked><span class="toggle-thumb"></span></label>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- /db-content -->
+         </div>
+         <!-- /db-main -->
+      </div>
+      <!-- /dashboard -->
+      <!-- ======================== SCRIPTS ======================== -->
+      <!-- jQuery -->
+      <script src="js/jquery-3.7.1.min.js"></script>
+      <!-- Bootstrap 5 -->
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <!-- AOS -->
+      <script src="js/aos.js"></script>
+      <!-- Swiper -->
+      <script src="js/chart.umd.min.js"></script>
+      <!-- CounterUp -->
+      <script src="js/jquery.magnific-popup.min.js"></script>
+      <!-- Main js -->
+      <script src="js/main.js"></script>
+      <script>
+      function copyToClipboard(elementId) {
+         const text = document.getElementById(elementId).textContent;
+         const button = event.target.closest('button');
+         const originalContent = button.innerHTML;
+
+         navigator.clipboard.writeText(text).then(function() {
+            button.innerHTML = '<i class="fa-solid fa-check me-1"></i>Copied';
+            button.style.color = '#34d399';
+            setTimeout(function() {
+               button.innerHTML = originalContent;
+               button.style.color = '';
+            }, 2000);
+         }, function(err) {
+            console.error('Failed to copy: ', err);
+            button.innerHTML = '<i class="fa-solid fa-xmark me-1"></i>Failed';
+            button.style.color = '#ef4444';
+            setTimeout(function() {
+               button.innerHTML = originalContent;
+               button.style.color = '';
+            }, 2000);
+         });
+      }
+      </script>
+   </body>
+</html>
