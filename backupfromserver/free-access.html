@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" id="htmlRoot">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Free Access | Dr. Scalper EA</title>
+      <link rel="icon" type="image/png" href="img/favicon.png">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="css/all.min.css">
+      <link rel="stylesheet" href="css/style.css">
+      <style>
+         .free-success-message {
+            background: rgba(52, 211, 153, 0.1);
+            border: 1px solid #34d399;
+            color: #34d399;
+            padding: 12px 16px;
+            border-radius: 8px;
+            margin-top: 16px;
+         }
+         .setup-copy {
+            background: var(--bg3);
+            border: 1px solid var(--bd);
+            border-radius: 6px;
+            padding: 4px 10px;
+            margin-left: 8px;
+            cursor: pointer;
+            font-size: 0.75rem;
+            color: var(--tx2);
+            transition: all 0.2s;
+         }
+         .setup-copy:hover {
+            background: var(--bg4);
+            border-color: var(--tx3);
+         }
+         .free-referral-note {
+            display: flex;
+            align-items: center;
+            margin-top: 12px;
+            font-size: 0.85rem;
+            color: var(--tx2);
+         }
+      </style>
+   </head>
+   <body class="free-access-page">
+      <nav class="free-access-nav">
+         <div class="container d-flex align-items-center justify-content-between">
+            <a href="index.html" class="free-access-logo">
+               <img src="img/logo.png" alt="Dr. Scalper Logo">
+            </a>
+            <div class="d-flex align-items-center gap-2">
+               <button class="boc free-theme-toggle" id="freeThemeToggle" type="button" aria-label="Toggle theme">
+                  <i class="fa-solid fa-moon" id="freeMoonIcon"></i>
+                  <i class="fa-solid fa-sun" id="freeSunIcon" style="display:none"></i>
+               </button>
+               <a href="index.html#pricing" class="boc btn free-back-link">Back to pricing</a>
+            </div>
+         </div>
+      </nav>
+
+      <main>
+         <section class="free-access-hero">
+            <div class="aur aur-a" style="top:-220px;left:-180px"></div>
+            <div class="aur aur-b" style="top:180px;right:-220px"></div>
+            <div class="container position-relative">
+               <div class="text-center">
+                  <span class="free-access-eyebrow">Free Access</span>
+                  <h1>How to Get <span class="gt">Free Access</span></h1>
+                  <p>Follow these simple steps to get Dr. Scalper EA for free.</p>
+               </div>
+
+               <div class="free-access-progress">
+                  <a href="#step-1" class="free-progress-item active"><span>01</span><strong>Register via My Link</strong></a>
+                  <a href="#step-2" class="free-progress-item"><span>02</span><strong>Complete Verification (KYC)</strong></a>
+                  <a href="#step-3" class="free-progress-item"><span>03</span><strong>Open MT5 Trading Account</strong></a>
+                  <a href="#verification" class="free-progress-item"><span>04</span><strong>Get Your Free Access</strong></a>
+               </div>
+            </div>
+         </section>
+
+         <section class="free-access-content">
+            <div class="container">
+               <div class="free-access-detail" id="step-1">
+                  <div class="free-detail-number">01</div>
+                  <div>
+                     <span class="slbl">Step one</span>
+                     <h2>Register via My Link</h2>
+                     <p>Register a new trading account through our referral link. Your account must be registered under our link to qualify for free access.</p>
+                     <a href="https://vtm.pro/la5-com/global/Sk3UytRC" class="bgrd btn" target="_blank" rel="noopener">Register New Account <i class="fa-solid fa-arrow-up-right-from-square ms-2"></i></a>
+                     <div class="free-referral-note">
+                        <strong>Referral code:  </strong>
+                        <span id="referralCode">Sk3UytRC</span>
+                        <button type="button" class="setup-copy" onclick="copyToClipboard('referralCode')"><i class="fa-regular fa-copy me-1"></i>Copy</button>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="free-access-detail" id="step-2">
+                  <div class="free-detail-number">02</div>
+                  <div>
+                     <span class="slbl">Step two</span>
+                     <h2>Complete Verification (KYC)</h2>
+                     <p>Fully verify your identity inside the broker platform. Verification is required before you can open and trade from your MT5 account.</p>
+                  </div>
+               </div>
+
+               <div class="free-access-detail" id="step-3">
+                  <div class="free-detail-number">03</div>
+                  <div>
+                     <span class="slbl">Step three</span>
+                     <h2>Open MT5 Trading Account</h2>
+                     <p>Create a new MT5 trading account inside the broker platform, then keep your MT5 account ID ready for the final verification step.</p>
+                     <div class="free-account-tip"><i class="fa-solid fa-circle-info"></i><span><strong>Recommended setup:</strong> Use a cent account while you test the EA and follow your broker's account requirements.</span></div>
+                  </div>
+               </div>
+
+               <div class="free-access-detail free-verification-detail" id="verification">
+                  <div class="free-detail-number">04</div>
+                  <div class="w-100">
+                     <span class="slbl">Step four</span>
+                     <h2>Get Your Free Access</h2>
+                     <p>Enter your MT5 account ID and registered email. We will use these details to verify your eligibility and send your access information.</p>
+                     <form class="free-verification-form" id="freeVerificationForm" action="mt5-register.php" method="POST">
+                        <div class="row g-3">
+                           <div class="col-md-6">
+                              <label for="mt5_account_id">MT5 Account ID</label>
+                              <input id="mt5_account_id" name="mt5_account_id" type="text" inputmode="numeric" placeholder="Enter your MT5 account ID" required>
+                           </div>
+                           <div class="col-md-6">
+                              <label for="registered_email">Registered Email</label>
+                              <input id="registered_email" name="registered_email" type="email" placeholder="you@example.com" required>
+                           </div>
+                           <div class="col-12">
+                              <label for="telegram_username">Telegram username <span>(optional)</span></label>
+                              <input id="telegram_username" name="telegram_username" type="text" placeholder="@yourusername">
+                           </div>
+                        </div>
+                        <button type="submit" class="bgrd btn free-verify-button">Verify &amp; Get Access <i class="fa-solid fa-arrow-right ms-2"></i></button>
+                        <p class="free-form-note"><i class="fa-solid fa-shield-halved me-1"></i>Your details will be sent to our Telegram support.</p>
+                     </form>
+                     <div class="free-verification-result" id="freeVerificationResult" role="status"></div>
+                  </div>
+               </div>
+
+               <div class="free-support-note">
+               </div>
+            </div>
+         </section>
+      </main>
+
+      <button id="freeScrollTopBtn" class="scroll-top-btn free-page-scroll-top" type="button" aria-label="Scroll to top">
+         <i class="fa-solid fa-arrow-up"></i>
+      </button>
+
+      <footer id="foot">
+         <div class="container">
+            <div class="row g-5 mb-5 justify-content-center">
+               <div class="col-lg-6 footer-brand text-center">
+                  <a class="d-flex align-items-center justify-content-center gap-2 mb-3" href="#" style="font-size:1.15rem;font-weight:700;color:var(--tx)">
+
+                  </a>
+                  <a href="https://t.me/drscalperofficial" target="_blank" rel="noopener" class="footer-telegram-button" aria-label="Contact us on Telegram">
+                     <span class="footer-telegram-icon"><i class="fa-brands fa-telegram" aria-hidden="true"></i></span>
+                     <span>Contact</span>
+                  </a>
+                  <p class="footer-disclaimer">Trading XAUUSD involves substantial risk. Past performance does not guarantee future results. The EA, like any automated system, can lose money. Use only capital you can afford to lose.</p>
+               </div>
+
+               </div>
+            <div class="footer-copyright d-flex align-items-center justify-content-center flex-wrap gap-3 pt-4" style="border-top:1px solid var(--bd)">
+               <p style="font-size:.8rem;color:var(--tx3);margin:0"><i class="fa-regular fa-copyright me-1"></i>2026 Dr. Scalper. All rights reserved. Powered by <a href="https://www.feb87.com/" target="_blank" rel="noopener" style="color:var(--pur);text-decoration:underline">feb87</a></p>
+               </div>
+                  </div>
+      </footer>
+
+      <script>
+         const root = document.getElementById('htmlRoot');
+         const themeToggle = document.getElementById('freeThemeToggle');
+         const moonIcon = document.getElementById('freeMoonIcon');
+         const sunIcon = document.getElementById('freeSunIcon');
+
+         themeToggle.addEventListener('click', () => {
+            const lightMode = root.classList.toggle('lm');
+            moonIcon.style.display = lightMode ? 'none' : 'inline';
+            sunIcon.style.display = lightMode ? 'inline' : 'none';
+         });
+
+         document.getElementById('freeScrollTopBtn').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+         });
+
+         // Check for success parameter in URL
+         const urlParams = new URLSearchParams(window.location.search);
+         if (urlParams.get('registration') === 'success') {
+            const result = document.getElementById('freeVerificationResult');
+            result.innerHTML = '<div class="free-success-message">✓ Your registration details have been submitted successfully! We will verify your account and contact you shortly.</div>';
+            result.classList.add('visible');
+         }
+
+         function copyToClipboard(elementId) {
+            const text = document.getElementById(elementId).textContent;
+            const button = event.target.closest('button');
+            const originalContent = button.innerHTML;
+
+            navigator.clipboard.writeText(text).then(function() {
+               button.innerHTML = '<i class="fa-solid fa-check me-1"></i>Copied';
+               button.style.color = '#34d399';
+               setTimeout(function() {
+                  button.innerHTML = originalContent;
+                  button.style.color = '';
+               }, 2000);
+            }, function(err) {
+               console.error('Failed to copy: ', err);
+               button.innerHTML = '<i class="fa-solid fa-xmark me-1"></i>Failed';
+               button.style.color = '#ef4444';
+               setTimeout(function() {
+                  button.innerHTML = originalContent;
+                  button.style.color = '';
+               }, 2000);
+            });
+         }
+      </script>
+   </body>
+</html>

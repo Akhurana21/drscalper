@@ -41,6 +41,54 @@
             font-size: 0.85rem;
             color: var(--tx2);
          }
+         .free-existing-link {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            width: min(100%, 500px);
+            min-height: 76px;
+            padding: 14px 18px;
+            margin-top: 12px;
+            border: 1px solid rgba(213, 171, 83, 0.48);
+            border-radius: 10px;
+            background: #0d0d0f;
+            color: #fff;
+            transition: border-color 0.2s ease, background-color 0.2s ease;
+         }
+         .free-existing-link:hover {
+            border-color: #d5ab53;
+            background: #141414;
+            color: #fff;
+         }
+         .free-existing-link:focus-visible {
+            outline: 2px solid var(--pur);
+            outline-offset: 3px;
+         }
+         .free-existing-icon {
+            display: grid;
+            place-items: center;
+            flex: 0 0 42px;
+            width: 42px;
+            height: 42px;
+            border: 1px solid rgba(213, 171, 83, 0.5);
+            border-radius: 50%;
+            color: #d5ab53;
+         }
+         .free-existing-copy {
+            display: grid;
+            gap: 3px;
+         }
+         .free-existing-copy strong {
+            font-size: 0.95rem;
+         }
+         .free-existing-copy span {
+            color: #d5ab53;
+            font-size: 0.84rem;
+         }
+         .free-existing-arrow {
+            margin-left: auto;
+            color: #d5ab53;
+         }
       </style>
    </head>
    <body class="free-access-page">
@@ -89,10 +137,18 @@
                      <p>Register a new trading account through our referral link. Your account must be registered under our link to qualify for free access.</p>
                      <a href="https://vtm.pro/la5-com/global/Sk3UytRC" class="bgrd btn" target="_blank" rel="noopener">Register New Account <i class="fa-solid fa-arrow-up-right-from-square ms-2"></i></a>
                      <div class="free-referral-note">
-                        <strong>Referral code:  </strong>
+                        <strong>Referral code :  </strong>
                         <span id="referralCode">Sk3UytRC</span>
                         <button type="button" class="setup-copy" onclick="copyToClipboard('referralCode')"><i class="fa-regular fa-copy me-1"></i>Copy</button>
                      </div>
+                     <a class="free-existing-link" href="index.html#transfer-info" aria-label="Already Registered? Not Under Our Link">
+                        <span class="free-existing-icon"><i class="fa-regular fa-user" aria-hidden="true"></i></span>
+                        <span class="free-existing-copy">
+                           <strong>I Already Have an Account</strong>
+                           <span>Change IB / Transfer to Our Link</span>
+                        </span>
+                        <i class="fa-solid fa-arrow-right free-existing-arrow" aria-hidden="true"></i>
+                     </a>
                   </div>
                </div>
 
@@ -111,7 +167,7 @@
                      <span class="slbl">Step three</span>
                      <h2>Open MT5 Trading Account</h2>
                      <p>Create a new MT5 trading account inside the broker platform, then keep your MT5 account ID ready for the final verification step.</p>
-                     <div class="free-account-tip"><i class="fa-solid fa-circle-info"></i><span><strong>Recommended setup:</strong> Use a cent account while you test the EA and follow your broker's account requirements.</span></div>
+                     <div class="free-account-tip"><i class="fa-solid fa-circle-info"></i><span><strong>Recommended setup:</strong> Use a cent account follow your broker's account requirements.</span></div>
                   </div>
                </div>
 
