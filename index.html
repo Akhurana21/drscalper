@@ -283,7 +283,7 @@
                         <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Use with any broker</div>
                         <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Free upgrades to all future versions</div>
                         <div class="pfl"><span class="pchk"><i class="fa-solid fa-check"></i></span>Priority reply message</div>
-                        <button class="boc btn w-100 py-2 mt-4" data-plan="1 Account" data-amount="$99" onclick="openPaymentModal(this)">Purchase License</button>
+                        <button class="boc btn w-100 py-2 mt-4" data-plan="1 Account" data-amount="$99" onclick="openPaymentModal(this)">Purchase License <i class="fa-solid fa-arrow-right ms-1 fa-sm"></i></button>
                      </div>
                   </div>
                    <div class="col-md-4">
@@ -569,51 +569,13 @@
       <!-- /landing -->
       
       <!-- Scroll to Top Button -->
+      <a class="telegram-float-btn" href="https://t.me/drscalperea" target="_blank" rel="noopener noreferrer" aria-label="Contact us on Telegram">
+         <i class="fa-brands fa-telegram" aria-hidden="true"></i>
+      </a>
       <button id="scrollTopBtn" class="scroll-top-btn" type="button" aria-label="Scroll to top">
          <i class="fa-solid fa-arrow-up"></i>
       </button>
-      <!-- ======================== LOGIN OFFCANVAS ======================== -->
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="lofc">
-         <div class="offcanvas-header">
-            <div class="d-flex align-items-center gap-2">
-               <img src="img/logo.png" alt="Dr. Scalper Logo">
-               <h5 class="offcanvas-title mb-0">Dr. Scalper</h5>
-            </div>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" style="filter:invert(1)"></button>
-         </div>
-         <div class="offcanvas-body p-4">
-            <div class="tab-switch"><button class="tab-sw-btn on" id="tabLogin" onclick="swTab('login')">Log In</button><button class="tab-sw-btn" id="tabSignup" onclick="swTab('signup')">Sign Up</button></div>
-            <!-- Login -->
-            <div id="fLogin">
-               <div id="loginErr" class="err-msg"><i class="fa-solid fa-circle-exclamation me-1"></i><span id="loginErrMsg">Invalid email or password.</span></div>
-               <label class="olbl"><i class="fa-regular fa-envelope me-1"></i>Email address</label>
-               <input class="oinp" type="email" id="loginEmail" placeholder="you@company.com">
-               <label class="olbl"><i class="fa-solid fa-lock me-1"></i>Password</label>
-               <input class="oinp" type="password" id="loginPass" placeholder="********">
-               <div class="text-end mb-3" style="margin-top:-8px"><a href="#" style="font-size:.8rem;color:var(--pur)">Forgot password?</a></div>
-               <button class="bgrd btn w-100 py-3 fw-semibold fs-6" id="loginBtn" onclick="doLogin()">Log In <i class="fa-solid fa-arrow-right ms-1 fa-sm"></i></button>
-               <div class="odiv">or continue with</div>
-               <button class="oauth" onclick="quickLogin('google')"><i class="fa-brands fa-google me-2"></i>Continue with Google</button>
-               <button class="oauth" onclick="quickLogin('github')"><i class="fa-brands fa-github me-2"></i>Continue with GitHub</button>
-               <p class="text-center mt-4" style="font-size:.82rem;color:var(--tx3)">Don't have an account? <a href="#" style="color:var(--pur)" onclick="swTab('signup');return false">Sign up free</a></p>
-            </div>
-            <!-- Sign Up -->
-            <div id="fSignup" style="display:none">
-               <div id="signupErr" class="err-msg"><i class="fa-solid fa-circle-exclamation me-1"></i><span id="signupErrMsg">Please fill all fields.</span></div>
-               <label class="olbl"><i class="fa-regular fa-user me-1"></i>Full name</label>
-               <input class="oinp" type="text" id="signupName" placeholder="Jane Smith">
-               <label class="olbl"><i class="fa-regular fa-envelope me-1"></i>Work email</label>
-               <input class="oinp" type="email" id="signupEmail" placeholder="you@company.com">
-               <label class="olbl"><i class="fa-solid fa-lock me-1"></i>Password</label>
-               <input class="oinp" type="password" id="signupPass" placeholder="Min. 8 characters">
-               <button class="bgrd btn w-100 py-3 fw-semibold fs-6" id="signupBtn" onclick="doSignup()">Create Free Account <i class="fa-solid fa-arrow-right ms-1 fa-sm"></i></button>
-               <div class="odiv">or sign up with</div>
-               <button class="oauth" onclick="quickLogin('google')"><i class="fa-brands fa-google me-2"></i>Continue with Google</button>
-               <button class="oauth" onclick="quickLogin('github')"><i class="fa-brands fa-github me-2"></i>Continue with GitHub</button>
-               <p class="text-center mt-3" style="font-size:.76rem;color:var(--tx3)">By signing up, you agree to our <a href="#" style="color:var(--pur)">Terms</a> &amp; <a href="#" style="color:var(--pur)">Privacy Policy</a></p>
-            </div>
-         </div>
-      </div>
+      
       <!-- ======================== DASHBOARD ======================== -->
       <div id="dashboard">
          <!-- Sidebar -->

@@ -132,25 +132,8 @@ if (window.location.hash === '#transfer-info') {
 function copyWalletAddress(event) {
     event.stopPropagation();
     const wallet = document.getElementById('paymentWallet').textContent;
-    const button = event.currentTarget;
-    const originalContent = button.innerHTML;
-
-    navigator.clipboard.writeText(wallet).then(function() {
-        button.innerHTML = '<i class="fa-solid fa-check"></i>';
-        button.style.color = '#34d399';
-        setTimeout(function() {
-            button.innerHTML = originalContent;
-            button.style.color = '';
-        }, 3000);
-    }).catch(function(err) {
-        console.error('Failed to copy wallet address: ', err);
-        button.innerHTML = '<i class="fa-solid fa-xmark"></i>';
-        button.style.color = '#ef4444';
-        setTimeout(function() {
-            button.innerHTML = originalContent;
-            button.style.color = '';
-        }, 3000);
-    });
+    navigator.clipboard?.writeText(wallet);
+    event.currentTarget.title = 'Copied';
 }
 
 document.addEventListener('keydown', event => {
@@ -179,7 +162,8 @@ $('.vidpop').magnificPopup({
 });
 
 /*  PRICING TOGGLE  */
-document.getElementById('ptog').addEventListener('change', function() {
+const pricingToggle = document.getElementById('ptog');
+if (pricingToggle) pricingToggle.addEventListener('change', function() {
     const y = this.checked;
     document.getElementById('ptogThumb').style.transform = y ? 'translateX(24px)' : 'translateX(0)';
     document.querySelectorAll('.pv').forEach(el => el.textContent = y ? el.dataset.y : el.dataset.m);

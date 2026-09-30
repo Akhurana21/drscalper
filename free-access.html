@@ -90,6 +90,12 @@
             margin-left: auto;
             color: #d5ab53;
          }
+         .free-register-button {
+            display: inline-flex;
+            align-items: center;
+            min-height: 56px;
+            padding: 16px 24px;
+         }
       </style>
    </head>
    <body class="free-access-page">
@@ -136,7 +142,7 @@
                      <span class="slbl">Step one</span>
                      <h2>Register via My Link</h2>
                      <p>Register a new trading account through our referral link. Your account must be registered under our link to qualify for free access.</p>
-                     <a href="https://vtm.pro/la5-com/global/Sk3UytRC" class="bgrd btn" target="_blank" rel="noopener">Register New Account <i class="fa-solid fa-arrow-up-right-from-square ms-2"></i></a>
+                     <a href="https://vtm.pro/la5-com/global/Sk3UytRC" class="bgrd btn free-register-button" target="_blank" rel="noopener">Register New Account <i class="fa-solid fa-arrow-up-right-from-square ms-2"></i></a>
                      <div class="free-referral-note">
                         <strong>Referral code :  </strong>
                         <span id="referralCode">Sk3UytRC</span>
@@ -206,6 +212,9 @@
          </section>
       </main>
 
+      <a class="telegram-float-btn" href="https://t.me/drscalperea" target="_blank" rel="noopener noreferrer" aria-label="Contact us on Telegram">
+         <i class="fa-brands fa-telegram" aria-hidden="true"></i>
+      </a>
       <button id="freeScrollTopBtn" class="scroll-top-btn free-page-scroll-top" type="button" aria-label="Scroll to top">
          <i class="fa-solid fa-arrow-up"></i>
       </button>
@@ -240,7 +249,7 @@
          themeToggle.addEventListener('click', () => {
             const lightMode = root.classList.toggle('lm');
             moonIcon.style.display = lightMode ? 'none' : 'inline';
-            sunIcon.style.display = lightMode ? 'inline' : 'none';
+            sunIcon.style.display = lightMode ? 'inline-block' : 'none';
          });
 
          document.getElementById('freeScrollTopBtn').addEventListener('click', () => {

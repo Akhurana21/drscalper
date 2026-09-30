@@ -34,7 +34,6 @@
 html {
   scroll-behavior: smooth;
   overflow-x: clip;
-  scroll-padding-top: 80px;
 }
 body {
   font-family: "Space Grotesk", sans-serif;
